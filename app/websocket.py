@@ -197,12 +197,12 @@ async def websocket_test_endpoint(websocket: WebSocket):
                 }))
                 
                 # Get context from vector search (same as real flow)
-                logger.info("Getting vector context...")
+                
                 context = await vector_service.search(query)
-                logger.info(f"Got {len(context)} context chunks")
+                
                 
                 # Stream LLM response (same as real flow)
-                logger.info("Starting LLM streaming...")
+                
                 full_response = ""
                 
                 try:

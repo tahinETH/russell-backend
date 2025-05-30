@@ -1,6 +1,7 @@
 import litellm
 from typing import List, Dict, AsyncGenerator
 import asyncio
+from .prompts import prepare_name_generation_prompt, prepare_query_system_prompt, prepare_query_user_prompt
 
 class LLMService:
     def __init__(self, model: str):
@@ -14,20 +15,26 @@ class LLMService:
     ) -> AsyncGenerator[str, None]:
         """Stream LLM response with provided context"""
         # Build prompt with context
+        context_text = None
         if context:
-            context_text = "\n".join([c["content"] for c in context])
-            system_message = f"""Use the following context to answer the user's question. 
-If the context doesn't contain relevant information, say so clearly.
+            context_items = []
+            for c in context:
+                if "title" in c and c["title"]:
+                    context_items.append(f"{c['title']}\n{c['content']}")
+                else:
+                    context_items.append(c["content"])
+            context_text = "\n\n".join(context_items)
+        
+        system_message = prepare_query_system_prompt()
+        user_message = prepare_query_user_prompt(query, context_text)
 
-Context:
-{context_text}"""
-        else:
-            system_message = "Answer the user's question based on your knowledge."
+        
         
         messages = [
             {"role": "system", "content": system_message},
-            {"role": "user", "content": query}
+            {"role": "user", "content": user_message}
         ]
+        print(messages)
         
         try:
             # Stream response
@@ -71,12 +78,7 @@ Context:
     async def generate_chat_name(self, user_query: str, ai_response: str) -> str:
         """Generate a concise chat name based on user query and AI response using gpt-4o-mini"""
         try:
-            prompt = f"""Based on the following conversation, generate a short, descriptive title (2-6 words) that captures the main topic or question. The title should be clear and specific.
-
-User: {user_query}
-Assistant: {ai_response[:1000]}...
-
-Generate only the title, nothing else. Make it concise and descriptive."""
+            prompt = prepare_name_generation_prompt(user_query, ai_response)
 
             response = await litellm.acompletion(
                 model="gpt-4o-mini",

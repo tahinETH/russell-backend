@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     database_url: str = "sqlite+aiosqlite:///./aiapp.db"
     
     # LiteLLM
-    llm_model: str = "claude-3-5-sonnet-20240620"
+    llm_model: str = "claude-3-5-sonnet-latest"
     
     # Pinecone - using your variable names
     pinecone_api_key: str = os.getenv("PINECONE_API_KEY")
