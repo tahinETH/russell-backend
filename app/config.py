@@ -20,12 +20,22 @@ class Settings(BaseSettings):
     embedding_ctx_length: int = 8191
     chunk_size: int = 600
     
+    # Clerk Configuration
+    CLERK_WEBHOOK_SECRET: str = os.getenv("CLERK_WEBHOOK_SECRET", "")
+    CLERK_SECRET_KEY: str = os.getenv("CLERK_SECRET_KEY", "")
+    
+    # Stripe Configuration
     
     
     class Config:
         env_file = ".env"
         extra = "ignore"  # This allows extra env vars without errors
-    
-
 
 settings = Settings()
+
+# Create a config object for backward compatibility
+class Config:
+    CLERK_WEBHOOK_SECRET = settings.CLERK_WEBHOOK_SECRET
+    CLERK_SECRET_KEY = settings.CLERK_SECRET_KEY
+
+config = Config()

@@ -66,4 +66,33 @@ Context:
             else:
                 return response.choices[0].message.content
         except Exception as e:
-            return f"Error: {str(e)}" 
+            return f"Error: {str(e)}"
+    
+    async def generate_chat_name(self, user_query: str, ai_response: str) -> str:
+        """Generate a concise chat name based on user query and AI response using gpt-4o-mini"""
+        try:
+            prompt = f"""Based on the following conversation, generate a short, descriptive title (2-6 words) that captures the main topic or question. The title should be clear and specific.
+
+User: {user_query}
+Assistant: {ai_response[:1000]}...
+
+Generate only the title, nothing else. Make it concise and descriptive."""
+
+            response = await litellm.acompletion(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=20,
+                temperature=0.7
+            )
+            
+            title = response.choices[0].message.content.strip()
+            # Remove quotes if present and limit length
+            title = title.strip('"\'').strip()
+            return title[:50]  # Limit to 50 characters
+            
+        except Exception as e:
+            # Fallback to a simple name based on user query
+            words = user_query.split()[:3]
+            return " ".join(words).title() or "New Chat" 

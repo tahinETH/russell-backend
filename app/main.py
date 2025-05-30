@@ -5,11 +5,15 @@ import logging
 
 from .database import engine, Base
 from .api import router, set_services
+from .websocket import router as websocket_router, set_websocket_services
 from .services.llm import LLMService
 from .services.vector import VectorService
+from .services.chat import ChatService
 from .config import settings
 # Import models so SQLAlchemy can create tables
 from .models import User, Chat, Message
+# Import webhook router
+from .webhooks.clerk import router as webhook_router
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -32,9 +36,12 @@ async def lifespan(app: FastAPI):
             settings.pinecone_environment,
             settings.pinecone_index_name
         )
+        chat_service = ChatService()
         
         # Set services in API module
         set_services(llm_service, vector_service)
+        # Set services in WebSocket module
+        set_websocket_services(llm_service, vector_service, chat_service)
         logger.info("Services initialized successfully")
         
     except Exception as e:
@@ -63,7 +70,9 @@ app.add_middleware(
 )
 
 # Include API routes
-app.include_router(router, prefix="/api/v1")
+app.include_router(router)
+app.include_router(websocket_router)
+app.include_router(webhook_router, prefix="/webhooks")
 
 @app.get("/")
 async def root():
