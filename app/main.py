@@ -6,9 +6,7 @@ import logging
 from .database import engine, Base
 from .api import router, set_services
 from .websocket import router as websocket_router, set_websocket_services
-from .services.llm import LLMService
-from .services.vector import VectorService
-from .services.chat import ChatService
+from .services import LLMService, VectorService, ChatService, UserService
 from .config import settings
 # Import models so SQLAlchemy can create tables
 from .models import User, Chat, Message
@@ -36,12 +34,13 @@ async def lifespan(app: FastAPI):
             settings.pinecone_environment,
             settings.pinecone_index_name
         )
-        chat_service = ChatService()
+        chat_service = ChatService(llm_service, vector_service)
+        user_service = UserService()
         
         # Set services in API module
         set_services(llm_service, vector_service)
         # Set services in WebSocket module
-        set_websocket_services(llm_service, vector_service, chat_service)
+        set_websocket_services(llm_service, vector_service, chat_service, user_service)
         logger.info("Services initialized successfully")
         
     except Exception as e:

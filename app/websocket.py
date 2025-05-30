@@ -5,9 +5,7 @@ import json
 import logging
 from clerk_backend_api.jwks_helpers import verify_token, VerifyTokenOptions
 from .dependencies import auth_middleware
-from .services.llm import LLMService
-from .services.vector import VectorService
-from .services.chat import ChatService
+from .services import LLMService, VectorService, ChatService, UserService
 from .config import settings
 import asyncio
 
@@ -20,13 +18,15 @@ router = APIRouter()
 llm_service: Optional[LLMService] = None
 vector_service: Optional[VectorService] = None
 chat_service: Optional[ChatService] = None
+user_service: Optional[UserService] = None
 
-def set_websocket_services(llm: LLMService, vector: VectorService, chat: ChatService):
+def set_websocket_services(llm: LLMService, vector: VectorService, chat: ChatService, user: UserService):
     """Set the service instances for WebSocket"""
-    global llm_service, vector_service, chat_service
+    global llm_service, vector_service, chat_service, user_service
     llm_service = llm
     vector_service = vector
     chat_service = chat
+    user_service = user
 
 class ConnectionManager:
     def __init__(self):
@@ -103,8 +103,8 @@ async def websocket_chat_endpoint(websocket: WebSocket):
         
         await manager.connect(websocket, user_id)
         
-        # Verify user exists using chat service
-        if not await chat_service.verify_user_exists(user_id):
+        # Verify user exists using user service
+        if not await user_service.user_exists(user_id):
             await manager.send_message(user_id, {
                 "type": "error",
                 "error": "User not found"
@@ -272,8 +272,21 @@ async def handle_chat_message(user_id: str, message: dict):
             })
             return
         
+        # Convert chat_id to UUID if provided
+        chat_uuid = None
+        if chat_id:
+            try:
+                import uuid
+                chat_uuid = uuid.UUID(chat_id)
+            except ValueError:
+                await manager.send_message(user_id, {
+                    "type": "error",
+                    "error": "Invalid chat ID format"
+                })
+                return
+        
         # Get or create chat using chat service
-        chat = await chat_service.get_or_create_chat(user_id, chat_id)
+        chat = await chat_service.get_or_create_chat(user_id, chat_uuid)
         if not chat:
             await manager.send_message(user_id, {
                 "type": "error",
@@ -282,7 +295,7 @@ async def handle_chat_message(user_id: str, message: dict):
             return
         
         # Save user message using chat service
-        user_message = await chat_service.save_user_message(chat.id, query)
+        user_message = await chat_service.create_message(chat.id, "user", query)
         
         # Send chat start message
         await manager.send_message(user_id, {
@@ -320,30 +333,33 @@ async def handle_chat_message(user_id: str, message: dict):
             return
         
         # Save assistant message using chat service
-        assistant_message = await chat_service.save_assistant_message(
+        assistant_message = await chat_service.create_message(
             chat.id, 
+            "assistant",
             full_response, 
             {"retrieved_chunks": context}
         )
         
         # Generate and save chat name for new chats
-        try:
-            is_new = await chat_service.is_new_chat(chat.id)
-            if is_new:
-                logger.info(f"Generating name for new chat {chat.id}")
+        chat_name = None
+        if not chat.name:
+            try:
                 chat_name = await llm_service.generate_chat_name(query, full_response)
                 await chat_service.update_chat_name(chat.id, chat_name)
-                logger.info(f"Generated chat name: {chat_name}")
-        except Exception as e:
-            logger.error(f"Failed to generate chat name: {e}")
-            # Don't fail the whole request if naming fails
+                logger.info(f"Generated chat name for {chat.id}: {chat_name}")
+            except Exception as e:
+                logger.error(f"Failed to generate chat name for {chat.id}: {e}")
+                chat_name = None
+        else:
+            chat_name = chat.name
         
         # Send completion message
         await manager.send_message(user_id, {
             "type": "chat_complete",
             "chat_id": str(chat.id),
             "message_id": str(assistant_message.id),
-            "full_response": full_response
+            "full_response": full_response,
+            "chat_name": chat_name
         })
         
     except Exception as e:
