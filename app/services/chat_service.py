@@ -136,16 +136,26 @@ class ChatService:
             logger.error(f"Error creating message in chat {chat_id}: {e}")
             raise Exception("Failed to create message")
     
-    async def process_query_stream(self, request: QueryRequest, chat: Chat) -> AsyncGenerator[Dict[str, Any], None]:
+    async def process_query_stream(self, request: QueryRequest, chat: Chat, user_custom_prompt: str = None) -> AsyncGenerator[Dict[str, Any], None]:
         """Process a query with streaming response"""
         try:
             # 1. Save user message
             await self.create_message(chat.id, "user", request.query)
             
-            # 2. Get context from vector search
+            # 2. Get chat message history (excluding the just-saved user message for now)
+            messages = await self.chat_repo.get_chat_messages(chat.id)
+            # Convert to format expected by LLM (exclude the current user message)
+            chat_history = []
+            for msg in messages[:-1]:  # Exclude the last message (current user message)
+                chat_history.append({
+                    "role": msg.role,
+                    "content": msg.content
+                })
+            
+            # 3. Get context from vector search
             context = await self.vector_service.search(request.query)
             
-            # 3. Stream response
+            # 4. Stream response
             full_response = ""
             
             # Send start event
@@ -154,8 +164,13 @@ class ChatService:
                 "chat_id": str(chat.id)
             }
             
-            # Stream LLM response
-            async for chunk in self.llm_service.stream_with_context(request.query, context):
+            # Stream LLM response with chat history and custom system prompt
+            async for chunk in self.llm_service.stream_with_context(
+                request.query, 
+                context, 
+                chat_history, 
+                custom_system_prompt=user_custom_prompt
+            ):
                 full_response += chunk
                 yield {
                     "type": "content", 

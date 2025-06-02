@@ -95,6 +95,7 @@ async def handle_event(event_type: str, user_data: dict):
                 email=email,
                 name=name,
                 username=username,
+                custom_system_prompt=None,  # Will be set to default by the repository
                 fe_metadata=fe_metadata
             )
 

@@ -11,30 +11,37 @@ class LLMService:
     async def stream_with_context(
         self, 
         query: str, 
-        context: List[Dict]
+        context: List[Dict],
+        chat_history: List[Dict] = None,
+        custom_system_prompt: str = None
     ) -> AsyncGenerator[str, None]:
-        """Stream LLM response with provided context"""
+        """Stream LLM response with provided context and chat history"""
         # Build prompt with context
         context_text = None
         if context:
             context_items = []
             for c in context:
+                
                 if "title" in c and c["title"]:
-                    context_items.append(f"{c['title']}\n{c['content']}")
+                    context_items.append(f"{c['title']}\n\n{c['content']}")
                 else:
                     context_items.append(c["content"])
             context_text = "\n\n".join(context_items)
         
-        system_message = prepare_query_system_prompt()
-        user_message = prepare_query_user_prompt(query, context_text)
-
+        # Use custom system prompt if provided, otherwise use default
+        if custom_system_prompt:
+            system_message = custom_system_prompt
+        else:
+            system_message = prepare_query_system_prompt()
+        
+        user_message = prepare_query_user_prompt(query, context_text, chat_history)
+        
         
         
         messages = [
             {"role": "system", "content": system_message},
             {"role": "user", "content": user_message}
         ]
-        print(messages)
         
         try:
             # Stream response

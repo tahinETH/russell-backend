@@ -206,7 +206,7 @@ async def websocket_test_endpoint(websocket: WebSocket):
                 full_response = ""
                 
                 try:
-                    async for chunk in llm_service.stream_with_context(query, context):
+                    async for chunk in llm_service.stream_with_context(query, context, []):
                         full_response += chunk
                         await websocket.send_text(json.dumps({
                             "type": "chunk",
@@ -294,6 +294,10 @@ async def handle_chat_message(user_id: str, message: dict):
             })
             return
         
+        # Get user's custom system prompt
+        user = await user_service.get_user(user_id)
+        user_custom_prompt = user.custom_system_prompt if user else None
+        
         # Save user message using chat service
         user_message = await chat_service.create_message(chat.id, "user", query)
         
@@ -304,6 +308,15 @@ async def handle_chat_message(user_id: str, message: dict):
             "message_id": str(user_message.id)
         })
         
+        # Get chat message history (excluding the just-saved user message)
+        messages = await chat_service.get_chat_messages(chat.id)
+        chat_history = []
+        for msg in messages[:-1]:  # Exclude the last message (current user message)
+            chat_history.append({
+                "role": msg.role,
+                "content": msg.content
+            })
+        
         # Get context from vector search
         context = await vector_service.search(query)
         
@@ -311,7 +324,7 @@ async def handle_chat_message(user_id: str, message: dict):
         full_response = ""
         
         try:
-            async for chunk in llm_service.stream_with_context(query, context):
+            async for chunk in llm_service.stream_with_context(query, context, chat_history, custom_system_prompt=user_custom_prompt):
                 full_response += chunk
                 await manager.send_message(user_id, {
                     "type": "chat_chunk",
