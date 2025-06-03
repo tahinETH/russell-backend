@@ -46,6 +46,16 @@ class Message(Base):
     
     chat = relationship("Chat", back_populates="messages")
 
+class Source(Base):
+    __tablename__ = "sources"
+    
+    id = Column(String, primary_key=True)  # Use the original ID from JSON (e.g., "faq_001", "paper_001")
+    title = Column(String, nullable=False)
+    content = Column(Text, nullable=False)  # Full content
+    link = Column(String, nullable=True)
+    source_type = Column(String, nullable=False)  # "faq" or "scientific_papers"
+    created_at = Column(DateTime, default=datetime.utcnow)
+
 # Pydantic Models
 class QueryRequest(BaseModel):
     query: str
@@ -98,4 +108,12 @@ class CustomPromptRequest(BaseModel):
 
 class CustomPromptResponse(BaseModel):
     custom_system_prompt: Optional[str] = None
-    is_default: bool 
+    is_default: bool
+
+class SourceResponse(BaseModel):
+    id: str
+    title: str
+    content: str
+    link: Optional[str] = None
+    source_type: str
+    created_at: datetime 

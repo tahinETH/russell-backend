@@ -201,6 +201,7 @@ async def websocket_test_endpoint(websocket: WebSocket):
                 context = await vector_service.search(query)
                 
                 
+                
                 # Stream LLM response (same as real flow)
                 
                 full_response = ""

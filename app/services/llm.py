@@ -21,12 +21,15 @@ class LLMService:
         if context:
             context_items = []
             for c in context:
-                
-                if "title" in c and c["title"]:
-                    context_items.append(f"{c['title']}\n\n{c['content']}")
+                if "metadata" in c and "title" in c["metadata"] and c["metadata"]["title"]:
+                    content_str = f"Title:{c['metadata']['title']}\n\nContent:{c['content']}"
+                    if "link" in c["metadata"] and c["metadata"]["link"]:
+                        content_str += f"\nLink:{c['metadata']['link']}"
+                    context_items.append(content_str)
                 else:
                     context_items.append(c["content"])
             context_text = "\n\n".join(context_items)
+        
         
         # Use custom system prompt if provided, otherwise use default
         if custom_system_prompt:
@@ -35,8 +38,6 @@ class LLMService:
             system_message = prepare_query_system_prompt()
         
         user_message = prepare_query_user_prompt(query, context_text, chat_history)
-        
-        
         
         messages = [
             {"role": "system", "content": system_message},
@@ -53,6 +54,7 @@ class LLMService:
             
             async for chunk in response:
                 if chunk.choices[0].delta.content:
+                    print(chunk.choices[0])
                     yield chunk.choices[0].delta.content
         except Exception as e:
             # Handle errors gracefully
