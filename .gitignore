@@ -1,4 +1,6 @@
 .env
 GiantCodebase.md
 *.sh
+venv
 *.db
+__pycache__
