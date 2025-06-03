@@ -53,12 +53,12 @@ class ConnectionManager:
 manager = ConnectionManager()
 
 async def authenticate_websocket(token: str) -> str:
-    """Authenticate WebSocket connection using JWT token"""
+    
     try:
         claims = verify_token(
             token,
             VerifyTokenOptions(
-                authorized_parties=["http://localhost:3000"],
+                authorized_parties=["http://localhost:3000", "https://loomlockai.com"],
                 secret_key=settings.CLERK_SECRET_KEY
             )
         )
@@ -71,7 +71,6 @@ async def authenticate_websocket(token: str) -> str:
 async def websocket_chat_endpoint(websocket: WebSocket):
     """WebSocket endpoint for real-time chat with streaming LLM responses"""
     user_id = None
-    
     
     try:
         await websocket.accept()
