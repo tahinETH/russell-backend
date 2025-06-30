@@ -89,15 +89,33 @@ async def handle_event(event_type: str, user_data: dict):
                 "last_name": user_data.get("last_name")
             }
             
-            logger.info(f"Creating user record for {user_id}")
-            await user_repo.create_user(
-                user_id=user_id,
-                email=email,
-                name=name,
-                username=username,
-                custom_system_prompt=None,  # Will be set to default by the repository
-                fe_metadata=fe_metadata
-            )
+            # Check if a user with this email already exists
+            existing_user = await user_repo.get_user_by_email(email)
+            
+            if existing_user:
+                logger.warning(f"User with email {email} already exists with ID {existing_user.id}. Updating instead.")
+                # Update the existing user with new data
+                updates = {
+                    "name": name,
+                    "username": username,
+                    "fe_metadata": fe_metadata
+                }
+                await user_repo.update_user(existing_user.id, **updates)
+                
+                # Optionally, you might want to handle the ID mismatch
+                if existing_user.id != user_id:
+                    logger.error(f"ID mismatch: Clerk user {user_id} vs existing user {existing_user.id} for email {email}")
+                    # You could delete the old user and create a new one, or handle this differently
+            else:
+                logger.info(f"Creating user record for {user_id}")
+                await user_repo.create_user(
+                    user_id=user_id,
+                    email=email,
+                    name=name,
+                    username=username,
+                    custom_system_prompt=None,  # Will be set to default by the repository
+                    fe_metadata=fe_metadata
+                )
 
         elif event_type == "user.updated":
             logger.info("Processing user update")

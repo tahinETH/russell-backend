@@ -5,8 +5,9 @@ import logging
 
 from .database import engine, Base
 from .api import router, set_services
+from .api_optimized import router as optimized_router, set_optimized_services
 from .websocket import router as websocket_router, set_websocket_services
-from .services import LLMService, VectorService, ChatService, UserService
+from .services import LLMService, VectorService, ChatService, UserService, ElevenLabsService
 from .config import settings
 # Import models so SQLAlchemy can create tables
 from .models import User, Chat, Message
@@ -36,9 +37,12 @@ async def lifespan(app: FastAPI):
         )
         chat_service = ChatService(llm_service, vector_service)
         user_service = UserService()
+        elevenlabs_service = ElevenLabsService()
         
         # Set services in API module
         set_services(llm_service, vector_service)
+        # Set services in optimized API module
+        set_optimized_services(llm_service, vector_service, chat_service, user_service, elevenlabs_service)
         # Set services in WebSocket module
         set_websocket_services(llm_service, vector_service, chat_service, user_service)
         logger.info("Services initialized successfully")
@@ -70,6 +74,7 @@ app.add_middleware(
 
 # Include API routes
 app.include_router(router)
+app.include_router(optimized_router)
 app.include_router(websocket_router)
 app.include_router(webhook_router, prefix="/webhooks")
 

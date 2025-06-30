@@ -2,9 +2,11 @@ from typing import Optional, List, Dict, Any, AsyncGenerator
 import uuid
 import logging
 import json
+import asyncio
 from db.chats import ChatDataRepository
 from .llm import LLMService
 from .vector import VectorService
+from .elevenlabs_service import ElevenLabsService
 from ..models import (
     Chat, Message, ChatResponse, MessageResponse, 
     ChatWithMessages, QueryRequest
@@ -19,6 +21,7 @@ class ChatService:
         self.chat_repo = ChatDataRepository()
         self.llm_service = llm_service
         self.vector_service = vector_service
+        self.elevenlabs_service = ElevenLabsService()
     
     async def create_chat(self, user_id: str) -> ChatResponse:
         """Create a new chat for a user"""
@@ -137,7 +140,7 @@ class ChatService:
             raise Exception("Failed to create message")
     
     async def process_query_stream(self, request: QueryRequest, chat: Chat, user_custom_prompt: str = None) -> AsyncGenerator[Dict[str, Any], None]:
-        """Process a query with streaming response"""
+        """Process a query with response and voice synthesis"""
         try:
             # 1. Save user message
             await self.create_message(chat.id, "user", request.query)
@@ -157,12 +160,21 @@ class ChatService:
             
             # 4. Stream response
             full_response = ""
+            sentence_buffer = ""
             
             # Send start event
             yield {
                 "type": "start", 
                 "chat_id": str(chat.id)
             }
+            
+            # Check if voice synthesis is enabled
+            voice_enabled = self.elevenlabs_service.api_key is not None
+            if voice_enabled:
+                yield {
+                    "type": "voice_enabled",
+                    "enabled": True
+                }
             
             # Stream LLM response with chat history and custom system prompt
             async for chunk in self.llm_service.stream_with_context(
@@ -172,10 +184,86 @@ class ChatService:
                 custom_system_prompt=user_custom_prompt
             ):
                 full_response += chunk
+                sentence_buffer += chunk
+                
+                # Send text chunk
                 yield {
                     "type": "content", 
                     "content": chunk
                 }
+                
+                # Check if we have a complete sentence for voice synthesis
+                if voice_enabled and any(end in sentence_buffer for end in ['.', '!', '?', '\n']):
+                    # Find the last sentence ending
+                    last_end = max(
+                        sentence_buffer.rfind('.'),
+                        sentence_buffer.rfind('!'),
+                        sentence_buffer.rfind('?'),
+                        sentence_buffer.rfind('\n')
+                    )
+                    
+                    if last_end > -1:
+                        # Extract complete sentence(s)
+                        complete_sentence = sentence_buffer[:last_end + 1].strip()
+                        sentence_buffer = sentence_buffer[last_end + 1:]
+                        
+                        if complete_sentence:
+                            # Stream voice synthesis directly
+                            yield {
+                                "type": "voice_start",
+                                "text": complete_sentence
+                            }
+                            
+                            try:
+                                # Stream audio chunks as they come
+                                async for audio_chunk in self.elevenlabs_service.text_to_speech_stream(complete_sentence):
+                                    # Encode audio chunk to base64 and send
+                                    audio_base64 = self.elevenlabs_service.encode_audio_base64(audio_chunk)
+                                    yield {
+                                        "type": "voice_chunk",
+                                        "audio": audio_base64,
+                                        "format": "mp3"
+                                    }
+                                
+                                yield {
+                                    "type": "voice_end",
+                                    "text": complete_sentence
+                                }
+                            except Exception as e:
+                                logger.error(f"Error synthesizing voice: {e}")
+                                yield {
+                                    "type": "voice_error",
+                                    "error": str(e),
+                                    "text": complete_sentence
+                                }
+            
+            # Process any remaining text in sentence buffer
+            if voice_enabled and sentence_buffer.strip():
+                yield {
+                    "type": "voice_start",
+                    "text": sentence_buffer.strip()
+                }
+                
+                try:
+                    async for audio_chunk in self.elevenlabs_service.text_to_speech_stream(sentence_buffer.strip()):
+                        audio_base64 = self.elevenlabs_service.encode_audio_base64(audio_chunk)
+                        yield {
+                            "type": "voice_chunk",
+                            "audio": audio_base64,
+                            "format": "mp3"
+                        }
+                    
+                    yield {
+                        "type": "voice_end",
+                        "text": sentence_buffer.strip()
+                    }
+                except Exception as e:
+                    logger.error(f"Error synthesizing remaining voice: {e}")
+                    yield {
+                        "type": "voice_error",
+                        "error": str(e),
+                        "text": sentence_buffer.strip()
+                    }
             
             # Save assistant message
             await self.create_message(
@@ -207,7 +295,7 @@ class ChatService:
                 "type": "error", 
                 "error": str(e)
             }
-
+    
     async def update_chat_name(self, chat_id: uuid.UUID, name: str) -> bool:
         """Update chat name"""
         try:

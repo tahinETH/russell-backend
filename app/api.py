@@ -5,13 +5,13 @@ from typing import List, Optional
 import uuid
 import json
 import logging
+import time
 
 from .models import (
-    QueryRequest, UserCreate, UserResponse, ChatResponse, 
-    MessageResponse, ChatWithMessages, TranscriptionResponse,
+    QueryRequest, QueryResponse, UserCreate, UserResponse, ChatResponse, ChatWithMessages, TranscriptionResponse,
     CustomPromptRequest, CustomPromptResponse
 )
-from .services import LLMService, VectorService, ChatService, UserService, TranscriptionService
+from .services import LLMService, VectorService, ChatService, UserService, TranscriptionService, ElevenLabsService
 from .dependencies import auth_middleware
 
 logger = logging.getLogger(__name__)
@@ -24,15 +24,17 @@ vector_service: Optional[VectorService] = None
 chat_service: Optional[ChatService] = None
 user_service: Optional[UserService] = None
 transcription_service: Optional[TranscriptionService] = None
+elevenlabs_service: Optional[ElevenLabsService] = None
 
 def set_services(llm: LLMService, vector: VectorService):
     """Set the service instances"""
-    global llm_service, vector_service, chat_service, user_service, transcription_service
+    global llm_service, vector_service, chat_service, user_service, transcription_service, elevenlabs_service
     llm_service = llm
     vector_service = vector
     chat_service = ChatService(llm, vector)
     user_service = UserService()
     transcription_service = TranscriptionService()
+    elevenlabs_service = ElevenLabsService()
 
 @router.post("/users", response_model=UserResponse)
 async def create_user(
@@ -56,9 +58,13 @@ async def query_endpoint(
     request: QueryRequest,
     user_id: str = Depends(auth_middleware)
 ):
-    """Handle streaming Q&A with vector search context"""
+
     if not chat_service or not user_service:
         raise HTTPException(status_code=500, detail="Services not initialized")
+    
+    # If voice is enabled, check if voice service is available
+    if request.enable_voice and (not elevenlabs_service or not elevenlabs_service.api_key):
+        raise HTTPException(status_code=500, detail="Voice service not configured")
     
     try:
         # 1. Verify user exists - use authenticated user_id
@@ -66,26 +72,28 @@ async def query_endpoint(
         if not user_exists:
             raise HTTPException(status_code=404, detail="User not found")
         
-        # 2. Override request user_id with authenticated user_id for security
-        request.user_id = user_id
-        
-        # 3. Get user to access custom system prompt
+        # 2. Get user to access custom system prompt
         user = await user_service.get_user(user_id)
         user_custom_prompt = user.custom_system_prompt if user else None
         
-        # 4. Get or create chat
+        # 3. Get or create chat
         chat = await chat_service.get_or_create_chat(user_id, request.chat_id)
         
-        # 5. Stream response
-        async def generate():
-            try:
-                async for event in chat_service.process_query_stream(request, chat, user_custom_prompt):
-                    yield f"data: {json.dumps(event)}\n\n"
-            except Exception as e:
-                logger.error(f"Error in streaming: {e}")
-                yield f"data: {json.dumps({'type': 'error', 'error': str(e)})}\n\n"
-        
-        return EventSourceResponse(generate())
+        # 4. Handle voice vs streaming response
+        if request.enable_voice:
+            # Voice response - return complete response with audio
+            return await _handle_voice_query(request, chat, user_custom_prompt)
+        else:
+            # Streaming response - return SSE stream
+            async def generate():
+                try:
+                    async for event in chat_service.process_query_stream(request, chat, user_custom_prompt):
+                        yield f"data: {json.dumps(event)}\n\n"
+                except Exception as e:
+                    logger.error(f"Error in streaming: {e}")
+                    yield f"data: {json.dumps({'type': 'error', 'error': str(e)})}\n\n"
+            
+            return EventSourceResponse(generate())
         
     except HTTPException:
         raise
@@ -94,6 +102,81 @@ async def query_endpoint(
     except Exception as e:
         logger.error(f"Error in query endpoint: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
+
+async def _handle_voice_query(request: QueryRequest, chat, user_custom_prompt: Optional[str]) -> QueryResponse:
+    """Handle voice query and return complete response with audio"""
+    start_time = time.time()
+    
+    try:
+        # 1. Save user message to database
+        user_message = await chat_service.create_message(chat.id, "user", request.query)
+        logger.info(f"Saved user message {user_message.id} to chat {chat.id}")
+        
+        # 2. Get chat history for context (excluding the just-saved user message)
+        messages = await chat_service.get_chat_messages(chat.id)
+        chat_history = []
+        for msg in messages[:-1]:  # Exclude the last message (current user message)
+            chat_history.append({
+                "role": msg.role,
+                "content": msg.content
+            })
+        
+        # 3. Get context from vector search
+        context = await vector_service.search(request.query)
+        
+        # 4. Get full LLM response with chat history (collect all chunks)
+        full_response = ""
+        async for chunk in llm_service.stream_with_context(
+            request.query, 
+            context, 
+            chat_history,  # Include chat history for context
+            user_custom_prompt
+        ):
+            full_response += chunk
+        
+        # 5. Generate voice audio
+        audio_data = await elevenlabs_service.text_to_speech(
+            full_response, 
+            voice_id=request.voice_id,
+            model_id=request.model_id
+        )
+        
+        # 6. Encode audio to base64
+        audio_base64 = elevenlabs_service.encode_audio_base64(audio_data)
+        
+        # 7. Save assistant message to database
+        assistant_message = await chat_service.create_message(
+            chat.id, 
+            "assistant", 
+            full_response,
+            {"retrieved_chunks": context}
+        )
+        logger.info(f"Saved assistant message {assistant_message.id} to chat {chat.id}")
+        
+        # 8. Generate and save chat name for new chats
+        if not chat.name:
+            try:
+                chat_name = await llm_service.generate_chat_name(request.query, full_response)
+                await chat_service.update_chat_name(chat.id, chat_name)
+                chat.name = chat_name  # Update local object
+                logger.info(f"Generated and saved chat name for {chat.id}: {chat_name}")
+            except Exception as e:
+                logger.error(f"Failed to generate chat name for {chat.id}: {e}")
+        
+        processing_time = time.time() - start_time
+        
+        return QueryResponse(
+            text_response=full_response,
+            audio_base64=audio_base64,
+            audio_format="mp3",
+            context_chunks=len(context),
+            processing_time=processing_time,
+            chat_id=chat.id
+        )
+        
+    except Exception as e:
+        logger.error(f"Error in voice query processing: {e}")
+        raise HTTPException(status_code=500, detail=f"Voice query failed: {str(e)}")
 
 @router.get("/chats", response_model=List[ChatResponse])
 async def get_user_chats(

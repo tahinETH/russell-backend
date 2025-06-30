@@ -59,8 +59,19 @@ class Source(Base):
 # Pydantic Models
 class QueryRequest(BaseModel):
     query: str
-    user_id: str  # Changed to string to match Clerk user ID
     chat_id: Optional[uuid_module.UUID] = None
+    enable_voice: Optional[bool] = True
+    voice_id: Optional[str] = None
+    model_id: Optional[str] = None
+    voice_settings: Optional[dict] = None  # ElevenLabs voice settings
+
+class QueryResponse(BaseModel):
+    text_response: str
+    audio_base64: Optional[str] = None
+    audio_format: Optional[str] = None
+    context_chunks: int = 0
+    processing_time: float
+    chat_id: uuid_module.UUID
 
 class UserCreate(BaseModel):
     username: Optional[str] = None
@@ -116,4 +127,12 @@ class SourceResponse(BaseModel):
     content: str
     link: Optional[str] = None
     source_type: str
-    created_at: datetime 
+    created_at: datetime
+
+class VoiceSettingsRequest(BaseModel):
+    voice_id: Optional[str] = None
+    model_id: Optional[str] = None
+    stability: Optional[float] = 0.5
+    similarity_boost: Optional[float] = 0.75
+    style: Optional[float] = 0.0
+    use_speaker_boost: Optional[bool] = True 
