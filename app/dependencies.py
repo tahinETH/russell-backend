@@ -23,7 +23,7 @@ class ClerkAuthMiddleware(HTTPBearer):
             claims = verify_token(
                 token,
                 VerifyTokenOptions(
-                    authorized_parties=["http://localhost:3000", "https://loomlockai.com"],
+                    authorized_parties=["http://localhost:3000", "https://russell.hfgok.com"],
                     secret_key=config.CLERK_SECRET_KEY
                 )
             )
