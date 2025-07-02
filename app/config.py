@@ -10,9 +10,9 @@ class Settings(BaseSettings):
     database_url: str = "sqlite+aiosqlite:///./aiapp.db"
     
     # LiteLLM
-    #llm_model: str = "claude-3-5-sonnet-latest"
+    llm_model: str = "claude-3-5-sonnet-latest"
     #llm_model: str = "claude-3-opus-20240229"
-    llm_model: str = "claude-opus-4-20250514"
+    #llm_model: str = "claude-sonnet-4-20250514"
     
     # Pinecone - using your variable names
     pinecone_api_key: str = os.getenv("PINECONE_API_KEY")
@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     # ElevenLabs Configuration
     elevenlabs_api_key: Optional[str] = os.getenv("ELEVENLABS_API_KEY")
     elevenlabs_voice_id: str = os.getenv("ELEVENLABS_VOICE_ID", "NFG5qt843uXKj4pFvR7C")
-    elevenlabs_model_id: str = os.getenv("ELEVENLABS_MODEL_ID", "eleven_flash_v2_5")
+    elevenlabs_model_id: str = os.getenv("ELEVENLABS_MODEL_ID", "eleven_multilingual_v2")
     
     class Config:
         env_file = ".env"

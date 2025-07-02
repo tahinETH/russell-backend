@@ -155,17 +155,20 @@ class ChatService:
                     "content": msg.content
                 })
             
-            # 3. Get context from vector search
-            context = await self.vector_service.search(request.query)
+            # 3. Get context from vector search (skip if this is a lesson mode)
+            context = []
+            if not request.lesson:  # Only do vector search if not in lesson mode
+                context = await self.vector_service.search(request.query)
             
             # 4. Stream response
             full_response = ""
             sentence_buffer = ""
             
-            # Send start event
+            # Send start event with lesson info
             yield {
                 "type": "start", 
-                "chat_id": str(chat.id)
+                "chat_id": str(chat.id),
+                "lesson": request.lesson
             }
             
             # Check if voice synthesis is enabled
@@ -176,11 +179,12 @@ class ChatService:
                     "enabled": True
                 }
             
-            # Stream LLM response with chat history
+            # Stream LLM response with chat history and lesson parameter
             async for chunk in self.llm_service.stream_with_context(
                 request.query, 
                 context, 
-                chat_history
+                chat_history,
+                lesson=request.lesson
             ):
                 full_response += chunk
                 sentence_buffer += chunk
@@ -285,7 +289,8 @@ class ChatService:
             yield {
                 "type": "end", 
                 "content": full_response,
-                "chat_name": chat.name
+                "chat_name": chat.name,
+                "lesson": request.lesson
             }
             
         except Exception as e:

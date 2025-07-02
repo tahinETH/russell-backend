@@ -5,3 +5,5 @@ venv
 *.db
 __pycache__
 .env
+*.out
+__pycache__

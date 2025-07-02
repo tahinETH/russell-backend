@@ -63,6 +63,7 @@ class QueryRequest(BaseModel):
     voice_id: Optional[str] = None
     model_id: Optional[str] = None
     voice_settings: Optional[dict] = None  # ElevenLabs voice settings
+    lesson: Optional[str] = None  # Add lesson parameter for specific experiences like "blackholes"
 
 class QueryResponse(BaseModel):
     text_response: str
@@ -71,6 +72,7 @@ class QueryResponse(BaseModel):
     context_chunks: int = 0
     processing_time: float
     chat_id: uuid_module.UUID
+    lesson: Optional[str] = None  # Return the lesson parameter in response
 
 class UserCreate(BaseModel):
     username: Optional[str] = None

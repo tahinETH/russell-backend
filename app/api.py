@@ -57,6 +57,7 @@ async def query_endpoint(
     request: QueryRequest,
     user_id: str = Depends(auth_middleware)
 ):
+    print(request.query,"\n\n",request.lesson)
     
     
     if not chat_service or not user_service:
@@ -117,15 +118,18 @@ async def _handle_voice_query(request: QueryRequest, chat) -> QueryResponse:
                 "content": msg.content
             })
         
-        # 3. Get context from vector search
-        context = await vector_service.search(request.query)
+        # 3. Get context from vector search (skip if this is a lesson mode)
+        context = []
+        if not request.lesson:  # Only do vector search if not in lesson mode
+            context = await vector_service.search(request.query)
         
-        # 4. Get full LLM response with chat history (collect all chunks)
+        # 4. Get full LLM response with chat history and lesson parameter
         full_response = ""
         async for chunk in llm_service.stream_with_context(
             request.query, 
             context, 
-            chat_history  # Include chat history for context
+            chat_history,
+            lesson=request.lesson
         ):
             full_response += chunk
         
@@ -144,7 +148,7 @@ async def _handle_voice_query(request: QueryRequest, chat) -> QueryResponse:
             chat.id, 
             "assistant", 
             full_response,
-            {"retrieved_chunks": context}
+            {"retrieved_chunks": context, "lesson": request.lesson} if request.lesson else {"retrieved_chunks": context}
         )
         logger.info(f"Saved assistant message {assistant_message.id} to chat {chat.id}")
         
@@ -166,7 +170,8 @@ async def _handle_voice_query(request: QueryRequest, chat) -> QueryResponse:
             audio_format="mp3",
             context_chunks=len(context),
             processing_time=processing_time,
-            chat_id=chat.id
+            chat_id=chat.id,
+            lesson=request.lesson
         )
         
     except Exception as e:

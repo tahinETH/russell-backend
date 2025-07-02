@@ -1,8 +1,9 @@
 import litellm
-from typing import List, Dict, AsyncGenerator
+from typing import List, Dict, AsyncGenerator, Optional
 import asyncio
 import logging
-from .prompts import prepare_name_generation_prompt, prepare_query_system_prompt, prepare_query_user_prompt
+from .prompts import prepare_name_generation_prompt, prepare_query_system_prompt, prepare_query_user_prompt, prepare_blackholes_lesson_prompt
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -10,40 +11,75 @@ class LLMService:
     def __init__(self, model: str):
         self.model = model
         self.fallback_model = "gpt-4.1"  # Fallback model
+        self._blackholes_content = None  # Cache for blackholes content
         
+    def _load_blackholes_content(self) -> str:
+        """Load blackholes.txt content (cached after first load)"""
+        if self._blackholes_content is None:
+            try:
+                # Get the directory where this file is located
+                current_dir = os.path.dirname(os.path.abspath(__file__))
+                # Go up one level to app directory
+                app_dir = os.path.dirname(current_dir)
+                blackholes_path = os.path.join(app_dir, 'blackholes.txt')
+                
+                with open(blackholes_path, 'r', encoding='utf-8') as f:
+                    self._blackholes_content = f.read()
+            except Exception as e:
+                logger.error(f"Error loading blackholes.txt: {e}")
+                self._blackholes_content = ""
+        return self._blackholes_content
     
     async def stream_with_context(
         self, 
         query: str, 
         context: List[Dict],
-        chat_history: List[Dict] = None
+        chat_history: List[Dict] = None,
+        lesson: Optional[str] = None
     ) -> AsyncGenerator[str, None]:
         """Stream LLM response with provided context and chat history"""
-        # Build prompt with context
-        context_text = None
-        """  if context:
-            context_items = []
-            for c in context:
-                if "metadata" in c and "title" in c["metadata"] and c["metadata"]["title"]:
-                    content_str = f"Title:{c['metadata']['title']}\n\nContent:{c['content']}"
-                    if "link" in c["metadata"] and c["metadata"]["link"]:
-                        content_str += f"\nLink:{c['metadata']['link']}"
-                    context_items.append(content_str)
-                else:
-                    context_items.append(c["content"])
-            context_text = "\n\n".join(context_items) """
         
-        
-        # Use default system prompt
-        system_message = prepare_query_system_prompt()
-        
-        user_message = prepare_query_user_prompt(query, context_text, chat_history)
-        
-        messages = [
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": user_message}
-        ]
-        
+        # Check if this is a black holes lesson
+        if lesson == "blackholes":
+            # Load blackholes content
+            blackholes_content = self._load_blackholes_content()
+            
+            # Use the specialized black holes prompt
+            system_message = prepare_query_system_prompt()
+            user_message = prepare_blackholes_lesson_prompt(query, blackholes_content, chat_history)
+            
+            messages = [
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message}
+            ]
+            
+        else:
+            # Regular flow with context
+            # Build prompt with context
+            context_text = None
+            """  if context:
+                context_items = []
+                for c in context:
+                    if "metadata" in c and "title" in c["metadata"] and c["metadata"]["title"]:
+                        content_str = f"Title:{c['metadata']['title']}\n\nContent:{c['content']}"
+                        if "link" in c["metadata"] and c["metadata"]["link"]:
+                            content_str += f"\nLink:{c['metadata']['link']}"
+                        context_items.append(content_str)
+                    else:
+                        context_items.append(c["content"])
+                context_text = "\n\n".join(context_items) """
+            
+            
+            # Use default system prompt
+            system_message = prepare_query_system_prompt()
+            
+            user_message = prepare_query_user_prompt(query, context_text, chat_history)
+            
+            messages = [
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message}
+            ]
+            
         # Try main model first, then fallback
         models_to_try = [self.model, self.fallback_model]
         
