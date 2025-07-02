@@ -16,7 +16,6 @@ class User(Base):
     username = Column(String, unique=True, nullable=True)  # Allow null initially
     email = Column(String, unique=True, nullable=False)
     name = Column(String, nullable=True)
-    custom_system_prompt = Column(Text, nullable=True)  # Custom system prompt for the user
 
     fe_metadata = Column(JSON, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
@@ -77,7 +76,6 @@ class UserCreate(BaseModel):
     username: Optional[str] = None
     email: str
     name: Optional[str] = None
-    custom_system_prompt: Optional[str] = None
     fe_metadata: Optional[dict] = None
 
 class UserResponse(BaseModel):
@@ -85,7 +83,6 @@ class UserResponse(BaseModel):
     username: Optional[str] = None
     email: str
     name: Optional[str] = None
-    custom_system_prompt: Optional[str] = None
     fe_metadata: Optional[dict] = None
     created_at: datetime
 
@@ -113,13 +110,6 @@ class ChatWithMessages(BaseModel):
 class TranscriptionResponse(BaseModel):
     transcription: str
     message: str = "Audio transcribed successfully"
-
-class CustomPromptRequest(BaseModel):
-    custom_system_prompt: Optional[str] = None  # None means reset to default
-
-class CustomPromptResponse(BaseModel):
-    custom_system_prompt: Optional[str] = None
-    is_default: bool
 
 class SourceResponse(BaseModel):
     id: str

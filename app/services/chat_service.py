@@ -139,7 +139,7 @@ class ChatService:
             logger.error(f"Error creating message in chat {chat_id}: {e}")
             raise Exception("Failed to create message")
     
-    async def process_query_stream(self, request: QueryRequest, chat: Chat, user_custom_prompt: str = None) -> AsyncGenerator[Dict[str, Any], None]:
+    async def process_query_stream(self, request: QueryRequest, chat: Chat) -> AsyncGenerator[Dict[str, Any], None]:
         """Process a query with response and voice synthesis"""
         try:
             # 1. Save user message
@@ -176,12 +176,11 @@ class ChatService:
                     "enabled": True
                 }
             
-            # Stream LLM response with chat history and custom system prompt
+            # Stream LLM response with chat history
             async for chunk in self.llm_service.stream_with_context(
                 request.query, 
                 context, 
-                chat_history, 
-                custom_system_prompt=user_custom_prompt
+                chat_history
             ):
                 full_response += chunk
                 sentence_buffer += chunk

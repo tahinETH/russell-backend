@@ -510,9 +510,8 @@ async def handle_chat_message(user_id: str, message: dict):
             })
             return
         
-        # Get user's custom system prompt
+        # Get user
         user = await user_service.get_user(user_id)
-        user_custom_prompt = user.custom_system_prompt if user else None
         
         # Save user message using chat service
         user_message = await chat_service.create_message(chat.id, "user", query)
@@ -543,7 +542,7 @@ async def handle_chat_message(user_id: str, message: dict):
         sentence_buffer = ""
         
         try:
-            async for chunk in llm_service.stream_with_context(query, context, chat_history, custom_system_prompt=user_custom_prompt):
+            async for chunk in llm_service.stream_with_context(query, context, chat_history):
                 full_response += chunk
                 sentence_buffer += chunk
                 
@@ -735,9 +734,8 @@ async def handle_voice_chat_message(user_id: str, message: dict):
             })
             return
         
-        # Get user's custom system prompt
+        # Get user
         user = await user_service.get_user(user_id)
-        user_custom_prompt = user.custom_system_prompt if user else None
         
         # Save user message using chat service
         user_message = await chat_service.create_message(chat.id, "user", query)
@@ -767,7 +765,7 @@ async def handle_voice_chat_message(user_id: str, message: dict):
         
         try:
             # Collect the full response without sending chunks
-            async for chunk in llm_service.stream_with_context(query, context, chat_history, custom_system_prompt=user_custom_prompt):
+            async for chunk in llm_service.stream_with_context(query, context, chat_history):
                 full_response += chunk
                 
         except Exception as e:

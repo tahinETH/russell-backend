@@ -8,8 +8,7 @@ import logging
 import time
 
 from .models import (
-    QueryRequest, QueryResponse, UserCreate, UserResponse, ChatResponse, ChatWithMessages, TranscriptionResponse,
-    CustomPromptRequest, CustomPromptResponse
+    QueryRequest, QueryResponse, UserCreate, UserResponse, ChatResponse, ChatWithMessages, TranscriptionResponse
 )
 from .services import LLMService, VectorService, ChatService, UserService, TranscriptionService, ElevenLabsService
 from .dependencies import auth_middleware
@@ -73,22 +72,18 @@ async def query_endpoint(
         if not user_exists:
             raise HTTPException(status_code=404, detail="User not found")
         
-        # 2. Get user to access custom system prompt
-        user = await user_service.get_user(user_id)
-        user_custom_prompt = user.custom_system_prompt if user else None
-        
-        # 3. Get or create chat
+        # 2. Get or create chat
         chat = await chat_service.get_or_create_chat(user_id, request.chat_id)
         
-        # 4. Handle voice vs streaming response
+        # 3. Handle voice vs streaming response
         if request.enable_voice:
             # Voice response - return complete response with audio
-            return await _handle_voice_query(request, chat, user_custom_prompt)
+            return await _handle_voice_query(request, chat)
         else:
             # Streaming response - return SSE stream
             async def generate():
                 try:
-                    async for event in chat_service.process_query_stream(request, chat, user_custom_prompt):
+                    async for event in chat_service.process_query_stream(request, chat):
                         yield f"data: {json.dumps(event)}\n\n"
                 except Exception as e:
                     logger.error(f"Error in streaming: {e}")
@@ -104,7 +99,7 @@ async def query_endpoint(
         logger.error(f"Error in query endpoint: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
-async def _handle_voice_query(request: QueryRequest, chat, user_custom_prompt: Optional[str]) -> QueryResponse:
+async def _handle_voice_query(request: QueryRequest, chat) -> QueryResponse:
     """Handle voice query and return complete response with audio"""
     start_time = time.time()
     
@@ -130,8 +125,7 @@ async def _handle_voice_query(request: QueryRequest, chat, user_custom_prompt: O
         async for chunk in llm_service.stream_with_context(
             request.query, 
             context, 
-            chat_history,  # Include chat history for context
-            user_custom_prompt
+            chat_history  # Include chat history for context
         ):
             full_response += chunk
         
@@ -272,55 +266,4 @@ async def transcribe_audio(
     except Exception as e:
         logger.error(f"Error in transcription endpoint: {e}")
         raise HTTPException(status_code=500, detail=f"Transcription failed: {str(e)}")
-
-@router.post("/users/custom-prompt", response_model=CustomPromptResponse)
-async def update_custom_system_prompt(
-    request: CustomPromptRequest,
-    user_id: str = Depends(auth_middleware)
-):
-    """Update user's custom system prompt"""
-    if not user_service:
-        raise HTTPException(status_code=500, detail="Services not initialized")
-    
-    try:
-        return await user_service.update_custom_system_prompt(user_id, request)
-    except ValueError as e:
-        raise HTTPException(status_code=404, detail=str(e))
-    except Exception as e:
-        logger.error(f"Error updating custom system prompt: {e}")
-        raise HTTPException(status_code=500, detail="Failed to update custom system prompt")
-
-@router.get("/users/custom-prompt", response_model=CustomPromptResponse)
-async def get_custom_system_prompt(
-    user_id: str = Depends(auth_middleware)
-):
-    """Get user's custom system prompt"""
-    if not user_service:
-        raise HTTPException(status_code=500, detail="Services not initialized")
-    
-    try:
-        return await user_service.get_custom_system_prompt(user_id)
-    except ValueError as e:
-        raise HTTPException(status_code=404, detail=str(e))
-    except Exception as e:
-        logger.error(f"Error getting custom system prompt: {e}")
-        raise HTTPException(status_code=500, detail="Failed to get custom system prompt")
-
-@router.post("/users/custom-prompt/reset", response_model=CustomPromptResponse)
-async def reset_custom_system_prompt(
-    user_id: str = Depends(auth_middleware)
-):
-    """Reset user's custom system prompt to default"""
-    if not user_service:
-        raise HTTPException(status_code=500, detail="Services not initialized")
-    
-    try:
-        # Reset by passing None as custom prompt
-        request = CustomPromptRequest(custom_system_prompt=None)
-        return await user_service.update_custom_system_prompt(user_id, request)
-    except ValueError as e:
-        raise HTTPException(status_code=404, detail=str(e))
-    except Exception as e:
-        logger.error(f"Error resetting custom system prompt: {e}")
-        raise HTTPException(status_code=500, detail="Failed to reset custom system prompt")
 

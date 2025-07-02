@@ -39,7 +39,7 @@ class ElevenLabsService:
         voice_settings = VoiceSettings(
             stability=0.8,
             similarity_boost=1,
-            speed=1,
+            speed=0.9,
             use_speaker_boost=True
         )
 
@@ -52,6 +52,7 @@ class ElevenLabsService:
                 model_id=model_id,
                 voice_settings=voice_settings
             )
+
             
             # Convert generator to bytes if needed
             if hasattr(audio_data, '__iter__') and not isinstance(audio_data, (bytes, str)):

@@ -2,8 +2,7 @@ from typing import Optional
 import uuid
 import logging
 from db.users import UserDataRepository
-from ..models import User, UserCreate, UserResponse, CustomPromptRequest, CustomPromptResponse
-from .prompts import get_default_system_prompt
+from ..models import User, UserCreate, UserResponse
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +35,6 @@ class UserService:
                 email=user_data.email,
                 name=user_data.name,
                 username=user_data.username,
-                custom_system_prompt=user_data.custom_system_prompt,
                 fe_metadata=user_data.fe_metadata
             )
             
@@ -45,7 +43,6 @@ class UserService:
                 username=user.username,
                 email=user.email,
                 name=user.name,
-                custom_system_prompt=user.custom_system_prompt,
                 fe_metadata=user.fe_metadata,
                 created_at=user.created_at
             )
@@ -79,46 +76,4 @@ class UserService:
             return user is not None
         except Exception as e:
             logger.error(f"Error checking if user exists {user_id}: {e}")
-            return False
-    
-    async def update_custom_system_prompt(self, user_id: str, request: CustomPromptRequest) -> CustomPromptResponse:
-        """Update user's custom system prompt"""
-        try:
-            user = await self.user_repo.update_custom_system_prompt(user_id, request.custom_system_prompt)
-            if not user:
-                raise ValueError("User not found")
-            
-            # Check if it's the default prompt
-            default_prompt = get_default_system_prompt()
-            is_default = user.custom_system_prompt == default_prompt
-            
-            return CustomPromptResponse(
-                custom_system_prompt=user.custom_system_prompt,
-                is_default=is_default
-            )
-        except ValueError:
-            raise
-        except Exception as e:
-            logger.error(f"Error updating custom system prompt for user {user_id}: {e}")
-            raise Exception("Failed to update custom system prompt")
-    
-    async def get_custom_system_prompt(self, user_id: str) -> CustomPromptResponse:
-        """Get user's custom system prompt"""
-        try:
-            user = await self.get_user(user_id)
-            if not user:
-                raise ValueError("User not found")
-            
-            # Check if it's the default prompt
-            default_prompt = get_default_system_prompt()
-            is_default = user.custom_system_prompt == default_prompt
-            
-            return CustomPromptResponse(
-                custom_system_prompt=user.custom_system_prompt,
-                is_default=is_default
-            )
-        except ValueError:
-            raise
-        except Exception as e:
-            logger.error(f"Error getting custom system prompt for user {user_id}: {e}")
-            raise Exception("Failed to get custom system prompt") 
+            return False 

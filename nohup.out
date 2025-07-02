@@ -656,3 +656,1148 @@ INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-2
 INFO:db.chats.chat_db:Created message 971f6750-5a81-4c4a-805c-87a4c88e7f47 in chat 161387bb-70e6-43a7-ab2c-56e1888cd546
 INFO:app.api:Saved assistant message 971f6750-5a81-4c4a-805c-87a4c88e7f47 to chat 161387bb-70e6-43a7-ab2c-56e1888cd546
 INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created chat 6b2d72bb-3274-4710-a3e9-f4297cc276b5 for user user_2zHukxAuW6oB0n0orLYQxNcow40
+INFO:db.chats.chat_db:Created message 906f2eb7-e03a-4783-9cb4-b07682022447 in chat 6b2d72bb-3274-4710-a3e9-f4297cc276b5
+INFO:app.api:Saved user message 906f2eb7-e03a-4783-9cb4-b07682022447 to chat 6b2d72bb-3274-4710-a3e9-f4297cc276b5
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m11:53:31 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m11:53:31 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m11:53:32 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m11:53:34 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m11:53:38 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m11:53:40 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 1e3d7535-e33b-4d05-8ebd-f53d0167da42 in chat 6b2d72bb-3274-4710-a3e9-f4297cc276b5
+INFO:app.api:Saved assistant message 1e3d7535-e33b-4d05-8ebd-f53d0167da42 to chat 6b2d72bb-3274-4710-a3e9-f4297cc276b5
+[92m11:53:40 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m11:53:41 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m11:53:41 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 6b2d72bb-3274-4710-a3e9-f4297cc276b5 name to: Cosmic Connections: Brain and Universe
+INFO:app.services.chat_service:Updated chat 6b2d72bb-3274-4710-a3e9-f4297cc276b5 name to: Cosmic Connections: Brain and Universe
+INFO:app.api:Generated and saved chat name for 6b2d72bb-3274-4710-a3e9-f4297cc276b5: Cosmic Connections: Brain and Universe
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /chats/6b2d72bb-3274-4710-a3e9-f4297cc276b5 HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "GET /chats/6b2d72bb-3274-4710-a3e9-f4297cc276b5 HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "GET /chats/6b2d72bb-3274-4710-a3e9-f4297cc276b5 HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "GET /chats/6b2d72bb-3274-4710-a3e9-f4297cc276b5 HTTP/1.1" 200 OK
+INFO:     162.142.125.214:0 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.214:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.214:0 - "GET / HTTP/1.1" 200 OK
+INFO:     77.90.153.66:0 - "GET / HTTP/1.1" 200 OK
+INFO:     77.90.153.66:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     77.90.153.66:0 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     35.205.45.78:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.144.212.129:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     185.242.226.75:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     57.151.105.130:0 - "GET /ReportServer HTTP/1.1" 404 Not Found
+INFO:app.webhooks.clerk:Received webhook request
+INFO:app.webhooks.clerk:Verifying webhook signature
+INFO:app.webhooks.clerk:Webhook signature verified successfully
+INFO:app.webhooks.clerk:Processing webhook event type: user.created
+INFO:     54.216.8.72:0 - "POST /webhooks/clerk-webhook HTTP/1.1" 200 OK
+INFO:app.webhooks.clerk:Handling user.created event
+INFO:app.webhooks.clerk:Processing user creation
+INFO:app.webhooks.clerk:Creating user record for user_2zJtsWTE9mxIeBh9VPGoz3LiVoX
+INFO:db.users.user_db:Created user user_2zJtsWTE9mxIeBh9VPGoz3LiVoX with email chinchinoshi@gmail.com
+INFO:     188.58.82.253:0 - "OPTIONS /chats/6b2d72bb-3274-4710-a3e9-f4297cc276b5 HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     188.58.82.253:0 - "GET /chats/6b2d72bb-3274-4710-a3e9-f4297cc276b5 HTTP/1.1" 404 Not Found
+INFO:     95.8.177.218:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created chat 10abda00-fb2f-47a4-b4e2-fb4bda27198a for user user_2zJtsWTE9mxIeBh9VPGoz3LiVoX
+INFO:db.chats.chat_db:Created message 6f6c955a-fcea-4d07-bd8b-b8c8e239f2f9 in chat 10abda00-fb2f-47a4-b4e2-fb4bda27198a
+INFO:app.api:Saved user message 6f6c955a-fcea-4d07-bd8b-b8c8e239f2f9 to chat 10abda00-fb2f-47a4-b4e2-fb4bda27198a
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:00:43 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:00:43 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m13:00:43 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:00:43 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:00:46 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:00:49 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:00:51 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 5d63458a-42b5-46ea-82f1-1576c98218c4 in chat 10abda00-fb2f-47a4-b4e2-fb4bda27198a
+INFO:app.api:Saved assistant message 5d63458a-42b5-46ea-82f1-1576c98218c4 to chat 10abda00-fb2f-47a4-b4e2-fb4bda27198a
+[92m13:00:51 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m13:00:52 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m13:00:52 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 10abda00-fb2f-47a4-b4e2-fb4bda27198a name to: The Nature of Consciousness
+INFO:app.services.chat_service:Updated chat 10abda00-fb2f-47a4-b4e2-fb4bda27198a name to: The Nature of Consciousness
+INFO:app.api:Generated and saved chat name for 10abda00-fb2f-47a4-b4e2-fb4bda27198a: The Nature of Consciousness
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/prompts.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [59744]
+INFO:     Started server process [74747]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     95.8.177.218:0 - "OPTIONS /chats/10abda00-fb2f-47a4-b4e2-fb4bda27198a HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     95.8.177.218:0 - "GET /chats/10abda00-fb2f-47a4-b4e2-fb4bda27198a HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/llm.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [74747]
+INFO:     Started server process [74992]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/llm.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [74992]
+INFO:     Started server process [75128]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     149.86.227.49:40848 - "GET / HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/elevenlabs_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [75128]
+INFO:     Started server process [75278]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/prompts.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [75278]
+INFO:     Started server process [75491]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created chat 8378188b-b5da-4555-a0c1-9462e1245b0f for user user_2zJtsWTE9mxIeBh9VPGoz3LiVoX
+INFO:db.chats.chat_db:Created message e3a207e3-9d16-483b-b3b0-32f000f835d2 in chat 8378188b-b5da-4555-a0c1-9462e1245b0f
+INFO:app.api:Saved user message e3a207e3-9d16-483b-b3b0-32f000f835d2 to chat 8378188b-b5da-4555-a0c1-9462e1245b0f
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:04:26 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:04:26 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m13:04:26 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:04:27 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:04:29 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:04:35 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:04:38 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 18b91ea2-0e7e-4b52-9663-ae726cee832e in chat 8378188b-b5da-4555-a0c1-9462e1245b0f
+INFO:app.api:Saved assistant message 18b91ea2-0e7e-4b52-9663-ae726cee832e to chat 8378188b-b5da-4555-a0c1-9462e1245b0f
+[92m13:04:38 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m13:04:38 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m13:04:38 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 8378188b-b5da-4555-a0c1-9462e1245b0f name to: Exploring Cosmic Consciousness
+INFO:app.services.chat_service:Updated chat 8378188b-b5da-4555-a0c1-9462e1245b0f name to: Exploring Cosmic Consciousness
+INFO:app.api:Generated and saved chat name for 8378188b-b5da-4555-a0c1-9462e1245b0f: Exploring Cosmic Consciousness
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /chats/8378188b-b5da-4555-a0c1-9462e1245b0f HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "GET /chats/8378188b-b5da-4555-a0c1-9462e1245b0f HTTP/1.1" 200 OK
+INFO:     Will watch for changes in these directories: ['/root/russell-backend']
+ERROR:    [Errno 98] Address already in use
+INFO:     Will watch for changes in these directories: ['/root/russell-backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [76576] using WatchFiles
+INFO:     Started server process [76579]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     95.8.177.218:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created chat 1d058ef3-3650-4d89-8aa1-c7fccb0a9c90 for user user_2zJtsWTE9mxIeBh9VPGoz3LiVoX
+INFO:db.chats.chat_db:Created message ec3f395f-e1c1-48d2-b31c-59d60f44a999 in chat 1d058ef3-3650-4d89-8aa1-c7fccb0a9c90
+INFO:app.api:Saved user message ec3f395f-e1c1-48d2-b31c-59d60f44a999 to chat 1d058ef3-3650-4d89-8aa1-c7fccb0a9c90
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:16:58 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:16:58 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m13:16:58 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:16:58 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:17:01 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:17:06 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:17:08 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 4a543d77-fef9-456b-9982-60a664e783ad in chat 1d058ef3-3650-4d89-8aa1-c7fccb0a9c90
+INFO:app.api:Saved assistant message 4a543d77-fef9-456b-9982-60a664e783ad to chat 1d058ef3-3650-4d89-8aa1-c7fccb0a9c90
+[92m13:17:08 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m13:17:09 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m13:17:09 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 1d058ef3-3650-4d89-8aa1-c7fccb0a9c90 name to: The Nature of Existence and Consciousness
+INFO:app.services.chat_service:Updated chat 1d058ef3-3650-4d89-8aa1-c7fccb0a9c90 name to: The Nature of Existence and Consciousness
+INFO:app.api:Generated and saved chat name for 1d058ef3-3650-4d89-8aa1-c7fccb0a9c90: The Nature of Existence and Consciousness
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     172.234.246.109:36904 - "GET / HTTP/1.0" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.246.109:36922 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.246.109:36950 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     172.234.246.109:36966 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.246.109:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.234.246.109:37100 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.246.109:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.234.246.109:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.234.246.109:37116 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.246.109:50866 - "GET / HTTP/1.1" 200 OK
+INFO:     172.234.246.109:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.234.246.109:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/models.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [76579]
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/russell-backend/app/main.py", line 7, in <module>
+    from .api import router, set_services
+  File "/root/russell-backend/app/api.py", line 10, in <module>
+    from .models import (
+ImportError: cannot import name 'CustomPromptRequest' from 'app.models' (/root/russell-backend/app/models.py)
+WARNING:  WatchFiles detected changes in 'app/api.py'. Reloading...
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/russell-backend/app/main.py", line 7, in <module>
+    from .api import router, set_services
+  File "/root/russell-backend/app/api.py", line 13, in <module>
+    from .services import LLMService, VectorService, ChatService, UserService, TranscriptionService, ElevenLabsService
+  File "/root/russell-backend/app/services/__init__.py", line 4, in <module>
+    from .user_service import UserService
+  File "/root/russell-backend/app/services/user_service.py", line 5, in <module>
+    from ..models import User, UserCreate, UserResponse, CustomPromptRequest, CustomPromptResponse
+ImportError: cannot import name 'CustomPromptRequest' from 'app.models' (/root/russell-backend/app/models.py)
+WARNING:  WatchFiles detected changes in 'app/api.py'. Reloading...
+WARNING:  WatchFiles detected changes in 'app/models.py'. Reloading...
+Process SpawnProcess-4:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/russell-backend/app/main.py", line 7, in <module>
+    from .api import router, set_services
+  File "/root/russell-backend/app/api.py", line 13, in <module>
+    from .services import LLMService, VectorService, ChatService, UserService, TranscriptionService, ElevenLabsService
+  File "/root/russell-backend/app/services/__init__.py", line 4, in <module>
+    from .user_service import UserService
+  File "/root/russell-backend/app/services/user_service.py", line 5, in <module>
+    from ..models import User, UserCreate, UserResponse, CustomPromptRequest, CustomPromptResponse
+ImportError: cannot import name 'CustomPromptRequest' from 'app.models' (/root/russell-backend/app/models.py)
+Process SpawnProcess-5:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/russell-backend/app/main.py", line 7, in <module>
+    from .api import router, set_services
+  File "/root/russell-backend/app/api.py", line 13, in <module>
+    from .services import LLMService, VectorService, ChatService, UserService, TranscriptionService, ElevenLabsService
+  File "/root/russell-backend/app/services/__init__.py", line 4, in <module>
+    from .user_service import UserService
+  File "/root/russell-backend/app/services/user_service.py", line 5, in <module>
+    from ..models import User, UserCreate, UserResponse, CustomPromptRequest, CustomPromptResponse
+ImportError: cannot import name 'CustomPromptRequest' from 'app.models' (/root/russell-backend/app/models.py)
+WARNING:  WatchFiles detected changes in 'app/services/llm.py'. Reloading...
+Process SpawnProcess-6:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/russell-backend/app/main.py", line 7, in <module>
+    from .api import router, set_services
+  File "/root/russell-backend/app/api.py", line 13, in <module>
+    from .services import LLMService, VectorService, ChatService, UserService, TranscriptionService, ElevenLabsService
+  File "/root/russell-backend/app/services/__init__.py", line 4, in <module>
+    from .user_service import UserService
+  File "/root/russell-backend/app/services/user_service.py", line 5, in <module>
+    from ..models import User, UserCreate, UserResponse, CustomPromptRequest, CustomPromptResponse
+ImportError: cannot import name 'CustomPromptRequest' from 'app.models' (/root/russell-backend/app/models.py)
+WARNING:  WatchFiles detected changes in 'app/services/llm.py'. Reloading...
+Process SpawnProcess-7:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/russell-backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/russell-backend/app/main.py", line 7, in <module>
+    from .api import router, set_services
+  File "/root/russell-backend/app/api.py", line 13, in <module>
+    from .services import LLMService, VectorService, ChatService, UserService, TranscriptionService, ElevenLabsService
+  File "/root/russell-backend/app/services/__init__.py", line 4, in <module>
+    from .user_service import UserService
+  File "/root/russell-backend/app/services/user_service.py", line 5, in <module>
+    from ..models import User, UserCreate, UserResponse, CustomPromptRequest, CustomPromptResponse
+ImportError: cannot import name 'CustomPromptRequest' from 'app.models' (/root/russell-backend/app/models.py)
+WARNING:  WatchFiles detected changes in 'app/services/user_service.py'. Reloading...
+INFO:     Started server process [80960]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/chat_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [80960]
+WARNING:  WatchFiles detected changes in 'app/services/user_service.py'. Reloading...
+INFO:     Started server process [81118]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/chat_service.py'. Reloading...
+INFO:     Started server process [81146]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/chat_service.py'. Reloading...
+INFO:     Started server process [81168]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [81189]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81189]
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Started server process [81253]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Started server process [81287]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Started server process [81310]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Started server process [81322]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Started server process [81357]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Started server process [81381]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [81402]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81402]
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Started server process [81420]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [81456]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/websocket.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81456]
+WARNING:  WatchFiles detected changes in 'app/websocket.py'. Reloading...
+INFO:     Started server process [81540]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [81568]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/websocket.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81568]
+WARNING:  WatchFiles detected changes in 'app/websocket.py'. Reloading...
+INFO:     Started server process [81592]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [81613]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/websocket.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81613]
+WARNING:  WatchFiles detected changes in 'app/websocket.py'. Reloading...
+INFO:     Started server process [81667]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [81676]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/websocket.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81676]
+WARNING:  WatchFiles detected changes in 'app/websocket.py'. Reloading...
+INFO:     Started server process [81706]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [81721]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api_optimized.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81721]
+WARNING:  WatchFiles detected changes in 'app/services/parallel_processor.py'. Reloading...
+INFO:     Started server process [82002]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/websocket.py', 'app/api_optimized.py'. Reloading...
+INFO:     Started server process [82033]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api_optimized.py'. Reloading...
+INFO:     Started server process [82060]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [82082]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'db/users/user_db.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82082]
+WARNING:  WatchFiles detected changes in 'db/users/user_db.py'. Reloading...
+INFO:     Started server process [82152]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [82176]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/webhooks/clerk.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82176]
+WARNING:  WatchFiles detected changes in 'app/webhooks/clerk.py'. Reloading...
+INFO:     Started server process [82203]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [82215]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/prompts.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82215]
+WARNING:  WatchFiles detected changes in 'app/services/prompts.py'. Reloading...
+INFO:     Started server process [82288]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/webhooks/clerk.py'. Reloading...
+INFO:     Started server process [82316]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/prompts.py'. Reloading...
+INFO:     Started server process [82339]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [82370]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     95.8.177.218:0 - "OPTIONS /chats/1d058ef3-3650-4d89-8aa1-c7fccb0a9c90 HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     95.8.177.218:0 - "GET /chats/1d058ef3-3650-4d89-8aa1-c7fccb0a9c90 HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created chat 29674058-501d-47d8-a81a-b45b0b82144b for user user_2zJtsWTE9mxIeBh9VPGoz3LiVoX
+INFO:db.chats.chat_db:Created message 46f8b3f3-b467-459e-82e8-24ee2b90fde3 in chat 29674058-501d-47d8-a81a-b45b0b82144b
+INFO:app.api:Saved user message 46f8b3f3-b467-459e-82e8-24ee2b90fde3 to chat 29674058-501d-47d8-a81a-b45b0b82144b
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:29:25 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:29:25 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m13:29:25 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:29:26 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:29:29 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:29:35 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:29:38 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 287507d3-dd72-43e8-9a53-9a977b69f32c in chat 29674058-501d-47d8-a81a-b45b0b82144b
+INFO:app.api:Saved assistant message 287507d3-dd72-43e8-9a53-9a977b69f32c to chat 29674058-501d-47d8-a81a-b45b0b82144b
+[92m13:29:38 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m13:29:38 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m13:29:38 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 29674058-501d-47d8-a81a-b45b0b82144b name to: Understanding the Universe Through Physics
+INFO:app.services.chat_service:Updated chat 29674058-501d-47d8-a81a-b45b0b82144b name to: Understanding the Universe Through Physics
+INFO:app.api:Generated and saved chat name for 29674058-501d-47d8-a81a-b45b0b82144b: Understanding the Universe Through Physics
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/api_optimized.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82370]
+WARNING:  WatchFiles detected changes in 'app/api_optimized.py'. Reloading...
+INFO:     Started server process [82554]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [82573]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/prompts.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82573]
+INFO:     Started server process [82594]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api_optimized.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82594]
+WARNING:  WatchFiles detected changes in 'app/api_optimized.py'. Reloading...
+INFO:     Started server process [82632]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api_optimized.py'. Reloading...
+INFO:     Started server process [82652]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [82686]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     95.8.177.218:0 - "OPTIONS /chats/29674058-501d-47d8-a81a-b45b0b82144b HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     95.8.177.218:0 - "GET /chats/29674058-501d-47d8-a81a-b45b0b82144b HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /chats/29674058-501d-47d8-a81a-b45b0b82144b HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "GET /chats/29674058-501d-47d8-a81a-b45b0b82144b HTTP/1.1" 200 OK
+INFO:     24.133.193.11:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created chat 9160ce4c-61f6-422d-bbae-b7343379fbc4 for user user_2zHvVLKc0UofB58CcMUAKWoyCTZ
+INFO:db.chats.chat_db:Created message 4b208cd4-14b6-4743-969e-220c62e81464 in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved user message 4b208cd4-14b6-4743-969e-220c62e81464 to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:38:48 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:38:48 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m13:38:48 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:38:49 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:38:52 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:38:57 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:38:59 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 7539f119-bd88-4813-ae02-3c3ca54c5c0b in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved assistant message 7539f119-bd88-4813-ae02-3c3ca54c5c0b to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+[92m13:38:59 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m13:39:01 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m13:39:01 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 9160ce4c-61f6-422d-bbae-b7343379fbc4 name to: The Physics of Existence
+INFO:app.services.chat_service:Updated chat 9160ce4c-61f6-422d-bbae-b7343379fbc4 name to: The Physics of Existence
+INFO:app.api:Generated and saved chat name for 9160ce4c-61f6-422d-bbae-b7343379fbc4: The Physics of Existence
+INFO:     24.133.193.11:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     24.133.193.11:0 - "OPTIONS /chats/9160ce4c-61f6-422d-bbae-b7343379fbc4 HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     24.133.193.11:0 - "GET /chats/9160ce4c-61f6-422d-bbae-b7343379fbc4 HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created message 4b86a94f-0e81-4da1-86fc-f8f2ee158303 in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved user message 4b86a94f-0e81-4da1-86fc-f8f2ee158303 to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:40:09 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:40:09 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m13:40:09 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:40:10 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:40:13 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:40:17 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:40:19 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message d24e3a62-da13-4e6a-ae6f-d8688ea6283b in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved assistant message d24e3a62-da13-4e6a-ae6f-d8688ea6283b to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:     24.133.193.11:0 - "POST /query HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created message e63c80c2-fe91-41a8-b5db-dca067100dd7 in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved user message e63c80c2-fe91-41a8-b5db-dca067100dd7 to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:41:39 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:41:39 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m13:41:39 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:41:39 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:41:42 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:41:47 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:41:49 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message daa82cf1-2226-4c61-bf23-606305216088 in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved assistant message daa82cf1-2226-4c61-bf23-606305216088 to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:     24.133.193.11:0 - "POST /query HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created message aadde458-6f9a-480b-a75d-2848c5ee7af5 in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved user message aadde458-6f9a-480b-a75d-2848c5ee7af5 to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:47:09 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:47:09 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m13:47:09 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:47:10 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:47:12 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:47:17 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:47:19 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 7ffc0b8a-2641-48bd-9f1e-048212f724bd in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved assistant message 7ffc0b8a-2641-48bd-9f1e-048212f724bd to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:     24.133.193.11:0 - "POST /query HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created message db17d07f-d9dd-40da-8629-fc8d1ad4c5dc in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved user message db17d07f-d9dd-40da-8629-fc8d1ad4c5dc to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:48:06 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:48:06 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:     149.86.227.49:48594 - "GET / HTTP/1.1" 200 OK
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:48:07 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:48:09 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:48:14 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:48:17 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message fcb7254f-1a05-4fd9-8b82-ae23307ae018 in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved assistant message fcb7254f-1a05-4fd9-8b82-ae23307ae018 to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:     24.133.193.11:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     24.133.193.11:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created message 1d3bb848-1ce6-4a9d-a637-408f9cebcbf4 in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved user message 1d3bb848-1ce6-4a9d-a637-408f9cebcbf4 to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m13:48:54 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m13:48:54 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m13:48:54 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m13:48:54 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m13:48:58 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m13:49:03 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m13:49:04 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 1eba9fd9-652a-4e77-b93d-520646af7e8e in chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:app.api:Saved assistant message 1eba9fd9-652a-4e77-b93d-520646af7e8e to chat 9160ce4c-61f6-422d-bbae-b7343379fbc4
+INFO:     24.133.193.11:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     194.26.192.144:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     66.249.79.131:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     66.249.72.108:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     185.190.24.24:0 - "GET / HTTP/1.1" 200 OK
+INFO:     185.190.24.24:0 - "GET / HTTP/1.1" 200 OK

@@ -50,9 +50,9 @@ async def optimized_query_endpoint(
         if not user_exists:
             raise HTTPException(status_code=404, detail="User not found")
         
-        # 2. Get user to access custom system prompt
+        # 2. Get user
         user = await user_service.get_user(user_id)
-        user_custom_prompt = user.custom_system_prompt if user else None
+
         
         # 3. Get or create chat
         chat = await chat_service.get_or_create_chat(user_id, request.chat_id)
@@ -62,7 +62,6 @@ async def optimized_query_endpoint(
             return await handle_voice_query_optimized(
                 request=request,
                 chat=chat,
-                user_custom_prompt=user_custom_prompt,
                 llm_service=llm_service,
                 vector_service=vector_service,
                 elevenlabs_service=elevenlabs_service,
@@ -75,7 +74,6 @@ async def optimized_query_endpoint(
             return await handle_voice_query_optimized(
                 request=request,
                 chat=chat,
-                user_custom_prompt=user_custom_prompt,
                 llm_service=llm_service,
                 vector_service=vector_service,
                 elevenlabs_service=elevenlabs_service,
@@ -93,7 +91,6 @@ async def optimized_query_endpoint(
 async def handle_voice_query_optimized(
     request: QueryRequest,
     chat,
-    user_custom_prompt: Optional[str],
     llm_service: LLMService,
     vector_service: VectorService,
     elevenlabs_service: ElevenLabsService,
@@ -139,8 +136,7 @@ async def handle_voice_query_optimized(
         async for chunk in llm_service.stream_with_context(
             request.query, 
             context, 
-            chat_history,  # Include chat history for context
-            user_custom_prompt
+            chat_history  # Include chat history for context
         ):
             full_response += chunk
             llm_metrics.record_chunk(len(chunk))

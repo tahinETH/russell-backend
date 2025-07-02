@@ -3,7 +3,6 @@ from sqlalchemy.future import select
 from sqlalchemy.exc import IntegrityError
 from app.database import AsyncSessionLocal
 from app.models import User
-from app.services.prompts import get_default_system_prompt
 import logging
 from typing import Optional, Dict, Any
 
@@ -18,22 +17,16 @@ class UserDataRepository:
         email: str,
         name: Optional[str] = None,
         username: Optional[str] = None,
-        custom_system_prompt: Optional[str] = None,
         fe_metadata: Optional[Dict[str, Any]] = None
     ) -> User:
         """Create a new user"""
         async with AsyncSessionLocal() as session:
             try:
-                # If no custom prompt provided, use default
-                if custom_system_prompt is None:
-                    custom_system_prompt = get_default_system_prompt()
-                
                 user = User(
                     id=user_id,
                     email=email,
                     name=name,
                     username=username,
-                    custom_system_prompt=custom_system_prompt,
                     fe_metadata=fe_metadata
                 )
                 
@@ -156,34 +149,4 @@ class UserDataRepository:
     async def user_exists(self, user_id: str) -> bool:
         """Check if user exists"""
         user = await self.get_user(user_id)
-        return user is not None
-
-    async def update_custom_system_prompt(self, user_id: str, custom_prompt: Optional[str]) -> Optional[User]:
-        """Update user's custom system prompt. If custom_prompt is None, reset to default."""
-        async with AsyncSessionLocal() as session:
-            try:
-                result = await session.execute(
-                    select(User).where(User.id == user_id)
-                )
-                user = result.scalar_one_or_none()
-                
-                if not user:
-                    logger.warning(f"User {user_id} not found for custom prompt update")
-                    return None
-                
-                # If None, reset to default
-                if custom_prompt is None:
-                    user.custom_system_prompt = get_default_system_prompt()
-                else:
-                    user.custom_system_prompt = custom_prompt
-                
-                await session.commit()
-                await session.refresh(user)
-                
-                logger.info(f"Updated custom system prompt for user {user_id}")
-                return user
-                
-            except Exception as e:
-                await session.rollback()
-                logger.error(f"Error updating custom system prompt for user {user_id}: {str(e)}")
-                raise 
+        return user is not None 

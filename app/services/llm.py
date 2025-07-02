@@ -16,8 +16,7 @@ class LLMService:
         self, 
         query: str, 
         context: List[Dict],
-        chat_history: List[Dict] = None,
-        custom_system_prompt: str = None
+        chat_history: List[Dict] = None
     ) -> AsyncGenerator[str, None]:
         """Stream LLM response with provided context and chat history"""
         # Build prompt with context
@@ -35,11 +34,8 @@ class LLMService:
             context_text = "\n\n".join(context_items) """
         
         
-        # Use custom system prompt if provided, otherwise use default
-        if custom_system_prompt:
-            system_message = custom_system_prompt
-        else:
-            system_message = prepare_query_system_prompt()
+        # Use default system prompt
+        system_message = prepare_query_system_prompt()
         
         user_message = prepare_query_user_prompt(query, context_text, chat_history)
         
