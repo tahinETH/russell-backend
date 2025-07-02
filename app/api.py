@@ -58,7 +58,8 @@ async def query_endpoint(
     request: QueryRequest,
     user_id: str = Depends(auth_middleware)
 ):
-
+    
+    
     if not chat_service or not user_service:
         raise HTTPException(status_code=500, detail="Services not initialized")
     

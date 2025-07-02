@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     
     # LiteLLM
     #llm_model: str = "claude-3-5-sonnet-latest"
+    #llm_model: str = "claude-3-opus-20240229"
     llm_model: str = "claude-opus-4-20250514"
     
     # Pinecone - using your variable names

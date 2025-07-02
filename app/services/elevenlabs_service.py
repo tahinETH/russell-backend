@@ -30,32 +30,27 @@ class ElevenLabsService:
         model_id: Optional[str] = None,
         output_format: str = "mp3_44100_128"
     ) -> bytes:
-        """
-        Convert text to speech using ElevenLabs API
-        
-        Args:
-            text: Text to convert to speech
-            voice_id: Optional voice ID override
-            model_id: Optional model ID override
-            output_format: Audio output format
-            
-        Returns:
-            Audio data as bytes
-        """
         if not self.client:
             logger.error("ElevenLabs API key not configured")
             raise ValueError("ElevenLabs service not configured")
         
         voice_id = voice_id or self.voice_id
         model_id = model_id or self.model_id
-        
+        voice_settings = VoiceSettings(
+            stability=0.8,
+            similarity_boost=1,
+            speed=1,
+            use_speaker_boost=True
+        )
+
         try:
             # Use the convert method as specified
             audio_data = self.client.text_to_speech.convert(
                 voice_id=voice_id,
                 output_format=output_format,
                 text=text,
-                model_id=model_id
+                model_id=model_id,
+                voice_settings=voice_settings
             )
             
             # Convert generator to bytes if needed
@@ -106,8 +101,8 @@ class ElevenLabsService:
         model_id = model_id or self.model_id
         voice_settings = VoiceSettings(
             stability=0.8,
-            similarity_boost=0.9,
-            speed=1.2,
+            similarity_boost=1,
+            speed=0.8,
             use_speaker_boost=True
         )
         

@@ -1,0 +1,658 @@
+INFO:     Will watch for changes in these directories: ['/root/russell-backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [39550] using WatchFiles
+INFO:     Started server process [39553]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     88.230.93.58:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created chat e1a36e2e-59d5-4185-a9ae-cf27285a015e for user user_2zHukxAuW6oB0n0orLYQxNcow40
+INFO:db.chats.chat_db:Created message c3e090ef-6146-48e0-9b03-5a4650857d63 in chat e1a36e2e-59d5-4185-a9ae-cf27285a015e
+INFO:app.api:Saved user message c3e090ef-6146-48e0-9b03-5a4650857d63 to chat e1a36e2e-59d5-4185-a9ae-cf27285a015e
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m08:08:00 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m08:08:00 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m08:08:00 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-3-5-sonnet-latest
+[92m08:08:01 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m08:08:02 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+[92m08:08:04 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m08:08:05 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:db.chats.chat_db:Created message 756e839d-58e8-47fe-8304-42a67fce4eed in chat e1a36e2e-59d5-4185-a9ae-cf27285a015e
+INFO:app.api:Saved assistant message 756e839d-58e8-47fe-8304-42a67fce4eed to chat e1a36e2e-59d5-4185-a9ae-cf27285a015e
+[92m08:08:05 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m08:08:06 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m08:08:06 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat e1a36e2e-59d5-4185-a9ae-cf27285a015e name to: Fascination with Cosmic Origins
+INFO:app.services.chat_service:Updated chat e1a36e2e-59d5-4185-a9ae-cf27285a015e name to: Fascination with Cosmic Origins
+INFO:app.api:Generated and saved chat name for e1a36e2e-59d5-4185-a9ae-cf27285a015e: Fascination with Cosmic Origins
+INFO:     88.230.93.58:0 - "POST /query HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/elevenlabs_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39553]
+INFO:     Started server process [39693]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/elevenlabs_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39693]
+INFO:     Started server process [39728]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/elevenlabs_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39728]
+INFO:     Started server process [39759]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     88.230.93.58:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     88.230.93.58:0 - "POST /query HTTP/1.1" 401 Unauthorized
+INFO:     88.230.93.58:0 - "OPTIONS /chats/e1a36e2e-59d5-4185-a9ae-cf27285a015e HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     88.230.93.58:0 - "GET /chats/e1a36e2e-59d5-4185-a9ae-cf27285a015e HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created chat 04aa8a88-3d10-4555-ab75-861ded80dcfd for user user_2zHukxAuW6oB0n0orLYQxNcow40
+INFO:db.chats.chat_db:Created message 7a09f862-4a57-4b7c-a3ff-9c0e51326ca0 in chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:app.api:Saved user message 7a09f862-4a57-4b7c-a3ff-9c0e51326ca0 to chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m08:15:28 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m08:15:28 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m08:15:28 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-3-5-sonnet-latest
+[92m08:15:28 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m08:15:30 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+[92m08:15:32 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m08:15:33 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:db.chats.chat_db:Created message 06aa755c-e275-4b6a-a6f4-44b945b11fd9 in chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:app.api:Saved assistant message 06aa755c-e275-4b6a-a6f4-44b945b11fd9 to chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+[92m08:15:33 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m08:15:34 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m08:15:34 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 04aa8a88-3d10-4555-ab75-861ded80dcfd name to: The Cosmic Age of Our Voices
+INFO:app.services.chat_service:Updated chat 04aa8a88-3d10-4555-ab75-861ded80dcfd name to: The Cosmic Age of Our Voices
+INFO:app.api:Generated and saved chat name for 04aa8a88-3d10-4555-ab75-861ded80dcfd: The Cosmic Age of Our Voices
+INFO:     88.230.93.58:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "OPTIONS /chats/04aa8a88-3d10-4555-ab75-861ded80dcfd HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/04aa8a88-3d10-4555-ab75-861ded80dcfd HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/elevenlabs_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39759]
+INFO:     Started server process [40632]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/elevenlabs_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40632]
+INFO:     Started server process [40836]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created message bddcdf76-5c95-4360-b41a-b943266690bd in chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:app.api:Saved user message bddcdf76-5c95-4360-b41a-b943266690bd to chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m08:17:18 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m08:17:18 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m08:17:18 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-3-5-sonnet-latest
+[92m08:17:19 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m08:17:21 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+[92m08:17:23 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m08:17:24 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:db.chats.chat_db:Created message 2f3e477a-94e4-4d8b-8776-35bd2eebf35c in chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:app.api:Saved assistant message 2f3e477a-94e4-4d8b-8776-35bd2eebf35c to chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:     88.230.93.58:0 - "POST /query HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/elevenlabs_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40836]
+INFO:     Started server process [40913]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40913]
+INFO:     Started server process [42168]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     88.230.93.58:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created message 036ff99c-1dca-4c60-993c-95d9af720b34 in chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:app.api:Saved user message 036ff99c-1dca-4c60-993c-95d9af720b34 to chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m08:28:50 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m08:28:50 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m08:28:50 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-3-opus-20240229
+[92m08:28:51 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m08:28:52 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+[92m08:28:56 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m08:28:58 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:db.chats.chat_db:Created message 2f8db233-2468-451a-8ef0-17e4c820bcca in chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:app.api:Saved assistant message 2f8db233-2468-451a-8ef0-17e4c820bcca to chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:     88.230.93.58:0 - "POST /query HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/elevenlabs_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [42168]
+INFO:     Started server process [42355]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created message cffe5711-5d2c-4ef0-9286-1c03e7e619d0 in chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:app.api:Saved user message cffe5711-5d2c-4ef0-9286-1c03e7e619d0 to chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m08:30:05 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m08:30:05 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m08:30:05 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-3-opus-20240229
+[92m08:30:06 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m08:30:07 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+[92m08:30:12 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m08:30:14 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:db.chats.chat_db:Created message 86fe2693-54ae-441b-aef1-47008dfe0fe4 in chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:app.api:Saved assistant message 86fe2693-54ae-441b-aef1-47008dfe0fe4 to chat 04aa8a88-3d10-4555-ab75-861ded80dcfd
+INFO:     88.230.93.58:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     5.250.187.42:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     5.250.187.42:0 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     185.177.72.210:0 - "GET /.aws/config HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.AWS_/credentials HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env.bak HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env.example HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env.local HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env.old HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env.prod HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env.production HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env.production.local HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env.sample HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env.stage HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.envs/.production/.django HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.travis.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.vscode/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /_phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /_profiler/phpinfo/info.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /_profiler/phpinfo/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /?phpinfo=1 HTTP/1.1" 200 OK
+INFO:     185.177.72.210:0 - "GET /admin/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /admin/config HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /admin/config?cmd=cat+/root/.aws/credentials HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /admin/controllers/merchant.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /admin/controllers/partner.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /admin/server_info.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /api/config.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /api/config/config.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /api/config.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /api/objects/codes.php.save HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /api/shared/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /api/shared/config.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /api/shared/config/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /api/shared/config/config.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /app.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /app/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /app/config/parameters.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /app_dev.php/_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /appsettings.json HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /application/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /application.properties HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /apps/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /aws-secret.yaml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /aws.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /aws/credentials HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /awstats/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /backend/config/default.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /backend/config/development.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /backend/config/settings.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /blog.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /cloud/Scraper.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /conf/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/application.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/aws.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/config.json HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/constants.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/local.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/parameters.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/secrets.json HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/settings.json HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/settings.local HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/settings.prod HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config/storage.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config.yaml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /controller/admin/post.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /controller/api/post.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /controllers/settings.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /core/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /crm/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /cron/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /dashboard/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /debug/default/view HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /development/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /dev/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /docker/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /docker/app/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /env/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /env.backup HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /gatsby-config.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /getcpuutil.php-bakworking HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /helper.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /helper/EmailHelper.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /i.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /index.html HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /index.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /info.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /js/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /js/main.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /karma.conf.json HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /kyc/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /lara/info.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /lara/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /laravel/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /laravel/core/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /laravel/info.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /library/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /local/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /main.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /main.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /main/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /mail/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /mailer/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /my_env/chakaash.py HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /my_env/newsletter.py HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /my_env/palash.py HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /myproject/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /mytest/astech_robot.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /new/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /new/.env.local HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /new/.env.production HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /new/.env.staging HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /nginx/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /node/.env_example HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /node-api/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /node_modules/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /nextjs-app/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /partner/config/config.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /p.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /phpinfo HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /portal/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /prod/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /public/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /public/js/main.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /react-app/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /react-app/.env.production HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /scripts/nodemailer.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /s3.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /secured/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /server-info HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /server-info.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /server.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /server/config/database.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /service/email_service.py HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /settings.py HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /shared/config/config.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /site/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /sms.py HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /static/js/main.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /storage/logs/laravel.log HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /swagger.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /swagger.json HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /test.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /test_phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /user/config/config.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /user/controllers/index.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /vendor/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /web/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /website/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /wp-config HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /wp-config.php.bak HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /wp-content/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /xampp/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /xampp/phpinfo.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET / HTTP/1.1" 200 OK
+INFO:     185.177.72.210:0 - "GET /www/.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config.env HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.env_sample HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /static/js/main.141b0494.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /static/js/2.ca066a4b.chunk.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /static/js/main.e85f7a37.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /server_info.php HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /app.py HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /apis/config/config.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /apis/controllers/users.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /configs/routes-4aug.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /configs/routes.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /configs/s3_config.json HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /.circleci/configs/development.yml HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /helpers/utility.js HTTP/1.1" 404 Not Found
+INFO:     185.177.72.210:0 - "GET /server/s3.js HTTP/1.1" 404 Not Found
+INFO:     138.246.253.24:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     18.237.230.227:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:54516 - "GET / HTTP/1.1" 200 OK
+INFO:     194.163.152.77:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:52118 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.123:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     198.55.98.91:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     95.8.177.218:0 - "OPTIONS /chats/04aa8a88-3d10-4555-ab75-861ded80dcfd HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     95.8.177.218:0 - "GET /chats/04aa8a88-3d10-4555-ab75-861ded80dcfd HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /query HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created chat 93687c0c-d303-4e58-9238-d9cd08ccdea1 for user user_2zHukxAuW6oB0n0orLYQxNcow40
+INFO:db.chats.chat_db:Created message 43753b65-de4f-4fb3-9288-d2d687327c1a in chat 93687c0c-d303-4e58-9238-d9cd08ccdea1
+INFO:app.api:Saved user message 43753b65-de4f-4fb3-9288-d2d687327c1a to chat 93687c0c-d303-4e58-9238-d9cd08ccdea1
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m11:27:11 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m11:27:11 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m11:27:11 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-3-opus-20240229
+[92m11:27:12 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m11:27:13 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+[92m11:27:17 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m11:27:19 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:db.chats.chat_db:Created message 58a47faf-94d5-432a-952c-d5c508291220 in chat 93687c0c-d303-4e58-9238-d9cd08ccdea1
+INFO:app.api:Saved assistant message 58a47faf-94d5-432a-952c-d5c508291220 to chat 93687c0c-d303-4e58-9238-d9cd08ccdea1
+[92m11:27:19 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m11:27:20 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m11:27:20 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 93687c0c-d303-4e58-9238-d9cd08ccdea1 name to: Consequences of Falling into a Black Hole
+INFO:app.services.chat_service:Updated chat 93687c0c-d303-4e58-9238-d9cd08ccdea1 name to: Consequences of Falling into a Black Hole
+INFO:app.api:Generated and saved chat name for 93687c0c-d303-4e58-9238-d9cd08ccdea1: Consequences of Falling into a Black Hole
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created message c3d2106b-4696-408e-bb89-112ee26507d5 in chat 93687c0c-d303-4e58-9238-d9cd08ccdea1
+INFO:app.api:Saved user message c3d2106b-4696-408e-bb89-112ee26507d5 to chat 93687c0c-d303-4e58-9238-d9cd08ccdea1
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m11:27:43 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m11:27:43 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-3-opus-20240229
+[92m11:27:44 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m11:27:45 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+[92m11:27:50 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m11:27:52 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:db.chats.chat_db:Created message 1d5cdc6c-9c74-4164-af73-adea37c20bdd in chat 93687c0c-d303-4e58-9238-d9cd08ccdea1
+INFO:app.api:Saved assistant message 1d5cdc6c-9c74-4164-af73-adea37c20bdd to chat 93687c0c-d303-4e58-9238-d9cd08ccdea1
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /chats/93687c0c-d303-4e58-9238-d9cd08ccdea1 HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "GET /chats/93687c0c-d303-4e58-9238-d9cd08ccdea1 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [42355]
+INFO:     Started server process [59425]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created chat 1cb21629-37cb-4faf-90c1-1b72f15e17fb for user user_2zHukxAuW6oB0n0orLYQxNcow40
+INFO:db.chats.chat_db:Created message 8bb8d592-afc0-4ec5-9ebb-2693c7b164ef in chat 1cb21629-37cb-4faf-90c1-1b72f15e17fb
+INFO:app.api:Saved user message 8bb8d592-afc0-4ec5-9ebb-2693c7b164ef to chat 1cb21629-37cb-4faf-90c1-1b72f15e17fb
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m11:28:20 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m11:28:20 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m11:28:20 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m11:28:20 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m11:28:22 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m11:28:28 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m11:28:30 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message bd04d46e-5545-4e1b-9c6d-b92a30502f01 in chat 1cb21629-37cb-4faf-90c1-1b72f15e17fb
+INFO:app.api:Saved assistant message bd04d46e-5545-4e1b-9c6d-b92a30502f01 to chat 1cb21629-37cb-4faf-90c1-1b72f15e17fb
+[92m11:28:30 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m11:28:31 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m11:28:31 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 1cb21629-37cb-4faf-90c1-1b72f15e17fb name to: Experiencing a Black Hole Fall
+INFO:app.services.chat_service:Updated chat 1cb21629-37cb-4faf-90c1-1b72f15e17fb name to: Experiencing a Black Hole Fall
+INFO:app.api:Generated and saved chat name for 1cb21629-37cb-4faf-90c1-1b72f15e17fb: Experiencing a Black Hole Fall
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /chats/1cb21629-37cb-4faf-90c1-1b72f15e17fb HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "GET /chats/1cb21629-37cb-4faf-90c1-1b72f15e17fb HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/prompts.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [59425]
+INFO:     Started server process [59744]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:db.chats.chat_db:Created chat 161387bb-70e6-43a7-ab2c-56e1888cd546 for user user_2zHukxAuW6oB0n0orLYQxNcow40
+INFO:db.chats.chat_db:Created message 1c156bb0-462e-4326-be01-254a2c7e537e in chat 161387bb-70e6-43a7-ab2c-56e1888cd546
+INFO:app.api:Saved user message 1c156bb0-462e-4326-be01-254a2c7e537e to chat 161387bb-70e6-43a7-ab2c-56e1888cd546
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m11:30:15 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m11:30:15 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m11:30:15 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m11:30:15 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m11:30:18 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m11:30:24 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m11:30:26 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 6a32228f-eb0e-4fac-9819-041e2fca683e in chat 161387bb-70e6-43a7-ab2c-56e1888cd546
+INFO:app.api:Saved assistant message 6a32228f-eb0e-4fac-9819-041e2fca683e to chat 161387bb-70e6-43a7-ab2c-56e1888cd546
+[92m11:30:26 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m11:30:26 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m11:30:26 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 161387bb-70e6-43a7-ab2c-56e1888cd546 name to: Journey Through a Black Hole
+INFO:app.services.chat_service:Updated chat 161387bb-70e6-43a7-ab2c-56e1888cd546 name to: Journey Through a Black Hole
+INFO:app.api:Generated and saved chat name for 161387bb-70e6-43a7-ab2c-56e1888cd546: Journey Through a Black Hole
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "OPTIONS /chats/161387bb-70e6-43a7-ab2c-56e1888cd546 HTTP/1.1" 200 OK
+INFO:     95.8.177.218:0 - "GET /chats/161387bb-70e6-43a7-ab2c-56e1888cd546 HTTP/1.1" 200 OK
+INFO:db.chats.chat_db:Created message 9c9c5cb6-1089-432d-9f52-9f59a6b18cb8 in chat 161387bb-70e6-43a7-ab2c-56e1888cd546
+INFO:app.api:Saved user message 9c9c5cb6-1089-432d-9f52-9f59a6b18cb8 to chat 161387bb-70e6-43a7-ab2c-56e1888cd546
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m11:31:37 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m11:31:37 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m11:31:37 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m11:31:37 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m11:31:39 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m11:31:45 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+[92m11:31:47 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 971f6750-5a81-4c4a-805c-87a4c88e7f47 in chat 161387bb-70e6-43a7-ab2c-56e1888cd546
+INFO:app.api:Saved assistant message 971f6750-5a81-4c4a-805c-87a4c88e7f47 to chat 161387bb-70e6-43a7-ab2c-56e1888cd546
+INFO:     95.8.177.218:0 - "POST /query HTTP/1.1" 200 OK

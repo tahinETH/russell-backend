@@ -4,3 +4,4 @@ GiantCodebase.md
 venv
 *.db
 __pycache__
+.env
