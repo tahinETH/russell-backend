@@ -109,53 +109,22 @@ class ElevenLabsService:
         
         
         try:
-            # Try to use the streaming endpoint if available
-            # Check if the client has a streaming method
-            if hasattr(self.client.text_to_speech, 'convert_as_stream'):
-                # Use the streaming endpoint
-                audio_stream = self.client.text_to_speech.convert_as_stream(
-                    voice_id=voice_id,
-                    output_format=output_format,
-                    text=text,
-                    model_id=model_id,
-                    optimize_streaming_latency=optimize_streaming_latency,
-                    stream_chunk_size=stream_chunk_size,
-                    voice_settings=voice_settings
-                )
-                
-                # Stream the chunks directly
-                for chunk in audio_stream:
-                    if chunk:
-                        yield chunk
-            else:
-                # Fallback to the regular method with manual chunking
-                # Run the sync method in a thread pool to avoid blocking
-                loop = asyncio.get_event_loop()
-                
-                audio_stream = await loop.run_in_executor(
-                    None,
-                    lambda: self.client.text_to_speech.convert(
-                        voice_id=voice_id,
-                        output_format=output_format,
-                        text=text,
-                        model_id=model_id,
-                        stream=True  # Enable streaming if supported
-                    )
-                )
-                
-                # If we get a generator/iterator, stream the chunks
-                if hasattr(audio_stream, '__iter__') and not isinstance(audio_stream, (bytes, str)):
-                    for chunk in audio_stream:
-                        if chunk:
-                            yield chunk
-                            # Small delay to prevent overwhelming the client
-                            await asyncio.sleep(0.001)
-                else:
-                    # If we get bytes directly, chunk them manually
-                    if isinstance(audio_stream, bytes):
-                        for i in range(0, len(audio_stream), chunk_size):
-                            yield audio_stream[i:i + chunk_size]
-                            await asyncio.sleep(0.001)
+            # Use the stream() method as per the official API
+            audio_stream = self.client.text_to_speech.stream(
+                voice_id=voice_id,
+                output_format=output_format,
+                text=text,
+                model_id=model_id,
+                voice_settings=voice_settings
+            )
+            
+            # Stream the chunks directly
+            for chunk in audio_stream:
+                if chunk:
+                    yield chunk
+                    # Small delay to prevent overwhelming the client
+                    await asyncio.sleep(0.001)
+                    
         except Exception as e:
             logger.error(f"Error in text-to-speech streaming: {e}")
             raise

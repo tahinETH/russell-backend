@@ -2,7 +2,7 @@ import litellm
 from typing import List, Dict, AsyncGenerator, Optional
 import asyncio
 import logging
-from .prompts import prepare_name_generation_prompt, prepare_query_system_prompt, prepare_query_user_prompt, prepare_blackholes_lesson_prompt
+from .prompts import prepare_name_generation_prompt, prepare_query_system_prompt, prepare_query_user_prompt, prepare_blackholes_lesson_prompt, prepare_image_generation_prompt
 import os
 
 logger = logging.getLogger(__name__)
@@ -177,3 +177,42 @@ class LLMService:
                     return " ".join(words).title() or "New Chat"
                 else:
                     continue 
+
+    async def generate_image_prompt(self, user_query: str, ai_response: str) -> Optional[str]:
+        """Generate an image generation prompt based on user query and AI response using gpt-4o"""
+        try:
+            prompt = prepare_image_generation_prompt(user_query, ai_response)
+            
+            response = await litellm.acompletion(
+                model="gpt-4o",
+                messages=[
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=150,
+                temperature=0.7
+            )
+            
+            image_prompt = response.choices[0].message.content.strip()
+            logger.info(f"Generated image prompt: {image_prompt}")
+            return image_prompt
+            
+        except Exception as e:
+            logger.error(f"Failed to generate image prompt: {str(e)}")
+            # Try with fallback model
+            try:
+                response = await litellm.acompletion(
+                    model=self.fallback_model,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ],
+                    max_tokens=150,
+                    temperature=0.7
+                )
+                
+                image_prompt = response.choices[0].message.content.strip()
+                logger.info(f"Generated image prompt with fallback: {image_prompt}")
+                return image_prompt
+                
+            except Exception as fallback_error:
+                logger.error(f"Fallback image prompt generation also failed: {str(fallback_error)}")
+                return None 

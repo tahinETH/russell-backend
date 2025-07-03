@@ -11,6 +11,25 @@ Assistant: {ai_response[:1000]}...
 Generate only the title, nothing else. Make it concise and descriptive."""
 
 
+def prepare_image_generation_prompt(user_query: str, ai_response: str) -> str:
+    """Generate a prompt for creating an image that complements the AI response"""
+    # TODO: Replace this with the actual prompt template you want to use
+    return f"""Based on the following AI response to a user query, create a detailed image generation prompt that would produce a visually appealing and relevant image to accompany the response.
+
+User Query: {user_query}
+
+AI Response: {ai_response}
+
+Create a concise, descriptive image prompt that:
+1. Captures the essence of the topic discussed
+2. Is visually interesting and educational
+3. Avoids text in the image
+4. Uses a style appropriate for educational content
+5. Focuses on the main concept or visualization that would help understand the response
+
+Generate only the image prompt, nothing else. Make it detailed but concise (1-2 sentences)."""
+
+
 def prepare_query_system_prompt() -> str:
     current_date = datetime.now().strftime("%B %d, %Y")
 

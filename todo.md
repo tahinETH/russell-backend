@@ -1,0 +1,2 @@
+- voice streaming 
+- remember image url with the relevant message id
