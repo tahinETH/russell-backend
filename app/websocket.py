@@ -145,6 +145,7 @@ async def websocket_chat_endpoint(websocket: WebSocket):
         while True:
             try:
                 data = await websocket.receive_text()
+                print("data", data)
                 
                 message = json.loads(data)
                 
@@ -246,7 +247,7 @@ async def stream_voice_response(user_id: str, full_text: str, chat_id: str):
             "chat_id": chat_id
         })
 
-async def stream_image_response(user_id: str, user_query: str, full_text: str, chat_id: str, assistant_message_id: str):
+async def stream_image_response(user_id: str, user_query: str, full_text: str, chat_id: str, assistant_message_id: str, lesson: Optional[str] = None):
     """Generate and stream image based on the AI response"""
     try:
         logger.info(f"Starting image generation for user {user_id}")
@@ -262,8 +263,8 @@ async def stream_image_response(user_id: str, user_query: str, full_text: str, c
             return
         
         # 1. Generate image prompt using GPT-4o
-        image_prompt = await llm_service.generate_image_prompt(user_query, full_text)
-        
+        image_prompt = await llm_service.generate_image_prompt(user_query, full_text, lesson)
+
         if not image_prompt:
             logger.warning("Failed to generate image prompt")
             return
@@ -272,7 +273,8 @@ async def stream_image_response(user_id: str, user_query: str, full_text: str, c
         await manager.send_message(user_id, {
             "type": "image_start",
             "chat_id": chat_id,
-            "prompt": image_prompt
+            "prompt": image_prompt,
+            "lesson": lesson
         })
         
         # 2. Stream image generation with Fal
@@ -313,7 +315,8 @@ async def stream_image_response(user_id: str, user_query: str, full_text: str, c
                         "type": "image_complete",
                         "chat_id": chat_id,
                         "image_url": image_url,
-                        "prompt": image_prompt
+                        "prompt": image_prompt,
+                        "lesson": lesson
                     })
                     logger.info(f"Image generation completed for user {user_id}")
                 else:
@@ -352,6 +355,8 @@ async def handle_chat_message(user_id: str, message: dict):
         chat_id = message.get("chat_id")
         enable_voice = message.get("enable_voice", False)  # Client can request voice
         enable_image = message.get("enable_image", False)  # Client can request image generation
+        lesson = message.get("lesson")  # Extract lesson parameter
+        expertise = message.get("expertise", 3)  # Extract expertise level (1-5, default 3)
         
         if not query:
             await manager.send_message(user_id, {
@@ -399,7 +404,8 @@ async def handle_chat_message(user_id: str, message: dict):
             "chat_id": str(chat.id),
             "message_id": str(user_message.id),
             "voice_enabled": voice_enabled,
-            "image_enabled": image_enabled
+            "image_enabled": image_enabled,
+            "lesson": lesson
         })
         
         # Get chat message history (excluding the just-saved user message)
@@ -411,15 +417,17 @@ async def handle_chat_message(user_id: str, message: dict):
                 "content": msg.content
             })
         
-        # Get context from vector search
-        context = await vector_service.search(query)
+        # Get context from vector search (skip if this is a lesson mode)
+        context = []
+        if not lesson:  # Only do vector search if not in lesson mode
+            context = await vector_service.search(query)
         
         # 1. Get full LLM response (collect all chunks without streaming)
         logger.info(f"Generating full LLM response for user {user_id}")
         full_response = ""
         
         try:
-            async for chunk in llm_service.stream_with_context(query, context, chat_history):
+            async for chunk in llm_service.stream_with_context(query, context, chat_history, lesson=lesson, expertise=expertise):
                 full_response += chunk
                 
                 # Check if connection is still active
@@ -440,7 +448,7 @@ async def handle_chat_message(user_id: str, message: dict):
             chat.id, 
             "assistant",
             full_response, 
-            {"retrieved_chunks": context}
+            {"retrieved_chunks": context, "lesson": lesson, "expertise": expertise} if lesson else {"retrieved_chunks": context, "expertise": expertise}
         )
         
         # Generate and save chat name for new chats
@@ -462,7 +470,8 @@ async def handle_chat_message(user_id: str, message: dict):
             "chat_id": str(chat.id),
             "message_id": str(assistant_message.id),
             "full_response": full_response,
-            "chat_name": chat_name
+            "chat_name": chat_name,
+            "lesson": lesson
         })
         
         # 3. Start concurrent tasks for voice and image generation
@@ -478,7 +487,7 @@ async def handle_chat_message(user_id: str, message: dict):
         # Start image generation (if enabled)
         if image_enabled:
             image_task = asyncio.create_task(
-                stream_image_response(user_id, query, full_response, str(chat.id), str(assistant_message.id))
+                stream_image_response(user_id, query, full_response, str(chat.id), str(assistant_message.id), lesson)
             )
             tasks.append(image_task)
         
@@ -495,7 +504,8 @@ async def handle_chat_message(user_id: str, message: dict):
             "chat_id": str(chat.id),
             "message_id": str(assistant_message.id),
             "voice_enabled": voice_enabled,
-            "image_enabled": image_enabled
+            "image_enabled": image_enabled,
+            "lesson": lesson
         })
         
     except Exception as e:

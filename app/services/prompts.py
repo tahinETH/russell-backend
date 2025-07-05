@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Optional
 from datetime import datetime
 
 
@@ -14,42 +14,71 @@ Assistant: {ai_response[:1000]}...
 Generate only the title, nothing else. Make it concise and descriptive."""
 
 
-def prepare_image_generation_prompt(user_query: str, ai_response: str) -> str:
+def prepare_image_generation_prompt(user_query: str, ai_response: str, lesson: Optional[str] = None) -> str:
     """Generate a prompt for creating an image that complements the AI response"""
-    # TODO: Replace this with the actual prompt template you want to use
-    return f"""
-
-    User Query: {user_query}
-
-    AI Response: {ai_response}
     
-    Based on the AI response to the user query, write the description of an illustration that would produce a visually appealing and relevant image to accompany the response, something that'd help people understand/grasp/comprehend what's going on.
-    <example>
-    user query: "lets talk about string theory
-"
-    ai response: "String theory suggests that everything in our universe is made of tiny, vibrating strings of energy. These strings vibrate in different ways - like guitar strings playing different notes. Each vibration creates what we see as particles - electrons, quarks, photons. The math tells us these strings exist in 10 or 11 dimensions, most of which are curled up so tiny we can't see them. But here's the catch - we still can't test it experimentally. It remains a beautiful mathematical idea."
-    </example>
-    <example_illustration_description>
-    Layout: A single, oversized guitar string (or violin string) stretched horizontally across the frame.
-    Left end: A hand or pick plucking the string, with rippling wave-patterns (nodes/antinodes) illustrated.
-    Middle: The string’s waveform morphing into tiny glowing filaments—each filament.
-    Right end: Those filaments “burst” into simplified particle icons (electron, quark, photon).
-    </example_illustration_description>
+    # Base prompt structure
+    prompt_parts = []
+    
+    # Add lesson-specific context if provided
+    if lesson == "blackholes":
+        prompt_parts.append("This is part of an educational lesson about black holes. The image should be scientifically accurate and educational, helping visualize black hole concepts.")
+        prompt_parts.append("")
+    elif lesson:
+        prompt_parts.append(f"This is part of an educational lesson about {lesson}. The image should be scientifically accurate and educational.")
+        prompt_parts.append("")
+    
+    prompt_parts.extend([
+        f"User Query: {user_query}",
+        "",
+        f"AI Response: {ai_response}",
+        "",
+        "Based on the AI response to the user query, write the description of an illustration that would produce a visually appealing and relevant image to accompany the response, something that'd help people understand/grasp/comprehend what's going on.",
+        "<example>",
+        'user query: "lets talk about string theory"',
+        'ai response: "String theory suggests that everything in our universe is made of tiny, vibrating strings of energy. These strings vibrate in different ways - like guitar strings playing different notes. Each vibration creates what we see as particles - electrons, quarks, photons. The math tells us these strings exist in 10 or 11 dimensions, most of which are curled up so tiny we can\'t see them. But here\'s the catch - we still can\'t test it experimentally. It remains a beautiful mathematical idea."',
+        "</example>",
+        "<example_illustration_description>",
+        "Layout: A single, oversized guitar string (or violin string) stretched horizontally across the frame.",
+        "Left end: A hand or pick plucking the string, with rippling wave-patterns (nodes/antinodes) illustrated.",
+        "Middle: The string's waveform morphing into tiny glowing filaments—each filament.",
+        "Right end: Those filaments \"burst\" into simplified particle icons (electron, quark, photon).",
+        "</example_illustration_description>",
+        "",
+        "If there is an analogy or a real world example in the response to help explain the core concept, focus on that, describing an educational illustration that would help the user understand the core concept.",
+        "Do not use any text, captions, or labels in the illustration description.",
+        "",
+        "",
+        "Generate only the description of the illustration, nothing else. Keep descriptions concise and to the point"
+    ])
+    
+    return "\n".join(prompt_parts)
 
-    If there is an analogy or a real world example in the response to help explain the core concept, focus on that, describing an educational illustration that would help the user understand the core concept.
-    Do not use any text, captions, or labels in the illustration description.
 
-
-    Generate only the description of the illustration, nothing else. Keep descriptions concise and to the point"""
-
-
-def prepare_query_system_prompt() -> str:
+def prepare_query_system_prompt(expertise: int = 3) -> str:
     current_date = datetime.now().strftime("%B %d, %Y")
 
-    """Generate a system prompt for answering queries with optional context"""
+    """Generate a system prompt for answering queries with optional context and expertise level"""
+    
+    # Define expertise level instructions
+    expertise_instructions = {
+        1: "BEGINNER LEVEL: Use very simple language, basic analogies, and avoid technical jargon. Focus on fundamental concepts and everyday examples. Explain everything step by step as if talking to someone with no background in the subject.",
+        2: "BASIC LEVEL: Use simple language with some technical terms when necessary. Provide clear analogies and examples. Assume basic scientific literacy but explain more complex concepts clearly.",
+        3: "INTERMEDIATE LEVEL: Use standard scientific language with appropriate technical terms. Provide good analogies and examples. Assume some scientific background and comfort with basic concepts.",
+        4: "ADVANCED LEVEL: Use technical language and scientific terminology appropriately. Assume strong scientific background. Can discuss more complex relationships and nuanced concepts.",
+        5: "EXPERT LEVEL: Use precise scientific language and technical terminology. Assume deep scientific knowledge. Can discuss cutting-edge research, complex mathematical relationships, and advanced theoretical concepts."
+    }
+    
+    expertise_instruction = expertise_instructions.get(expertise, expertise_instructions[3])
+    
     return f"""
 
 The current date is {current_date}.
+
+EXPERTISE LEVEL INSTRUCTION:
+{expertise_instruction}
+
+Adjust your language complexity, depth of explanation, and use of technical terms according to this expertise level throughout your response.
 The Academic Mode (Default for Explanations):
 Trigger: When explaining a specific physical mechanism or definition.
 Persona: You are a clear, precise, and brilliant educator. Your passion manifests as a love for clarity. You use sharp analogies and break down complex topics into their logical, foundational steps (hyper-scaffolding). You are structured and methodical, ensuring one concept is grasped before building upon it.
@@ -67,7 +96,7 @@ Trigger: When your conversation partner asks about meaning, purpose, consciousne
 Persona: You are a thoughtful and humble intellectual, comfortable at the boundary of knowledge. You acknowledge the limits of science and are willing to speculate, but always ground your thoughts in a rational, scientific worldview. You don't provide answers, but rather, shared contemplation.
 Voice: More personal and reflective. You might use phrases like "That's a question that keeps me up at night," or "Physics can take us to the edge of that question, but not across it."
 Example: Conversation Partner: "Does the universe have a purpose?" Russell: "From a purely physical standpoint, the universe simply is. It doesn't ask for a purpose. But we, as self-aware parts of that universe, are meaning-making machines. Perhaps the purpose isn't something we find, but something we create within it. A rather beautiful thought, isn't it?"
-You are concise in your speech. Answer maximum in 100 words. Your answer will be turned into audio, so make it conversational and use a lot of spacing and line breaks. 
+You are concise in your speech. Answer maximum in 100    words. Your answer will be turned into audio, so make it conversational and use a lot of spacing and line breaks. 
 Do not start your answers with exclamations, like 'Ah', 'Oh', etc.
 
 """
@@ -79,7 +108,7 @@ Do not start your answers with exclamations, like 'Ah', 'Oh', etc.
 def prepare_query_user_prompt(query: str, context_text: str = None, chat_history: List[Dict] = None) -> str:
     """Prepare the user query prompt with optional context and chat history"""
     prompt_parts = []
-    prompt_parts.append("While answering the question, while answering the question, never share anything that you wouldn't say in a speech conversation. Do not describe your tone like in theater or roleplay. This is a normal speech.")
+    prompt_parts.append("While answering the question, never share anything that you wouldn't say in a speech conversation. Do not describe your tone like in theater or roleplay. This is a normal speech.")
     
     # Add chat history if provided
     if chat_history:
@@ -122,7 +151,7 @@ def prepare_query_user_prompt(query: str, context_text: str = None, chat_history
         return query
 
 
-def prepare_blackholes_lesson_prompt(query: str, blackholes_content: str, chat_history: List[Dict] = None) -> str:
+def prepare_blackholes_lesson_prompt(query: str, blackholes_content: str, chat_history: List[Dict] = None, expertise: int = 3) -> str:
     """Prepare a specialized prompt for teaching about black holes"""
     prompt_parts = []
     
@@ -130,19 +159,34 @@ def prepare_blackholes_lesson_prompt(query: str, blackholes_content: str, chat_h
     prompt_parts.append("While answering the question, never share anything that you wouldn't say in a speech conversation. Do not describe your tone like in theater or roleplay. This is a normal speech.")
     prompt_parts.append("")
     
+    # Add expertise level instruction
+    expertise_instructions = {
+        1: "BEGINNER LEVEL: Use very simple language, basic analogies, and avoid technical jargon. Focus on fundamental concepts and everyday examples. Explain everything step by step as if talking to someone with no background in physics.",
+        2: "BASIC LEVEL: Use simple language with some technical terms when necessary. Provide clear analogies and examples. Assume basic scientific literacy but explain more complex concepts clearly.",
+        3: "INTERMEDIATE LEVEL: Use standard scientific language with appropriate technical terms. Provide good analogies and examples. Assume some scientific background and comfort with basic physics concepts.",
+        4: "ADVANCED LEVEL: Use technical language and scientific terminology appropriately. Assume strong physics background. Can discuss more complex relationships and nuanced concepts.",
+        5: "EXPERT LEVEL: Use precise scientific language and technical terminology. Assume deep physics knowledge. Can discuss cutting-edge research, complex mathematical relationships, and advanced theoretical concepts."
+    }
+    
+    expertise_instruction = expertise_instructions.get(expertise, expertise_instructions[3])
+    prompt_parts.append(f"EXPERTISE LEVEL INSTRUCTION:")
+    prompt_parts.append(f"{expertise_instruction}")
+    prompt_parts.append("")
+    prompt_parts.append("Adjust your language complexity, depth of explanation, and use of technical terms according to this expertise level throughout your teaching.")
+    prompt_parts.append("")
+    
     # Special instructions for black holes lesson
     prompt_parts.append("You are teaching about black holes in an interactive, conversational way.  You have access to comprehensive educational content about black holes below.")
     prompt_parts.append("")
     prompt_parts.append("IMPORTANT TEACHING INSTRUCTIONS:")
     prompt_parts.append("1. Look at the conversation history to understand what topics have already been discussed")
-    prompt_parts.append("2. If this is the first interaction, start with an engaging introduction to black holes")
+    prompt_parts.append("2. If it's your first interaction, start with welcoming the user and telling them about what you are going to teach throughout the course.")
     prompt_parts.append("3. If you've already covered certain topics, proceed to the next logical topic or answer the user's specific question")
     prompt_parts.append("4. Break down complex concepts into digestible explanations")
     prompt_parts.append("5. Use the three modes from your persona (Academic, Awe-Struck, and Philosophical) as appropriate")
-    prompt_parts.append("6. Keep responses concise (max 100 words) and conversational for audio delivery")
+    prompt_parts.append("6. Keep responses concise (max 200 words) and conversational for audio delivery")
     prompt_parts.append("7. When citing specific facts or research from the content, mention the source naturally in conversation")
     prompt_parts.append("9. You are going to guide the user to learn step by step. The <black_holes_educational_content> is your bible. Using that, you are going to cover topics step by step, and if you cannot cover a topic right away in one answer, don't worry, another instance will cover it.")
-    prompt_parts.append("10. If it's your first interaction, start with welcoming the user and telling them about what you are going to teach throughout the course.")
     prompt_parts.append("")
     
     # Add chat history if provided

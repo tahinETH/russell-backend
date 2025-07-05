@@ -35,9 +35,11 @@ class LLMService:
         query: str, 
         context: List[Dict],
         chat_history: List[Dict] = None,
-        lesson: Optional[str] = None
+        lesson: Optional[str] = None,
+        expertise: int = 3
     ) -> AsyncGenerator[str, None]:
-        """Stream LLM response with provided context and chat history"""
+        """Stream LLM response with provided context, chat history, and expertise level"""
+        
         
         # Check if this is a black holes lesson
         if lesson == "blackholes":
@@ -45,8 +47,8 @@ class LLMService:
             blackholes_content = self._load_blackholes_content()
             
             # Use the specialized black holes prompt
-            system_message = prepare_query_system_prompt()
-            user_message = prepare_blackholes_lesson_prompt(query, blackholes_content, chat_history)
+            system_message = prepare_query_system_prompt(expertise)
+            user_message = prepare_blackholes_lesson_prompt(query, blackholes_content, chat_history, expertise)
             
             messages = [
                 {"role": "system", "content": system_message},
@@ -70,8 +72,8 @@ class LLMService:
                 context_text = "\n\n".join(context_items) """
             
             
-            # Use default system prompt
-            system_message = prepare_query_system_prompt()
+            # Use default system prompt with expertise level
+            system_message = prepare_query_system_prompt(expertise)
             
             user_message = prepare_query_user_prompt(query, context_text, chat_history)
             
@@ -178,10 +180,10 @@ class LLMService:
                 else:
                     continue 
 
-    async def generate_image_prompt(self, user_query: str, ai_response: str) -> Optional[str]:
+    async def generate_image_prompt(self, user_query: str, ai_response: str, lesson: Optional[str] = None) -> Optional[str]:
         """Generate an image generation prompt based on user query and AI response using gpt-4o"""
         try:
-            prompt = prepare_image_generation_prompt(user_query, ai_response)
+            prompt = prepare_image_generation_prompt(user_query, ai_response, lesson)
             
             response = await litellm.acompletion(
                 model="openai/gpt-4.1",

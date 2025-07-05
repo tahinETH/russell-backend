@@ -213,12 +213,13 @@ class ChatService:
                     "enabled": True
                 }
             
-            # Stream LLM response with chat history and lesson parameter
+            # Stream LLM response with chat history, lesson parameter, and expertise level
             async for chunk in self.llm_service.stream_with_context(
                 request.query, 
                 context, 
                 chat_history,
-                lesson=request.lesson
+                lesson=request.lesson,
+                expertise=request.expertise
             ):
                 full_response += chunk
                 sentence_buffer += chunk

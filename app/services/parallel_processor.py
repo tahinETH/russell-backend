@@ -37,7 +37,8 @@ class ParallelProcessingService:
         chat_history: List[Dict] = None,
         voice_id: Optional[str] = None,
         model_id: Optional[str] = None,
-        enable_voice: bool = True
+        enable_voice: bool = True,
+        expertise: int = 3
     ) -> AsyncGenerator[Dict[str, Any], None]:
         """
         Process query with parallel LLM and TTS processing
@@ -72,7 +73,7 @@ class ParallelProcessingService:
             # Task 1: LLM streaming and sentence extraction
             llm_task = asyncio.create_task(
                 self._process_llm_stream(
-                    query, context, chat_history
+                    query, context, chat_history, expertise
                 )
             )
             tasks.append(llm_task)
@@ -127,7 +128,8 @@ class ParallelProcessingService:
         self,
         query: str,
         context: List[Dict],
-        chat_history: List[Dict]
+        chat_history: List[Dict],
+        expertise: int = 3
     ) -> Dict[str, Any]:
         """Process LLM stream and extract sentences"""
         full_text = ""
@@ -135,7 +137,7 @@ class ParallelProcessingService:
         
         try:
             async for chunk in self.llm_service.stream_with_context(
-                query, context, chat_history
+                query, context, chat_history, expertise=expertise
             ):
                 full_text += chunk
                 sentence_buffer += chunk

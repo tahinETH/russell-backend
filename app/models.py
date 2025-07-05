@@ -76,6 +76,7 @@ class QueryRequest(BaseModel):
     model_id: Optional[str] = None
     voice_settings: Optional[dict] = None  # ElevenLabs voice settings
     lesson: Optional[str] = None  # Add lesson parameter for specific experiences like "blackholes"
+    expertise: Optional[int] = 3  # Expertise level (1-5, default 3)
 
 class QueryResponse(BaseModel):
     text_response: str

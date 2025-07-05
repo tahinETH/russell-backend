@@ -120,13 +120,14 @@ async def _handle_voice_query(request: QueryRequest, chat) -> QueryResponse:
         if not request.lesson:  # Only do vector search if not in lesson mode
             context = await vector_service.search(request.query)
         
-        # 4. Get full LLM response with chat history and lesson parameter
+        # 4. Get full LLM response with chat history, lesson parameter, and expertise level
         full_response = ""
         async for chunk in llm_service.stream_with_context(
             request.query, 
             context, 
             chat_history,
-            lesson=request.lesson
+            lesson=request.lesson,
+            expertise=request.expertise
         ):
             full_response += chunk
         
@@ -145,7 +146,7 @@ async def _handle_voice_query(request: QueryRequest, chat) -> QueryResponse:
             chat.id, 
             "assistant", 
             full_response,
-            {"retrieved_chunks": context, "lesson": request.lesson} if request.lesson else {"retrieved_chunks": context}
+            {"retrieved_chunks": context, "lesson": request.lesson, "expertise": request.expertise} if request.lesson else {"retrieved_chunks": context, "expertise": request.expertise}
         )
         logger.info(f"Saved assistant message {assistant_message.id} to chat {chat.id}")
         
