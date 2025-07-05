@@ -1,6 +1,9 @@
 from typing import List, Dict
 from datetime import datetime
 
+
+
+
 def prepare_name_generation_prompt(user_query: str, ai_response: str) -> str:
     """Generate a prompt for creating a concise chat name based on user query and AI response"""
     return f"""Based on the following conversation, generate a short, descriptive title (2-6 words) that captures the main topic or question. The title should be clear and specific.
@@ -14,20 +17,23 @@ Generate only the title, nothing else. Make it concise and descriptive."""
 def prepare_image_generation_prompt(user_query: str, ai_response: str) -> str:
     """Generate a prompt for creating an image that complements the AI response"""
     # TODO: Replace this with the actual prompt template you want to use
-    return f"""Based on the following AI response to a user query, create a detailed image generation prompt that would produce a visually appealing and relevant image to accompany the response.
+    return f"""
 
-User Query: {user_query}
+    User Query: {user_query}
 
-AI Response: {ai_response}
+    AI Response: {ai_response}
+    
+    Based on the AI response to the user query, write the description of an illustration that would produce a visually appealing and relevant image to accompany the response.
+    If there is an analogy or a real world example in the response to help explain the core concept, focus on that, describing an educational illustration that would help the user understand the core concept.
+    <example>
+    user query: "What is a black hole?"
+    ai response: "Let's focus on what happens near a black hole. As you approach, time itself starts to warp. A clock near a black hole ticks slower than one far away. If you were watching a friend fall in, they'd appear to move slower and slower, eventually freezing in time at the event horizon. But from their perspective, everything would seem normal until they're stretched apart by the intense gravitational forces. These cosmic giants even distort the space around them, bending light like a cosmic lens."
 
-Create a concise, descriptive image prompt that:
-1. Captures the essence of the topic discussed
-2. Is visually interesting and educational
-3. Avoids text in the image
-4. Uses a style appropriate for educational content
-5. Focuses on the main concept or visualization that would help understand the response
-
-Generate only the image prompt, nothing else. Make it detailed but concise (1-2 sentences)."""
+    a potentially good illustration idea: A clock near a black hole ticks slower than one far away
+    
+    another potentially good illustration idea: a friend falling into a black hole
+    </example>
+    Generate only the description of the illustration, nothing else. Make it detailed but concise (1-2 sentences)."""
 
 
 def prepare_query_system_prompt() -> str:

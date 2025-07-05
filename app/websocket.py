@@ -263,6 +263,7 @@ async def stream_image_response(user_id: str, user_query: str, full_text: str, c
         
         # 1. Generate image prompt using GPT-4o
         image_prompt = await llm_service.generate_image_prompt(user_query, full_text)
+        
         if not image_prompt:
             logger.warning("Failed to generate image prompt")
             return

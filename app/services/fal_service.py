@@ -22,12 +22,11 @@ class FalService:
     async def generate_image_stream(
         self, 
         prompt: str, 
-        model: str = "fal-ai/flux-general",
-        image_size: str = "landscape_16_9",
-        num_inference_steps: int = 28,
-        guidance_scale: float = 3.5,
+        model: str = "fal-ai/flux-lora",
+        lora_path: str = "https://civitai.com/api/download/models/15893?type=Model&format=SafeTensor&size=full&fp=fp16",
+        image_size: str = "landscape_4_3",
         num_images: int = 1,
-        enable_safety_checker: bool = True
+        enable_safety_checker: bool = True,
     ) -> AsyncGenerator[Dict[str, Any], None]:
         """
         Stream image generation progress and return the final result
@@ -61,10 +60,12 @@ class FalService:
                 arguments={
                     "prompt": prompt,
                     "image_size": image_size,
-                    "num_inference_steps": num_inference_steps,
-                    "guidance_scale": guidance_scale,
                     "num_images": num_images,
-                    "enable_safety_checker": enable_safety_checker
+                    "enable_safety_checker": enable_safety_checker,
+                    "loras": [{
+                        "path": lora_path,
+                        "scale": 1.0  
+                    }]
                 }
             )
             

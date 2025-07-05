@@ -52,7 +52,7 @@ class ElevenLabsService:
         voice_settings = VoiceSettings(
             stability=0.8,
             similarity_boost=1,
-            speed=0.9,
+            speed=1.0,
             use_speaker_boost=True
         )
 

@@ -193,6 +193,7 @@ class LLMService:
             )
             
             image_prompt = response.choices[0].message.content.strip()
+            #image_prompt = f"cyberpunk aesthetic, 90s anime, minimalist design, blue and white colors with a tint of purple and green, metalic sheen, high contrast, featuring an illustration of {illustration}, illustration by moebius and katsuhiro otomo"
             logger.info(f"Generated image prompt: {image_prompt}")
             return image_prompt
             
