@@ -50,9 +50,10 @@ class ElevenLabsService:
         voice_id = voice_id or self.voice_id
         model_id = model_id or self.model_id
         voice_settings = VoiceSettings(
-            stability=0.8,
+            stability=0.75,
             similarity_boost=1,
             speed=1.0,
+            style=0.6,
             use_speaker_boost=True
         )
 

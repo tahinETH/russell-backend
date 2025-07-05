@@ -23,7 +23,7 @@ class FalService:
         self, 
         prompt: str, 
         model: str = "fal-ai/flux-lora",
-        lora_path: str = "https://civitai.com/api/download/models/15893?type=Model&format=SafeTensor&size=full&fp=fp16",
+        lora_path: str = "https://civitai.com/api/download/models/869226?type=Model&format=SafeTensor",
         image_size: str = "landscape_4_3",
         num_images: int = 1,
         enable_safety_checker: bool = True,

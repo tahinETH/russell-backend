@@ -23,17 +23,24 @@ def prepare_image_generation_prompt(user_query: str, ai_response: str) -> str:
 
     AI Response: {ai_response}
     
-    Based on the AI response to the user query, write the description of an illustration that would produce a visually appealing and relevant image to accompany the response.
-    If there is an analogy or a real world example in the response to help explain the core concept, focus on that, describing an educational illustration that would help the user understand the core concept.
+    Based on the AI response to the user query, write the description of an illustration that would produce a visually appealing and relevant image to accompany the response, something that'd help people understand/grasp/comprehend what's going on.
     <example>
-    user query: "What is a black hole?"
-    ai response: "Let's focus on what happens near a black hole. As you approach, time itself starts to warp. A clock near a black hole ticks slower than one far away. If you were watching a friend fall in, they'd appear to move slower and slower, eventually freezing in time at the event horizon. But from their perspective, everything would seem normal until they're stretched apart by the intense gravitational forces. These cosmic giants even distort the space around them, bending light like a cosmic lens."
-
-    a potentially good illustration idea: A clock near a black hole ticks slower than one far away
-    
-    another potentially good illustration idea: a friend falling into a black hole
+    user query: "lets talk about string theory
+"
+    ai response: "String theory suggests that everything in our universe is made of tiny, vibrating strings of energy. These strings vibrate in different ways - like guitar strings playing different notes. Each vibration creates what we see as particles - electrons, quarks, photons. The math tells us these strings exist in 10 or 11 dimensions, most of which are curled up so tiny we can't see them. But here's the catch - we still can't test it experimentally. It remains a beautiful mathematical idea."
     </example>
-    Generate only the description of the illustration, nothing else. Make it detailed but concise (1-2 sentences)."""
+    <example_illustration_description>
+    Layout: A single, oversized guitar string (or violin string) stretched horizontally across the frame.
+    Left end: A hand or pick plucking the string, with rippling wave-patterns (nodes/antinodes) illustrated.
+    Middle: The string’s waveform morphing into tiny glowing filaments—each filament.
+    Right end: Those filaments “burst” into simplified particle icons (electron, quark, photon).
+    </example_illustration_description>
+
+    If there is an analogy or a real world example in the response to help explain the core concept, focus on that, describing an educational illustration that would help the user understand the core concept.
+    Do not use any text, captions, or labels in the illustration description.
+
+
+    Generate only the description of the illustration, nothing else. Keep descriptions concise and to the point"""
 
 
 def prepare_query_system_prompt() -> str:

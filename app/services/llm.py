@@ -184,7 +184,7 @@ class LLMService:
             prompt = prepare_image_generation_prompt(user_query, ai_response)
             
             response = await litellm.acompletion(
-                model="gpt-4o",
+                model="openai/gpt-4.1",
                 messages=[
                     {"role": "user", "content": prompt}
                 ],
