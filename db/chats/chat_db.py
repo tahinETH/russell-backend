@@ -3,7 +3,7 @@ from sqlalchemy.future import select
 from sqlalchemy.orm import selectinload
 from sqlalchemy.exc import IntegrityError
 from app.database import AsyncSessionLocal
-from app.models import Chat, Message, User
+from app.models import Chat, Message, MessageImage, User
 import logging
 from typing import Optional, List, Dict, Any
 import uuid
@@ -46,10 +46,12 @@ class ChatDataRepository:
                 raise
 
     async def get_chat_with_messages(self, chat_id: uuid.UUID, user_id: Optional[str] = None) -> Optional[Chat]:
-        """Get chat with all its messages"""
+        """Get chat with all its messages and images"""
         async with AsyncSessionLocal() as session:
             try:
-                query = select(Chat).options(selectinload(Chat.messages)).where(Chat.id == chat_id)
+                query = select(Chat).options(
+                    selectinload(Chat.messages).selectinload(Message.images)
+                ).where(Chat.id == chat_id)
                 if user_id:
                     query = query.where(Chat.user_id == user_id)
                 
@@ -103,12 +105,39 @@ class ChatDataRepository:
                 logger.error(f"Error creating message in chat {chat_id}: {str(e)}")
                 raise
 
+    async def create_message_image(
+        self,
+        message_id: uuid.UUID,
+        prompt: str,
+        image_url: str
+    ) -> MessageImage:
+        """Create a new image associated with a message"""
+        async with AsyncSessionLocal() as session:
+            try:
+                message_image = MessageImage(
+                    message_id=message_id,
+                    prompt=prompt,
+                    image_url=image_url
+                )
+                session.add(message_image)
+                await session.commit()
+                await session.refresh(message_image)
+                
+                logger.info(f"Created image {message_image.id} for message {message_id}")
+                return message_image
+                
+            except Exception as e:
+                await session.rollback()
+                logger.error(f"Error creating image for message {message_id}: {str(e)}")
+                raise
+
     async def get_chat_messages(self, chat_id: uuid.UUID) -> List[Message]:
-        """Get all messages for a chat"""
+        """Get all messages for a chat with their images"""
         async with AsyncSessionLocal() as session:
             try:
                 result = await session.execute(
                     select(Message)
+                    .options(selectinload(Message.images))
                     .where(Message.chat_id == chat_id)
                     .order_by(Message.created_at.asc())
                 )
@@ -116,6 +145,21 @@ class ChatDataRepository:
                 return list(messages)
             except Exception as e:
                 logger.error(f"Error getting messages for chat {chat_id}: {str(e)}")
+                raise
+
+    async def get_message_images(self, message_id: uuid.UUID) -> List[MessageImage]:
+        """Get all images for a specific message"""
+        async with AsyncSessionLocal() as session:
+            try:
+                result = await session.execute(
+                    select(MessageImage)
+                    .where(MessageImage.message_id == message_id)
+                    .order_by(MessageImage.created_at.asc())
+                )
+                images = result.scalars().all()
+                return list(images)
+            except Exception as e:
+                logger.error(f"Error getting images for message {message_id}: {str(e)}")
                 raise
 
     async def update_chat_name(self, chat_id: uuid.UUID, name: str) -> bool:
@@ -143,10 +187,22 @@ class ChatDataRepository:
                 raise
 
     async def delete_chat(self, chat_id: uuid.UUID) -> bool:
-        """Delete a chat and all its messages"""
+        """Delete a chat and all its messages and images"""
         async with AsyncSessionLocal() as session:
             try:
-                # First delete all messages
+                # First get all messages for this chat
+                messages_result = await session.execute(
+                    select(Message).where(Message.chat_id == chat_id)
+                )
+                messages = messages_result.scalars().all()
+                
+                # Delete all images for these messages
+                for message in messages:
+                    await session.execute(
+                        select(MessageImage).where(MessageImage.message_id == message.id)
+                    )
+                
+                # Delete all messages (this will cascade to images due to foreign key)
                 await session.execute(
                     select(Message).where(Message.chat_id == chat_id)
                 )

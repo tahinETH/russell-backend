@@ -11,10 +11,11 @@ logger = logging.getLogger(__name__)
 class ElevenLabsService:
     """Service for text-to-speech using ElevenLabs API"""
     
-    def __init__(self):
+    def __init__(self, use_streaming: bool = False):
         self.api_key = settings.elevenlabs_api_key
         self.voice_id = settings.elevenlabs_voice_id
         self.model_id = settings.elevenlabs_model_id
+        self.use_streaming = use_streaming  # Flag to switch between streaming and HTTP
         
         if not self.api_key:
             logger.warning("ElevenLabs API key not found. Voice synthesis will be disabled.")
@@ -30,6 +31,18 @@ class ElevenLabsService:
         model_id: Optional[str] = None,
         output_format: str = "mp3_44100_128"
     ) -> bytes:
+        """
+        Convert text to speech using HTTP request (non-streaming)
+        
+        Args:
+            text: Text to convert to speech
+            voice_id: Optional voice ID override
+            model_id: Optional model ID override
+            output_format: Audio output format
+            
+        Returns:
+            Complete audio data as bytes
+        """
         if not self.client:
             logger.error("ElevenLabs API key not configured")
             raise ValueError("ElevenLabs service not configured")
@@ -44,7 +57,7 @@ class ElevenLabsService:
         )
 
         try:
-            # Use the convert method as specified
+            # Use the convert method for HTTP request
             audio_data = self.client.text_to_speech.convert(
                 voice_id=voice_id,
                 output_format=output_format,
@@ -52,7 +65,6 @@ class ElevenLabsService:
                 model_id=model_id,
                 voice_settings=voice_settings
             )
-
             
             # Convert generator to bytes if needed
             if hasattr(audio_data, '__iter__') and not isinstance(audio_data, (bytes, str)):
@@ -69,6 +81,9 @@ class ElevenLabsService:
             logger.error(f"Error in text-to-speech conversion: {e}")
             raise
     
+    # STREAMING METHODS - KEPT FOR FUTURE USE
+    # These methods are preserved in case you want to switch back to streaming
+    
     async def text_to_speech_stream(
         self,
         text: str,
@@ -81,6 +96,9 @@ class ElevenLabsService:
     ) -> AsyncGenerator[bytes, None]:
         """
         Stream text to speech conversion using ElevenLabs API with optimizations
+        
+        DEPRECATED: This method is kept for future use if streaming is needed again.
+        Use text_to_speech() for HTTP requests instead.
         
         Args:
             text: Text to convert to speech
@@ -107,7 +125,6 @@ class ElevenLabsService:
             use_speaker_boost=True
         )
         
-        
         try:
             # Use the stream() method as per the official API
             audio_stream = self.client.text_to_speech.stream(
@@ -128,6 +145,16 @@ class ElevenLabsService:
         except Exception as e:
             logger.error(f"Error in text-to-speech streaming: {e}")
             raise
+    
+    def enable_streaming(self):
+        """Enable streaming mode for future requests"""
+        self.use_streaming = True
+        logger.info("ElevenLabs service switched to streaming mode")
+    
+    def disable_streaming(self):
+        """Disable streaming mode, use HTTP requests"""
+        self.use_streaming = False
+        logger.info("ElevenLabs service switched to HTTP request mode")
     
     def encode_audio_base64(self, audio_bytes: bytes) -> str:
         """Encode audio bytes to base64 string"""

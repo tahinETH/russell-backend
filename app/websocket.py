@@ -47,12 +47,32 @@ class ConnectionManager:
 
     async def send_message(self, user_id: str, message: dict):
         if user_id in self.active_connections:
+            websocket = self.active_connections[user_id]
             try:
-                await self.active_connections[user_id].send_text(json.dumps(message))
+                # Check if the WebSocket is still connected
+                if websocket.client_state.name != "CONNECTED":
+                    logger.warning(f"WebSocket for user {user_id} is not connected (state: {websocket.client_state.name})")
+                    self.disconnect(user_id)
+                    return
+                
+                await websocket.send_text(json.dumps(message))
             except Exception as e:
                 logger.error(f"Failed to send message to user {user_id}: {e}")
                 # Remove the connection if sending fails
                 self.disconnect(user_id)
+
+    def is_connected(self, user_id: str) -> bool:
+        """Check if a user's WebSocket connection is still active"""
+        if user_id not in self.active_connections:
+            return False
+        
+        websocket = self.active_connections[user_id]
+        try:
+            return websocket.client_state.name == "CONNECTED"
+        except:
+            # If we can't check the state, assume it's disconnected
+            self.disconnect(user_id)
+            return False
 
 manager = ConnectionManager()
 
@@ -149,6 +169,10 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                 })
             except Exception as e:
                 logger.error(f"Error handling WebSocket message for user {user_id}: {e}")
+                # Prevent infinite loop on connection error
+                if "not connected" in str(e):
+                    logger.warning(f"WebSocket for user {user_id} is not connected. Closing loop.")
+                    break
                 await manager.send_message(user_id, {
                     "type": "error",
                     "error": "Internal server error"
@@ -162,146 +186,73 @@ async def websocket_chat_endpoint(websocket: WebSocket):
         if user_id:
             manager.disconnect(user_id)
 
-@router.websocket("/ws/test")
-async def websocket_test_endpoint(websocket: WebSocket):
-    """Test WebSocket endpoint with full LLM streaming without authentication"""
-    await websocket.accept()
-    logger.info("Test WebSocket connection established")
-    
-    try:
-        # Send welcome message
-        await websocket.send_text(json.dumps({
-            "type": "connected",
-            "message": "Test WebSocket connected. Send a message to test full LLM streaming."
-        }))
-        
-        while True:
-            try:
-                # Receive message
-                data = await websocket.receive_text()
-                message_data = json.loads(data)
-                
-                query = message_data.get("message", "Hello from test endpoint!")
-                
-                logger.info(f"Test endpoint received: {query}")
-                
-                # Check if services are available
-                if not llm_service or not vector_service:
-                    await websocket.send_text(json.dumps({
-                        "type": "error",
-                        "error": "Services not initialized"
-                    }))
-                    continue
-                
-                # Send start message
-                await websocket.send_text(json.dumps({
-                    "type": "stream_start",
-                    "query": query
-                }))
-                
-                # Get context from vector search (same as real flow)
-                
-                context = await vector_service.search(query)
-                
-                
-                
-                # Stream LLM response (same as real flow)
-                
-                full_response = ""
-                
-                try:
-                    async for chunk in llm_service.stream_with_context(query, context, []):
-                        full_response += chunk
-                        await websocket.send_text(json.dumps({
-                            "type": "chunk",
-                            "content": chunk
-                        }))
-                        
-                        logger.debug(f"Sent chunk: {chunk[:50]}...")
-                        
-                except Exception as e:
-                    logger.error(f"Error during LLM streaming in test: {e}")
-                    await websocket.send_text(json.dumps({
-                        "type": "error",
-                        "error": f"Streaming error: {str(e)}"
-                    }))
-                    continue
-                
-                # Send completion
-                await websocket.send_text(json.dumps({
-                    "type": "complete",
-                    "full_response": full_response,
-                    "context_chunks": len(context)
-                }))
-                
-                logger.info("Test LLM streaming completed successfully")
-                
-            except json.JSONDecodeError:
-                await websocket.send_text(json.dumps({
-                    "type": "error",
-                    "error": "Invalid JSON"
-                }))
-            except WebSocketDisconnect:
-                logger.info("Test WebSocket disconnected")
-                break
-            except Exception as e:
-                logger.error(f"Error in test WebSocket: {e}")
-                await websocket.send_text(json.dumps({
-                    "type": "error", 
-                    "error": str(e)
-                }))
-                
-    except Exception as e:
-        logger.error(f"Test WebSocket connection error: {e}")
-    finally:
-        logger.info("Test WebSocket connection closed")
-
 async def stream_voice_response(user_id: str, full_text: str, chat_id: str):
-    """Stream voice for the complete text response"""
+    """Generate voice for the complete text response using HTTP request"""
     try:
-        logger.info(f"Starting voice streaming for user {user_id}")
+        logger.info(f"Starting voice generation for user {user_id}")
         
         await manager.send_message(user_id, {
             "type": "voice_start",
             "chat_id": chat_id
         })
         
-        async for audio_chunk in elevenlabs_service.text_to_speech_stream(full_text):
-            # Check if connection is still active
-            if user_id not in manager.active_connections:
-                logger.warning(f"Connection lost for user {user_id} during voice streaming")
-                return
-            
-            audio_base64 = elevenlabs_service.encode_audio_base64(audio_chunk)
-            await manager.send_message(user_id, {
-                "type": "voice_chunk",
-                "audio": audio_base64,
-                "format": "mp3",
-                "chat_id": chat_id
-            })
+        # Generate complete audio using HTTP request
+        audio_data = await elevenlabs_service.text_to_speech(full_text)
         
+        # Check if connection is still active
+        if not manager.is_connected(user_id):
+            logger.warning(f"Connection lost for user {user_id} during voice generation")
+            return
+        
+        # Send the complete audio as base64
+        audio_base64 = elevenlabs_service.encode_audio_base64(audio_data)
         await manager.send_message(user_id, {
             "type": "voice_complete",
+            "audio": audio_base64,
+            "format": "mp3",
             "chat_id": chat_id
         })
         
-        logger.info(f"Voice streaming completed for user {user_id}")
+        logger.info(f"Voice generation completed for user {user_id}")
+        
+        # STREAMING VERSION - KEPT FOR FUTURE USE
+        # Uncomment the code below and comment out the HTTP version above 
+        # if you want to switch back to streaming:
+        
+        # async for audio_chunk in elevenlabs_service.text_to_speech_stream(full_text):
+        #     # Check if connection is still active
+        #     if not manager.is_connected(user_id):
+        #         logger.warning(f"Connection lost for user {user_id} during voice streaming")
+        #         return
+        #     
+        #     audio_base64 = elevenlabs_service.encode_audio_base64(audio_chunk)
+        #     await manager.send_message(user_id, {
+        #         "type": "voice_chunk",
+        #         "audio": audio_base64,
+        #         "format": "mp3",
+        #         "chat_id": chat_id
+        #     })
+        # 
+        # await manager.send_message(user_id, {
+        #     "type": "voice_complete",
+        #     "chat_id": chat_id
+        # })
         
     except Exception as e:
-        logger.error(f"Error streaming voice for user {user_id}: {e}")
+        logger.error(f"Error generating voice for user {user_id}: {e}")
         await manager.send_message(user_id, {
             "type": "voice_error",
             "error": str(e),
             "chat_id": chat_id
         })
 
-async def stream_image_response(user_id: str, user_query: str, full_text: str, chat_id: str):
+async def stream_image_response(user_id: str, user_query: str, full_text: str, chat_id: str, assistant_message_id: str):
     """Generate and stream image based on the AI response"""
     try:
         logger.info(f"Starting image generation for user {user_id}")
         
         # Check if services are available
-        if not llm_service or not fal_service:
+        if not llm_service or not fal_service or not chat_service:
             logger.warning("Image generation skipped: services not available")
             return
         
@@ -326,7 +277,7 @@ async def stream_image_response(user_id: str, user_query: str, full_text: str, c
         # 2. Stream image generation with Fal
         async for event in fal_service.generate_image_stream(image_prompt):
             # Check if connection is still active
-            if user_id not in manager.active_connections:
+            if not manager.is_connected(user_id):
                 logger.warning(f"Connection lost for user {user_id} during image generation")
                 return
             
@@ -339,8 +290,24 @@ async def stream_image_response(user_id: str, user_query: str, full_text: str, c
             elif event["type"] == "complete":
                 images = event.get("images", [])
                 if images:
-                    # Send the first image URL
+                    # Get the first image URL
                     image_url = images[0].get("url", "")
+                    
+                    # 3. Save image to database
+                    try:
+                        import uuid
+                        message_uuid = uuid.UUID(assistant_message_id)
+                        saved_image = await chat_service.create_message_image(
+                            message_uuid,
+                            image_prompt,
+                            image_url
+                        )
+                        logger.info(f"Saved image {saved_image.id} for message {assistant_message_id}")
+                    except Exception as save_error:
+                        logger.error(f"Failed to save image to database: {save_error}")
+                        # Continue anyway, don't fail the whole process
+                    
+                    # Send the image completion message
                     await manager.send_message(user_id, {
                         "type": "image_complete",
                         "chat_id": chat_id,
@@ -455,7 +422,7 @@ async def handle_chat_message(user_id: str, message: dict):
                 full_response += chunk
                 
                 # Check if connection is still active
-                if user_id not in manager.active_connections:
+                if not manager.is_connected(user_id):
                     logger.warning(f"Connection lost for user {user_id} during LLM generation")
                     return
                 
@@ -510,7 +477,7 @@ async def handle_chat_message(user_id: str, message: dict):
         # Start image generation (if enabled)
         if image_enabled:
             image_task = asyncio.create_task(
-                stream_image_response(user_id, query, full_response, str(chat.id))
+                stream_image_response(user_id, query, full_response, str(chat.id), str(assistant_message.id))
             )
             tasks.append(image_task)
         

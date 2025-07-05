@@ -44,6 +44,18 @@ class Message(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
     
     chat = relationship("Chat", back_populates="messages")
+    images = relationship("MessageImage", back_populates="message")
+
+class MessageImage(Base):
+    __tablename__ = "message_images"
+    
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    message_id = Column(UUID(as_uuid=True), ForeignKey("messages.id"))
+    prompt = Column(Text, nullable=False)  # The image generation prompt
+    image_url = Column(String, nullable=False)  # The generated image URL
+    created_at = Column(DateTime, default=datetime.utcnow)
+    
+    message = relationship("Message", back_populates="images")
 
 class Source(Base):
     __tablename__ = "sources"
@@ -88,6 +100,13 @@ class UserResponse(BaseModel):
     fe_metadata: Optional[dict] = None
     created_at: datetime
 
+class MessageImageResponse(BaseModel):
+    id: uuid_module.UUID
+    message_id: uuid_module.UUID
+    prompt: str
+    image_url: str
+    created_at: datetime
+
 class ChatResponse(BaseModel):
     id: uuid_module.UUID
     user_id: str  # Changed to string
@@ -101,6 +120,7 @@ class MessageResponse(BaseModel):
     content: str
     context: Optional[dict] = None
     created_at: datetime
+    images: List[MessageImageResponse] = []
 
 class ChatWithMessages(BaseModel):
     id: uuid_module.UUID

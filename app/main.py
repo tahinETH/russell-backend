@@ -10,7 +10,7 @@ from .websocket import router as websocket_router, set_websocket_services
 from .services import LLMService, VectorService, ChatService, UserService, ElevenLabsService
 from .config import settings
 # Import models so SQLAlchemy can create tables
-from .models import User, Chat, Message
+from .models import User, Chat, Message, MessageImage
 # Import webhook router
 from .webhooks.clerk import router as webhook_router
 

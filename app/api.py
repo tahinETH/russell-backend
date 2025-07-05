@@ -200,8 +200,8 @@ async def get_chat_messages(
     
     try:
         # Verify the chat belongs to the authenticated user
-        chat = await chat_service.get_chat_with_messages(chat_id)
-        if not chat or str(chat.user_id) != user_id:
+        chat = await chat_service.get_chat_with_messages(chat_id, user_id)
+        if not chat:
             raise HTTPException(status_code=404, detail="Chat not found")
         
         return chat

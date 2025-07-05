@@ -8,7 +8,7 @@ from .llm import LLMService
 from .vector import VectorService
 from .elevenlabs_service import ElevenLabsService
 from ..models import (
-    Chat, Message, ChatResponse, MessageResponse, 
+    Chat, Message, MessageImage, ChatResponse, MessageResponse, MessageImageResponse,
     ChatWithMessages, QueryRequest
 )
 
@@ -53,48 +53,60 @@ class ChatService:
             logger.error(f"Error getting chats for user {user_id}: {e}")
             raise Exception("Failed to retrieve chats")
     
+    def _build_message_response(self, message: Message) -> MessageResponse:
+        """Helper method to build MessageResponse with images"""
+        images = []
+        try:
+            # Only try to access images if the relationship is loaded
+            if hasattr(message, 'images') and message.images is not None:
+                images = [
+                    MessageImageResponse(
+                        id=img.id,
+                        message_id=img.message_id,
+                        prompt=img.prompt,
+                        image_url=img.image_url,
+                        created_at=img.created_at
+                    )
+                    for img in message.images
+                ]
+        except Exception as e:
+            # If there's an issue accessing images (e.g., lazy loading), just log and continue
+            logger.warning(f"Could not load images for message {message.id}: {e}")
+            images = []
+        
+        return MessageResponse(
+            id=message.id,
+            chat_id=message.chat_id,
+            role=message.role,
+            content=message.content,
+            context=message.context,
+            created_at=message.created_at,
+            images=images
+        )
+    
     async def get_chat_messages(self, chat_id: uuid.UUID) -> List[MessageResponse]:
-        """Get all messages for a chat"""
+        """Get all messages for a chat with their images"""
         try:
             messages = await self.chat_repo.get_chat_messages(chat_id)
-            return [
-                MessageResponse(
-                    id=msg.id,
-                    chat_id=msg.chat_id,
-                    role=msg.role,
-                    content=msg.content,
-                    context=msg.context,
-                    created_at=msg.created_at
-                )
-                for msg in messages
-            ]
+            return [self._build_message_response(msg) for msg in messages]
         except Exception as e:
             logger.error(f"Error getting messages for chat {chat_id}: {e}")
             raise Exception("Failed to retrieve messages")
     
     async def get_chat_with_messages(self, chat_id: uuid.UUID, user_id: Optional[str] = None) -> Optional[ChatWithMessages]:
-        """Get a chat with all its messages"""
+        """Get a chat with all its messages and images"""
         try:
             chat = await self.chat_repo.get_chat_with_messages(chat_id, user_id)
             if not chat:
                 return None
             
-            messages = [
-                MessageResponse(
-                    id=msg.id,
-                    chat_id=msg.chat_id,
-                    role=msg.role,
-                    content=msg.content,
-                    context=msg.context,
-                    created_at=msg.created_at
-                )
-                for msg in chat.messages
-            ]
+            messages = [self._build_message_response(msg) for msg in chat.messages]
             
             return ChatWithMessages(
                 id=chat.id,
                 user_id=chat.user_id,
                 created_at=chat.created_at,
+                name=chat.name,
                 messages=messages
             )
         except Exception as e:
@@ -127,17 +139,39 @@ class ChatService:
         """Create a new message in a chat"""
         try:
             message = await self.chat_repo.create_message(chat_id, role, content, context)
+            # For newly created messages, we know there are no images yet
             return MessageResponse(
                 id=message.id,
                 chat_id=message.chat_id,
                 role=message.role,
                 content=message.content,
                 context=message.context,
-                created_at=message.created_at
+                created_at=message.created_at,
+                images=[]  # New messages have no images
             )
         except Exception as e:
             logger.error(f"Error creating message in chat {chat_id}: {e}")
             raise Exception("Failed to create message")
+    
+    async def create_message_image(
+        self,
+        message_id: uuid.UUID,
+        prompt: str,
+        image_url: str
+    ) -> MessageImageResponse:
+        """Create a new image associated with a message"""
+        try:
+            image = await self.chat_repo.create_message_image(message_id, prompt, image_url)
+            return MessageImageResponse(
+                id=image.id,
+                message_id=image.message_id,
+                prompt=image.prompt,
+                image_url=image.image_url,
+                created_at=image.created_at
+            )
+        except Exception as e:
+            logger.error(f"Error creating image for message {message_id}: {e}")
+            raise Exception("Failed to create message image")
     
     async def process_query_stream(self, request: QueryRequest, chat: Chat) -> AsyncGenerator[Dict[str, Any], None]:
         """Process a query with response and voice synthesis"""
@@ -303,10 +337,7 @@ class ChatService:
     async def update_chat_name(self, chat_id: uuid.UUID, name: str) -> bool:
         """Update chat name"""
         try:
-            success = await self.chat_repo.update_chat_name(chat_id, name)
-            if success:
-                logger.info(f"Updated chat {chat_id} name to: {name}")
-            return success
+            return await self.chat_repo.update_chat_name(chat_id, name)
         except Exception as e:
-            logger.error(f"Error updating chat name for {chat_id}: {e}")
+            logger.error(f"Error updating chat name: {e}")
             raise Exception("Failed to update chat name") 
