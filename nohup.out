@@ -1801,3 +1801,1653 @@ INFO:     66.249.79.131:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
 INFO:     66.249.72.108:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
 INFO:     185.190.24.24:0 - "GET / HTTP/1.1" 200 OK
 INFO:     185.190.24.24:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:50848 - "GET / HTTP/1.1" 200 OK
+INFO:     54.226.109.182:0 - "GET / HTTP/1.1" 200 OK
+INFO:     98.80.4.94:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:38302 - "GET / HTTP/1.1" 200 OK
+INFO:     91.84.87.137:0 - "GET / HTTP/1.1" 200 OK
+INFO:     91.84.87.137:0 - "GET /js/twint_ch.js HTTP/1.1" 404 Not Found
+INFO:     91.84.87.137:0 - "GET /js/lkk_ch.js HTTP/1.1" 404 Not Found
+INFO:     44.220.188.128:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:57976 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+WARNING:  WatchFiles detected changes in 'app/api.py', 'app/models.py', 'app/services/chat_service.py', 'app/services/prompts.py', 'app/services/llm.py', 'app/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82686]
+INFO:     Started server process [145076]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     91.231.89.23:0 - "GET / HTTP/1.1" 200 OK
+INFO:     20.14.72.151:44142 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.75:56492 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.75:56476 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.75:33460 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.75:41700 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     45.131.155.253:45900 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     149.86.227.49:33268 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.62:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.62:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.62:0 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     149.86.227.49:60322 - "GET / HTTP/1.1" 200 OK
+INFO:     149.57.180.122:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:59398 - "GET / HTTP/1.1" 200 OK
+INFO:     18.97.5.52:53508 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     85.90.246.159:0 - "POST /vpnsvc/connect.cgi HTTP/1.1" 404 Not Found
+INFO:     45.131.155.253:0 - "GET / HTTP/1.1" 200 OK
+INFO:     135.222.40.117:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:41614 - "GET / HTTP/1.1" 200 OK
+INFO:     205.210.31.109:63708 - "GET / HTTP/1.1" 200 OK
+INFO:     54.196.122.63:0 - "GET /.env HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     20.106.57.141:0 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
+INFO:     119.13.211.135:0 - "GET / HTTP/1.1" 200 OK
+INFO:     35.164.170.136:0 - "GET / HTTP/1.1" 200 OK
+INFO:     170.130.204.90:0 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     149.86.227.49:44996 - "GET / HTTP/1.1" 200 OK
+INFO:     35.203.210.85:0 - "GET / HTTP/1.1" 200 OK
+INFO:     159.65.199.88:49848 - "GET / HTTP/1.1" 200 OK
+INFO:     159.65.199.88:49854 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:44004 - "GET / HTTP/1.1" 200 OK
+INFO:     79.124.58.198:0 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
+INFO:     3.131.215.38:48004 - "GET / HTTP/1.1" 200 OK
+INFO:     3.131.215.38:56392 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:47278 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     170.130.204.42:0 - "POST / HTTP/1.1" 405 Method Not Allowed
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     149.86.227.49:39134 - "GET / HTTP/1.1" 200 OK
+INFO:     79.124.58.198:0 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
+INFO:     196.251.66.177:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     185.218.84.47:34346 - "GET / HTTP/1.1" 200 OK
+INFO:     62.210.90.216:0 - "GET / HTTP/1.1" 200 OK
+INFO:     62.210.90.216:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     62.210.90.216:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     62.210.90.216:0 - "GET /ads.txt HTTP/1.1" 404 Not Found
+INFO:     62.210.90.216:0 - "GET /app-ads.txt HTTP/1.1" 404 Not Found
+INFO:     62.210.90.216:0 - "GET /sellers.json HTTP/1.1" 404 Not Found
+INFO:     167.71.229.198:36348 - "GET /aaa9 HTTP/1.1" 404 Not Found
+INFO:     167.71.229.198:36358 - "GET /aab8 HTTP/1.1" 404 Not Found
+INFO:     167.71.229.198:36362 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:36892 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     185.242.226.75:0 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.1.192:15530 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.1.198:32103 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     65.49.1.194:32701 - "GET /?format=json HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.88:36754 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.88:43068 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.88:43080 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.88:46862 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:42798 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     103.203.57.20:54660 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     149.86.227.49:60628 - "GET / HTTP/1.1" 200 OK
+INFO:     152.32.209.62:54662 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     152.32.209.62:33620 - "GET / HTTP/1.1" 200 OK
+INFO:     152.32.209.62:33998 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     152.32.209.62:34078 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     152.32.209.62:34080 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     148.251.122.92:0 - "GET /auth/login HTTP/1.1" 404 Not Found
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     48.217.87.78:0 - "GET /owa/auth/logon.aspx HTTP/1.1" 404 Not Found
+INFO:     184.105.247.195:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:42604 - "GET / HTTP/1.1" 200 OK
+INFO:     184.105.247.195:0 - "GET /webui/ HTTP/1.1" 404 Not Found
+INFO:     184.105.247.195:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     184.105.247.195:0 - "GET / HTTP/1.1" 200 OK
+INFO:     103.195.101.209:0 - "GET /locales/locale.json?locale=../../config/&namespace=database HTTP/1.1" 404 Not Found
+INFO:     184.105.247.195:0 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     184.105.247.195:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     151.243.101.230:0 - "GET / HTTP/1.1" 200 OK
+INFO:     151.243.101.230:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     81.29.134.51:0 - "GET / HTTP/1.1" 200 OK
+INFO:     81.29.134.51:0 - "GET / HTTP/1.1" 200 OK
+INFO:     81.29.134.51:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     156.67.82.92:0 - "GET /locales/locale.json?locale=../../config/&namespace=database HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:37196 - "GET / HTTP/1.1" 200 OK
+INFO:     84.247.163.75:0 - "GET /locales/locale.json?locale=../../config/&namespace=database HTTP/1.1" 404 Not Found
+INFO:     95.111.228.87:0 - "GET /locales/locale.json?locale=../../config/&namespace=database HTTP/1.1" 404 Not Found
+INFO:     167.94.145.107:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.107:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.145.107:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.82.78.254:54904 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     217.156.22.214:0 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     217.156.22.214:0 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:52712 - "GET / HTTP/1.1" 200 OK
+INFO:     103.226.248.206:0 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     103.226.248.206:0 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     91.134.91.17:0 - "GET / HTTP/1.1" 200 OK
+INFO:     54.204.120.96:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:41434 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     20.65.193.203:0 - "GET /owa/auth/x.js HTTP/1.1" 404 Not Found
+INFO:     199.45.155.76:54982 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.155.76:33990 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.155.76:34006 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.155.76:34036 - "GET / HTTP/1.1" 200 OK
+INFO:     103.245.111.91:0 - "GET /locales/locale.json?locale=../../config/&namespace=database HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:33948 - "GET / HTTP/1.1" 200 OK
+INFO:     115.231.78.14:0 - "GET / HTTP/1.1" 200 OK
+INFO:     115.231.78.14:0 - "GET / HTTP/1.1" 200 OK
+INFO:     115.231.78.14:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     115.231.78.14:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     45.82.78.254:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     87.236.176.8:33995 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     149.86.227.49:50936 - "GET / HTTP/1.1" 200 OK
+INFO:     40.119.32.47:0 - "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.1" 404 Not Found
+INFO:     163.5.160.123:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     163.5.160.123:0 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     149.86.227.49:49010 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.7:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     206.189.132.186:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.189.132.186:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     45.131.155.253:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     124.222.8.47:0 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     34.140.165.75:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:51424 - "GET / HTTP/1.1" 200 OK
+INFO:     13.89.124.216:0 - "GET /login HTTP/1.1" 404 Not Found
+INFO:     195.184.76.167:0 - "GET / HTTP/1.1" 200 OK
+INFO:     195.184.76.9:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     45.131.155.253:43920 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:55250 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.57:57810 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.57:50502 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.57:50510 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.57:50562 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.52:34660 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.52:58754 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.52:58766 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.146.52:41120 - "GET / HTTP/1.1" 200 OK
+INFO:     3.130.96.91:0 - "GET / HTTP/1.1" 200 OK
+INFO:     119.13.210.143:0 - "GET / HTTP/1.1" 200 OK
+INFO:     204.217.214.47:0 - "GET / HTTP/1.1" 200 OK
+INFO:     134.209.186.247:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     134.209.186.247:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     162.142.125.127:54480 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.127:50852 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.127:50872 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     162.142.125.127:36982 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     5.181.2.18:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:48282 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     78.153.140.151:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /app/.env.key HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /awsconf/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /app/.env.gcp HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /aws-ses/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.uat HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.txt HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.bkp HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.tmp HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.swp HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /app/dev/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.swo HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.swn HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.bak HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/test.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /adm/.env.bak HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.pem HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /app/.env.old HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /app/.env.dev HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /account/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /app/.env.log HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.old HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /adm/.env.dev HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.new HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.log HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /app/.env.crt HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.key HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /api/.env.gcp HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /admin/.env.1 HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /.env.aws_sns HTTP/1.1" 404 Not Found
+INFO:     78.153.140.151:0 - "GET /.env.aws_ses HTTP/1.1" 404 Not Found
+INFO:     164.90.206.38:0 - "GET / HTTP/1.1" 200 OK
+INFO:     164.90.206.38:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     35.203.210.56:0 - "GET / HTTP/1.1" 200 OK
+INFO:     79.124.58.198:0 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
+INFO:     172.234.218.10:59968 - "GET / HTTP/1.0" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.218.10:59986 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.218.10:60012 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     172.234.218.10:60018 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.218.10:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.218.10:60092 - "GET /devicedesc.xml HTTP/1.1" 404 Not Found
+INFO:     172.234.218.10:60164 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.218.10:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.234.218.10:60174 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.234.218.10:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     172.234.218.10:53830 - "GET / HTTP/1.1" 200 OK
+INFO:     172.234.218.10:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.234.218.10:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:58686 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     3.130.96.91:57740 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     3.130.96.91:57788 - "GET / HTTP/1.1" 200 OK
+INFO:     104.234.115.134:0 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     185.242.226.75:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:51866 - "GET / HTTP/1.1" 200 OK
+INFO:     147.185.132.82:59702 - "GET / HTTP/1.1" 200 OK
+INFO:     79.124.58.198:0 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
+INFO:     196.251.70.87:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     20.163.15.124:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     162.243.205.145:0 - "GET /starter.bin HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:53312 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     71.6.134.231:0 - "GET / HTTP/1.1" 200 OK
+INFO:     71.6.134.231:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     149.86.227.49:48134 - "GET / HTTP/1.1" 200 OK
+INFO:     74.82.47.2:20422 - "GET / HTTP/1.1" 200 OK
+INFO:     74.82.47.50:7527 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     74.82.47.2:33699 - "GET /?format=json HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     91.196.152.28:0 - "GET / HTTP/1.1" 200 OK
+INFO:     91.196.152.215:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:58390 - "GET / HTTP/1.1" 200 OK
+INFO:     35.187.71.104:0 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+WARNING:  Invalid HTTP request received.
+INFO:     45.82.78.254:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     109.122.198.105:58120 - "PUT /SDK/webLanguage HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:54738 - "GET / HTTP/1.1" 200 OK
+INFO:     154.47.29.7:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     45.82.78.254:37944 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     118.194.253.212:0 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     118.194.253.212:0 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     198.55.98.76:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:37204 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     152.42.140.163:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     147.185.132.114:60830 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:40020 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     162.142.125.200:0 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.200:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.200:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     77.110.119.126:0 - "GET / HTTP/1.1" 200 OK
+INFO:     77.110.119.126:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     109.74.197.213:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:60710 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     184.105.247.194:0 - "GET / HTTP/1.1" 200 OK
+INFO:     184.105.247.194:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     184.105.247.194:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     184.105.247.194:0 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     184.105.247.194:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:52112 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     45.131.155.253:43378 - "GET / HTTP/1.1" 200 OK
+INFO:     196.251.84.146:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     45.131.155.253:0 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     3.84.45.42:0 - "GET / HTTP/1.1" 200 OK
+INFO:     185.218.84.47:50992 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:55694 - "GET / HTTP/1.1" 200 OK
+INFO:     198.235.24.50:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.82.78.254:41326 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     194.195.210.47:54788 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:60288 - "GET / HTTP/1.1" 200 OK
+INFO:     45.82.78.254:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     167.94.145.98:58872 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.98:56936 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.98:56952 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.145.98:57002 - "GET / HTTP/1.1" 200 OK
+INFO:     23.27.145.18:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.79.181.104:3482 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:45568 - "GET / HTTP/1.1" 200 OK
+INFO:     198.55.98.76:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     152.32.235.85:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:40352 - "GET / HTTP/1.1" 200 OK
+INFO:     185.242.226.75:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.49:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.49:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.146.49:0 - "GET / HTTP/1.1" 200 OK
+INFO:     196.251.70.87:0 - "GET /.git/index HTTP/1.1" 404 Not Found
+INFO:     20.65.193.168:0 - "GET /owa/auth/logon.aspx HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:60840 - "GET / HTTP/1.1" 200 OK
+INFO:     206.189.40.211:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.189.40.211:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.189.40.211:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     18.220.154.78:0 - "GET / HTTP/1.1" 200 OK
+INFO:     192.153.68.109:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:55126 - "GET / HTTP/1.1" 200 OK
+INFO:     124.165.208.226:0 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     124.165.208.226:0 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     65.49.1.80:15558 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.1.81:62119 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     65.49.1.86:25479 - "GET /?format=json HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.60:59336 - "GET / HTTP/1.1" 200 OK
+INFO:     20.150.193.141:0 - "GET /actuator/health HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:47866 - "GET / HTTP/1.1" 200 OK
+INFO:     79.124.58.198:0 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
+INFO:     65.49.1.80:0 - "GET / HTTP/1.1" 200 OK
+INFO:     104.234.115.145:0 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     65.49.1.80:0 - "GET /webui/ HTTP/1.1" 404 Not Found
+INFO:     65.49.1.82:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     65.49.1.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     3.143.33.63:51262 - "GET / HTTP/1.1" 200 OK
+INFO:     3.143.33.63:47926 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     65.49.1.80:0 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     65.49.1.80:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     3.130.96.91:49418 - "GET / HTTP/1.1" 200 OK
+INFO:     3.130.96.91:57620 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.202.117.213:0 - "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.1" 404 Not Found
+INFO:     48.214.144.79:0 - "GET /version HTTP/1.1" 404 Not Found
+INFO:     124.31.107.206:0 - "GET / HTTP/1.1" 200 OK
+INFO:     182.119.231.109:0 - "GET / HTTP/1.1" 200 OK
+INFO:     175.30.48.111:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     182.138.158.58:0 - "GET / HTTP/1.1" 200 OK
+INFO:     43.248.108.127:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:46066 - "GET / HTTP/1.1" 200 OK
+INFO:     36.32.3.221:0 - "GET / HTTP/1.1" 200 OK
+INFO:     180.136.234.22:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     68.183.34.65:54976 - "GET /v1/models HTTP/1.1" 404 Not Found
+INFO:     162.216.149.106:0 - "GET / HTTP/1.1" 200 OK
+INFO:     79.124.58.198:0 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:52844 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     20.106.195.24:0 - "GET / HTTP/1.1" 200 OK
+INFO:     198.235.24.86:57982 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     149.86.227.49:33396 - "GET / HTTP/1.1" 200 OK
+INFO:     35.205.19.30:0 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     149.86.227.49:34302 - "GET / HTTP/1.1" 200 OK
+INFO:     20.65.224.144:0 - "GET /developmentserver/metadatauploader HTTP/1.1" 404 Not Found
+INFO:     35.164.170.136:0 - "GET / HTTP/1.1" 200 OK
+INFO:     193.24.123.66:0 - "GET /aaa9 HTTP/1.1" 404 Not Found
+INFO:     193.24.123.66:0 - "GET /aab9 HTTP/1.1" 404 Not Found
+INFO:     176.32.195.85:0 - "GET /aaa9 HTTP/1.1" 404 Not Found
+INFO:     176.32.195.85:0 - "GET /aab9 HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:41328 - "GET / HTTP/1.1" 200 OK
+INFO:     185.218.84.47:53620 - "GET / HTTP/1.1" 200 OK
+INFO:     20.65.194.130:60526 - "GET / HTTP/1.1" 200 OK
+INFO:     204.76.203.208:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     149.86.227.49:43822 - "GET / HTTP/1.1" 200 OK
+INFO:     185.190.24.24:0 - "GET / HTTP/1.1" 200 OK
+INFO:     185.190.24.24:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     118.193.35.202:48436 - "GET / HTTP/1.1" 200 OK
+INFO:     118.193.35.202:37484 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     118.193.35.202:37498 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     118.193.35.202:37504 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     118.193.35.202:37506 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     118.193.35.202:37508 - "GET /sse HTTP/1.1" 404 Not Found
+INFO:     118.193.35.202:37516 - "GET /mcp HTTP/1.1" 404 Not Found
+INFO:     118.193.35.202:37532 - "GET /mcp-sse HTTP/1.1" 404 Not Found
+INFO:     172.233.190.104:49940 - "GET / HTTP/1.0" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.190.104:49968 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.190.104:50004 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     172.233.190.104:50016 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     172.233.190.104:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.190.104:50108 - "GET /devicedesc.xml HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.190.104:45276 - "GET / HTTP/1.1" 200 OK
+INFO:     172.233.190.104:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.233.190.104:45304 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.233.190.104:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.190.104:52548 - "GET / HTTP/1.1" 200 OK
+INFO:     172.233.190.104:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.233.190.104:0 - "GET / HTTP/1.1" 200 OK
+INFO:     196.251.84.146:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     147.185.132.111:63502 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:39056 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     178.128.122.73:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     178.128.122.73:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:36500 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.118:0 - "GET / HTTP/1.1" 200 OK
+INFO:     68.183.38.197:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     93.123.109.35:57676 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.35:57676 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     93.123.109.35:0 - "GET / HTTP/1.1" 200 OK
+INFO:     93.123.109.35:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:48252 - "GET / HTTP/1.1" 200 OK
+INFO:     34.100.176.40:0 - "GET /cdn-cgi/trace/cdn-cgi/trace HTTP/1.1" 404 Not Found
+INFO:     13.221.12.149:0 - "GET / HTTP/1.1" 200 OK
+INFO:     185.242.226.75:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:33242 - "GET / HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET / HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     Will watch for changes in these directories: ['/root/russell-backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [396954] using WatchFiles
+INFO:     Started server process [396957]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.services.fal_service:Fal service initialized with API key
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     ('88.230.93.58', 0) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:app.websocket:WebSocket connected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Processing chat message for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created chat a50cedc0-57df-4669-86b0-0071f022cd53 for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created message 149ec51d-aaae-4718-a772-389ddf62fd95 in chat a50cedc0-57df-4669-86b0-0071f022cd53
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m19:15:24 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m19:15:24 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m19:15:24 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.websocket:Generating full LLM response for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.services.llm:Attempting to use model: claude-3-opus-20240229
+[92m19:15:24 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-opus-20240229; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m19:15:25 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+[92m19:15:30 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+[92m19:15:30 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-opus-20240229
+INFO:db.chats.chat_db:Created message 1b00ea04-89d3-4f9f-b7eb-1d49a11ff9b9 in chat a50cedc0-57df-4669-86b0-0071f022cd53
+[92m19:15:30 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m19:15:30 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m19:15:30 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat a50cedc0-57df-4669-86b0-0071f022cd53 name to: Engaging Conversations with AI
+INFO:app.websocket:Generated chat name for a50cedc0-57df-4669-86b0-0071f022cd53: Engaging Conversations with AI
+INFO:app.websocket:Starting voice generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+INFO:app.websocket:Voice generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Starting image generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+[92m19:15:39 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m19:15:42 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:app.services.llm:Generated image prompt: A futuristic AI interface forms the centerpiece: a translucent, holographic figure shaped like a friendly robot or digital assistant sits at a sleek desk. Instead of a face, its head glows with swirling, abstract patterns symbolizing information and data. All around, floating icons and gentle light trails represent flowing knowledge. In front of the AI, an open book and a glowing question mark hover, while a person sits nearby looking curious, their body language inviting conversation. The setting is welcoming and modern, emphasizing an atmosphere of open, insightful dialogue.
+INFO:app.services.fal_service:Starting image generation with prompt: A futuristic AI interface forms the centerpiece: a translucent, holographic figure shaped like a fri...
+[92m19:15:42 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:httpx:HTTP Request: POST https://queue.fal.run/fal-ai/flux-lora "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=true "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8/status?logs=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/8b1e3396-6e8d-4259-9a82-75a75e1174d8 "HTTP/1.1 200 OK"
+INFO:app.services.fal_service:Image generation completed. Generated 1 image(s)
+INFO:db.chats.chat_db:Created image 91785c18-c2d6-4e16-8b27-63bc30c7b956 for message 1b00ea04-89d3-4f9f-b7eb-1d49a11ff9b9
+INFO:app.websocket:Saved image 91785c18-c2d6-4e16-8b27-63bc30c7b956 for message 1b00ea04-89d3-4f9f-b7eb-1d49a11ff9b9
+INFO:app.websocket:Image generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Completed chat message processing for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnect detected for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:     connection closed
+data {"type":"chat","message":"hey there russell, whats up","enable_voice":true,"enable_image":true,"expertise":3}
+INFO:     88.230.93.58:0 - "OPTIONS /chats/a50cedc0-57df-4669-86b0-0071f022cd53 HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/a50cedc0-57df-4669-86b0-0071f022cd53 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [396957]
+INFO:     Started server process [397246]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.services.fal_service:Fal service initialized with API key
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     ('88.230.93.58', 0) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:app.websocket:WebSocket connected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Processing chat message for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created chat 2e99b816-3b13-4aa3-9bc3-58234144381e for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created message 053be7b9-19e5-45d2-9670-470eb6a2c7c6 in chat 2e99b816-3b13-4aa3-9bc3-58234144381e
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m19:16:35 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m19:16:35 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m19:16:35 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.websocket:Generating full LLM response for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m19:16:35 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m19:16:37 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m19:16:40 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m19:16:40 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message a4584e61-bfd8-40b4-b90b-6cc1d2e8f07d in chat 2e99b816-3b13-4aa3-9bc3-58234144381e
+[92m19:16:40 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m19:16:41 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m19:16:41 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 2e99b816-3b13-4aa3-9bc3-58234144381e name to: Cosmic Conversations on Quantum Physics
+INFO:app.websocket:Generated chat name for 2e99b816-3b13-4aa3-9bc3-58234144381e: Cosmic Conversations on Quantum Physics
+INFO:app.websocket:Starting voice generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+INFO:app.websocket:Voice generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Starting image generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+[92m19:16:47 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m19:16:48 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:app.services.llm:Generated image prompt: A person sitting calmly, shown in semi-transparent silhouette, with countless tiny, glowing particles (representing neutrinos) streaming through their body from all directions. The background is a deep, cosmic field with stars and swirling quantum waves, emphasizing the unseen universe in constant motion around and through the figure.
+INFO:app.services.fal_service:Starting image generation with prompt: A person sitting calmly, shown in semi-transparent silhouette, with countless tiny, glowing particle...
+[92m19:16:48 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:httpx:HTTP Request: POST https://queue.fal.run/fal-ai/flux-lora "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=true "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf/status?logs=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/c0ac3a27-572f-444b-a7bf-809058779bbf "HTTP/1.1 200 OK"
+INFO:app.services.fal_service:Image generation completed. Generated 1 image(s)
+INFO:db.chats.chat_db:Created image 54b754dd-5a8c-4f81-8d83-4589d73c9e32 for message a4584e61-bfd8-40b4-b90b-6cc1d2e8f07d
+INFO:app.websocket:Saved image 54b754dd-5a8c-4f81-8d83-4589d73c9e32 for message a4584e61-bfd8-40b4-b90b-6cc1d2e8f07d
+INFO:app.websocket:Image generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Completed chat message processing for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnect detected for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:     connection closed
+data {"type":"chat","message":"hey there russell, whats up","enable_voice":true,"enable_image":true,"expertise":3}
+INFO:     88.230.93.58:0 - "OPTIONS /chats/2e99b816-3b13-4aa3-9bc3-58234144381e HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/2e99b816-3b13-4aa3-9bc3-58234144381e HTTP/1.1" 200 OK
+INFO:     45.131.155.253:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     185.218.84.40:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     45.82.78.254:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     185.218.84.40:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     206.168.34.87:55342 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.87:55358 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.87:59724 - "GET / HTTP/1.1" 200 OK
+INFO:     43.143.60.88:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     185.218.84.40:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     206.168.34.205:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.205:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.205:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     45.131.155.253:38014 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.206:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.206:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     198.55.98.76:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:33018 - "GET / HTTP/1.1" 200 OK
+INFO:     78.153.140.179:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /api/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /backend/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /admin/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /.env.example HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /app_dev.php/_profiler/phpinfo HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /?phpinfo=-1 HTTP/1.1" 200 OK
+INFO:     78.153.140.179:0 - "GET /getcfg.php HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /cp/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /ads/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /config/aws.yml HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /staticfiles/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /opt/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /Api/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /App/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /psnlink/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /ftpmaster/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /error/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /div/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /theme/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /well-known/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /old.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /environments/local/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /environments/production/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /scripts/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /styles/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /inc/.env HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /.env_bak HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /.env-sample HTTP/1.1" 404 Not Found
+INFO:     78.153.140.179:0 - "GET /fastlane/.env HTTP/1.1" 404 Not Found
+INFO:     206.168.34.95:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.95:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.95:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.82.78.254:44792 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     64.62.197.32:0 - "GET / HTTP/1.1" 200 OK
+INFO:     185.218.84.40:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     3.130.96.91:0 - "GET / HTTP/1.1" 200 OK
+INFO:     138.68.95.0:0 - "GET / HTTP/1.1" 200 OK
+INFO:     138.68.95.0:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     64.62.197.32:0 - "GET /webui/ HTTP/1.1" 404 Not Found
+INFO:     20.171.25.78:0 - "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.1" 404 Not Found
+INFO:     64.62.197.32:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     64.62.197.44:0 - "GET / HTTP/1.1" 200 OK
+INFO:     165.232.85.243:55610 - "GET / HTTP/1.1" 200 OK
+INFO:     165.232.85.243:55616 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:47698 - "GET / HTTP/1.1" 200 OK
+INFO:     185.218.84.40:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     64.62.197.32:0 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     64.62.197.32:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     196.251.84.146:0 - "GET /.env HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     104.152.52.139:34093 - "GET / HTTP/1.1" 200 OK
+INFO:     104.152.52.162:0 - "GET / HTTP/1.1" 200 OK
+INFO:     198.235.24.17:58438 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     71.6.134.231:37072 - "GET / HTTP/1.1" 200 OK
+INFO:     71.6.134.231:39982 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     34.141.189.20:0 - "GET / HTTP/1.1" 200 OK
+INFO:     35.203.211.89:0 - "GET / HTTP/1.1" 200 OK
+INFO:     104.234.115.170:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:49974 - "GET / HTTP/1.1" 200 OK
+INFO:     3.134.148.59:39310 - "GET / HTTP/1.1" 200 OK
+INFO:     3.134.148.59:46600 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     3.130.96.91:53582 - "GET / HTTP/1.1" 200 OK
+INFO:     3.130.96.91:51064 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     185.218.84.40:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     79.124.58.198:0 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
+INFO:     34.38.6.152:0 - "GET / HTTP/1.1" 200 OK
+INFO:     64.62.156.10:5972 - "GET / HTTP/1.1" 200 OK
+INFO:     64.62.156.16:21287 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     64.62.156.16:43691 - "GET /?format=json HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     149.86.227.49:53816 - "GET / HTTP/1.1" 200 OK
+INFO:     185.218.84.40:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     79.124.58.198:0 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:39872 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     88.230.93.58:0 - "OPTIONS /chats/2e99b816-3b13-4aa3-9bc3-58234144381e HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     88.230.93.58:0 - "GET /chats/2e99b816-3b13-4aa3-9bc3-58234144381e HTTP/1.1" 200 OK
+INFO:     ('88.230.93.58', 0) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:app.websocket:WebSocket connected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Processing chat message for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created chat d76ebc45-3b9e-4778-9bda-1191748b6434 for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created message 6556a7a9-e76c-41a2-8508-713e5dcf9196 in chat d76ebc45-3b9e-4778-9bda-1191748b6434
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m07:03:17 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m07:03:17 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.websocket:Generating full LLM response for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m07:03:18 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m07:03:20 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m07:03:21 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m07:03:21 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message b0be1ff2-7e35-4519-941d-dea5c67feb3f in chat d76ebc45-3b9e-4778-9bda-1191748b6434
+[92m07:03:21 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m07:03:23 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m07:03:23 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat d76ebc45-3b9e-4778-9bda-1191748b6434 name to: Cosmic Conversations with a Physicist
+INFO:app.websocket:Generated chat name for d76ebc45-3b9e-4778-9bda-1191748b6434: Cosmic Conversations with a Physicist
+INFO:app.websocket:Starting voice generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+INFO:app.websocket:Voice generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Starting image generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+[92m07:03:27 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m07:03:29 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:app.services.llm:Generated image prompt: A thoughtful figure resembling Bertrand Russell sits on a floating chair in the center, surrounded by swirling, semi-transparent symbols: quantum wave functions, tangled spacetime grids, and faint cosmic shapes (galaxies, atoms, clocks). Above his head, thought bubbles contain abstract fragments—entangled particles, curved space, and shimmering question marks—conveying deep contemplation about the nature of reality. The background subtly fades between cosmic stars and mathematical diagrams.
+INFO:app.services.fal_service:Starting image generation with prompt: A thoughtful figure resembling Bertrand Russell sits on a floating chair in the center, surrounded b...
+[92m07:03:29 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:httpx:HTTP Request: POST https://queue.fal.run/fal-ai/flux-lora "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=true "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d/status?logs=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/27a1525a-3dce-4e59-bae8-afdc8fae247d "HTTP/1.1 200 OK"
+INFO:app.services.fal_service:Image generation completed. Generated 1 image(s)
+INFO:db.chats.chat_db:Created image 5e46e6d9-262a-474f-885f-2627be683d38 for message b0be1ff2-7e35-4519-941d-dea5c67feb3f
+INFO:app.websocket:Saved image 5e46e6d9-262a-474f-885f-2627be683d38 for message b0be1ff2-7e35-4519-941d-dea5c67feb3f
+INFO:app.websocket:Image generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Completed chat message processing for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnect detected for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:     connection closed
+data {"type":"chat","message":"hey russell whats up","enable_voice":true,"enable_image":true,"expertise":3}
+INFO:     88.230.93.58:0 - "OPTIONS /chats/d76ebc45-3b9e-4778-9bda-1191748b6434 HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/d76ebc45-3b9e-4778-9bda-1191748b6434 HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/d76ebc45-3b9e-4778-9bda-1191748b6434 HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     195.184.76.22:54499 - "GET / HTTP/1.1" 200 OK
+INFO:     195.184.76.204:43859 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     88.230.93.58:0 - "OPTIONS /chats/d76ebc45-3b9e-4778-9bda-1191748b6434 HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     88.230.93.58:0 - "GET /chats/d76ebc45-3b9e-4778-9bda-1191748b6434 HTTP/1.1" 200 OK
+INFO:     ('88.230.93.58', 0) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:app.websocket:WebSocket connected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Processing chat message for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created chat 1a4b9900-465d-4fbf-a0aa-6ae1cd631918 for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created message 1580ed07-88f2-4f50-97f4-da0d83343832 in chat 1a4b9900-465d-4fbf-a0aa-6ae1cd631918
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m07:38:04 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m07:38:04 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.websocket:Generating full LLM response for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m07:38:05 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m07:38:06 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m07:38:10 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m07:38:10 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message 400d48cb-76e9-43de-bbca-775ce720e367 in chat 1a4b9900-465d-4fbf-a0aa-6ae1cd631918
+[92m07:38:10 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m07:38:11 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m07:38:11 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 1a4b9900-465d-4fbf-a0aa-6ae1cd631918 name to: The Search for Life's Meaning
+INFO:app.websocket:Generated chat name for 1a4b9900-465d-4fbf-a0aa-6ae1cd631918: The Search for Life's Meaning
+INFO:app.websocket:Starting voice generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+INFO:app.websocket:Voice generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Starting image generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+[92m07:38:21 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m07:38:23 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:app.services.llm:Generated image prompt: A human figure, made up of swirling stardust and tiny glowing atoms, stands in the center. The figure gazes upward, with a faint silhouette of the cosmos—stars, galaxies, nebulae—arching above them. Emerging from the figure’s heart and hands are luminous threads that weave outward, forming shapes of a heart, a lightbulb, clasped hands, and a paintbrush, each glowing softly. The scene blurs the boundary between the person and the universe, showing them interconnected by these threads of meaning.
+INFO:app.services.fal_service:Starting image generation with prompt: A human figure, made up of swirling stardust and tiny glowing atoms, stands in the center. The figur...
+[92m07:38:23 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:httpx:HTTP Request: POST https://queue.fal.run/fal-ai/flux-lora "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=true "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089/status?logs=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/bc864349-826b-4eee-84c0-0baf12f36089 "HTTP/1.1 200 OK"
+INFO:app.services.fal_service:Image generation completed. Generated 1 image(s)
+INFO:db.chats.chat_db:Created image c6d47f07-68fa-4164-a941-9051f0219df3 for message 400d48cb-76e9-43de-bbca-775ce720e367
+INFO:app.websocket:Saved image c6d47f07-68fa-4164-a941-9051f0219df3 for message 400d48cb-76e9-43de-bbca-775ce720e367
+INFO:app.websocket:Image generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Completed chat message processing for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnect detected for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:     connection closed
+data {"type":"chat","message":"hey russell, whats the meaning of life","enable_voice":true,"enable_image":true,"expertise":3}
+INFO:     88.230.93.58:0 - "OPTIONS /chats/1a4b9900-465d-4fbf-a0aa-6ae1cd631918 HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/1a4b9900-465d-4fbf-a0aa-6ae1cd631918 HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/1a4b9900-465d-4fbf-a0aa-6ae1cd631918 HTTP/1.1" 200 OK
+INFO:     149.86.227.49:52834 - "GET / HTTP/1.1" 200 OK
+INFO:     5.181.86.33:0 - "GET /RDWeb/Pages/ HTTP/1.1" 404 Not Found
+INFO:     172.115.22.154:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:34518 - "GET / HTTP/1.1" 200 OK
+INFO:     20.65.193.104:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     45.194.66.8:0 - "GET /cgi-bin/luci/%3Bstok%3D/locale HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:46870 - "GET / HTTP/1.1" 200 OK
+INFO:     185.177.72.34:0 - "GET / HTTP/1.1" 200 OK
+INFO:     185.242.226.75:0 - "GET / HTTP/1.1" 200 OK
+INFO:     67.205.133.79:0 - "GET / HTTP/1.1" 200 OK
+INFO:     67.205.133.79:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:53730 - "GET / HTTP/1.1" 200 OK
+INFO:     34.162.0.93:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     34.162.0.93:0 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     193.34.212.110:58966 - "GET / HTTP/1.1" 200 OK
+INFO:     205.210.31.23:59464 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:42658 - "GET / HTTP/1.1" 200 OK
+INFO:     138.68.156.107:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     138.68.156.107:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     20.65.193.168:0 - "GET /owa/auth/x.js HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:59612 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     52.2.25.77:0 - "GET / HTTP/1.1" 200 OK
+INFO:     162.243.107.211:53142 - "GET /v1/models HTTP/1.1" 404 Not Found
+INFO:     188.166.236.28:0 - "GET //xmlrpc.php?rsd HTTP/1.1" 404 Not Found
+INFO:     188.166.236.28:0 - "GET //blog/robots.txt HTTP/1.1" 404 Not Found
+INFO:     188.166.236.28:0 - "GET //blog/ HTTP/1.1" 404 Not Found
+INFO:     188.166.236.28:0 - "GET //wordpress/ HTTP/1.1" 404 Not Found
+INFO:     188.166.236.28:0 - "GET //wp/ HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:41288 - "GET / HTTP/1.1" 200 OK
+INFO:     170.64.149.14:36950 - "GET /v1/models HTTP/1.1" 404 Not Found
+INFO:     185.218.84.40:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     167.94.138.198:54556 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.198:38296 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.198:38306 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.198:55248 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.34:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.34:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.34:0 - "GET / HTTP/1.1" 200 OK
+INFO:     198.235.24.111:65196 - "GET / HTTP/1.1" 200 OK
+INFO:     192.227.138.144:0 - "GET / HTTP/1.1" 200 OK
+INFO:     149.86.227.49:58278 - "GET / HTTP/1.1" 200 OK
+INFO:     172.202.117.213:0 - "GET /owa/auth/logon.aspx HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     91.196.152.102:51025 - "GET / HTTP/1.1" 200 OK
+INFO:     185.91.69.5:0 - "GET / HTTP/1.1" 200 OK
+INFO:     185.91.69.5:0 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     185.91.69.5:0 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     185.91.69.5:0 - "GET /WuEL HTTP/1.1" 404 Not Found
+INFO:     185.91.69.5:0 - "GET /a HTTP/1.1" 404 Not Found
+INFO:     185.91.69.5:0 - "GET /download/file.ext HTTP/1.1" 404 Not Found
+INFO:     185.91.69.5:0 - "GET /SiteLoader HTTP/1.1" 404 Not Found
+INFO:     185.91.69.5:0 - "GET /mPlayer HTTP/1.1" 404 Not Found
+INFO:     91.231.89.215:57823 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:54120 - "GET / HTTP/1.1" 200 OK
+INFO:     193.34.212.110:49608 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.101:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.101:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.145.101:0 - "GET / HTTP/1.1" 200 OK
+INFO:     196.251.84.146:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     185.218.84.40:0 - "PROPFIND / HTTP/1.1" 405 Method Not Allowed
+INFO:     5.79.105.22:0 - "GET /cgi-bin/luci/%3Bstok%3D/locale HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:38466 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     45.131.155.253:59936 - "GET / HTTP/1.1" 200 OK
+INFO:     193.34.212.110:42414 - "GET / HTTP/1.1" 200 OK
+INFO:     128.1.131.221:17570 - "GET /api/v2/heartbeat HTTP/1.1" 404 Not Found
+INFO:     128.1.131.221:17876 - "GET / HTTP/1.1" 200 OK
+INFO:     118.26.37.95:42506 - "GET / HTTP/1.1" 200 OK
+INFO:     118.26.37.95:42522 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     45.131.155.253:0 - "GET / HTTP/1.1" 200 OK
+INFO:     138.68.143.68:0 - "GET /aaa9 HTTP/1.1" 404 Not Found
+INFO:     138.68.143.68:0 - "GET /aab8 HTTP/1.1" 404 Not Found
+INFO:     138.68.143.68:0 - "GET / HTTP/1.1" 200 OK
+INFO:     147.185.133.125:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.172.89.248:0 - "GET /aaa9 HTTP/1.1" 404 Not Found
+INFO:     167.172.89.248:0 - "GET /aab8 HTTP/1.1" 404 Not Found
+INFO:     167.172.89.248:0 - "GET / HTTP/1.1" 200 OK
+INFO:     193.34.212.110:36204 - "GET / HTTP/1.1" 200 OK
+INFO:     195.184.76.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.82.78.254:56308 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:47184 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     149.86.227.49:60562 - "GET / HTTP/1.1" 200 OK
+INFO:     119.13.215.107:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.122:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.122:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.122:0 - "GET / HTTP/1.1" 200 OK
+INFO:     18.220.154.78:0 - "GET / HTTP/1.1" 200 OK
+INFO:     193.34.212.110:39780 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.1.162:0 - "GET / HTTP/1.1" 200 OK
+INFO:     220.250.10.211:54869 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.1.162:0 - "GET /webui/ HTTP/1.1" 404 Not Found
+INFO:     221.11.4.155:40726 - "GET / HTTP/1.1" 200 OK
+INFO:     123.178.210.106:18642 - "GET / HTTP/1.1" 200 OK
+INFO:     58.212.237.238:34047 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     45.82.78.254:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     65.49.1.164:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     65.49.1.164:0 - "GET / HTTP/1.1" 200 OK
+INFO:     65.49.1.162:0 - "GET /geoserver/web/ HTTP/1.1" 404 Not Found
+INFO:     65.49.1.162:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     91.196.152.87:0 - "GET / HTTP/1.1" 200 OK
+INFO:     91.196.152.46:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     91.230.168.247:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:58442 - "GET / HTTP/1.1" 200 OK
+INFO:     147.185.132.16:61094 - "GET / HTTP/1.1" 200 OK
+INFO:     59.52.254.73:0 - "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1" 404 Not Found
+INFO:     59.52.254.73:0 - "GET /containers/json HTTP/1.1" 404 Not Found
+INFO:     134.209.195.151:0 - "GET /.env HTTP/1.1" 404 Not Found
+INFO:     134.209.195.151:0 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     167.94.138.121:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.121:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     193.34.212.110:33514 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.121:0 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.155.67:0 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.155.67:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     199.45.155.67:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.73:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.73:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.73:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.179:0 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.179:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.179:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.205:0 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.205:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.205:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.233.183.40:52874 - "GET / HTTP/1.0" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.183.40:52904 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.183.40:52934 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     172.233.183.40:52946 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     172.233.183.40:0 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.183.40:60528 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.183.40:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.233.183.40:60546 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.233.183.40:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     172.233.183.40:38704 - "GET / HTTP/1.1" 200 OK
+INFO:     172.233.183.40:0 - "GET / HTTP/1.1" 200 OK
+INFO:     172.233.183.40:0 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.27:56475 - "GET / HTTP/1.1" 200 OK
+INFO:     194.187.176.92:0 - "GET /rest/applinks/1.0/manifest HTTP/1.1" 404 Not Found
+INFO:     149.86.227.49:54832 - "GET / HTTP/1.1" 200 OK
+INFO:     3.134.148.59:56432 - "GET / HTTP/1.1" 200 OK
+INFO:     3.134.148.59:39678 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     79.124.58.198:0 - "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 OK
+INFO:     20.221.71.226:0 - "GET /owa/auth/logon.aspx HTTP/1.1" 404 Not Found
+INFO:     193.34.212.110:52458 - "GET / HTTP/1.1" 200 OK
+INFO:     5.181.86.33:0 - "POST /global-protect/login.esp HTTP/1.1" 404 Not Found
+INFO:     106.75.64.248:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.56.121.15:0 - "GET / HTTP/1.1" 200 OK
+INFO:     152.32.204.21:0 - "GET / HTTP/1.1" 200 OK
+INFO:     152.32.204.21:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     152.32.204.21:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     152.32.204.21:0 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     152.32.204.21:0 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     79.124.58.198:0 - "GET /actuator/gateway/routes HTTP/1.1" 404 Not Found
+INFO:     35.205.208.255:0 - "GET / HTTP/1.1" 200 OK
+INFO:     193.34.212.110:42846 - "GET / HTTP/1.1" 200 OK
+INFO:     185.242.226.75:0 - "GET / HTTP/1.1" 200 OK
+INFO:     88.151.192.197:0 - "GET / HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "OPTIONS /chats/1a4b9900-465d-4fbf-a0aa-6ae1cd631918 HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     88.230.93.58:0 - "GET /chats/1a4b9900-465d-4fbf-a0aa-6ae1cd631918 HTTP/1.1" 200 OK
+INFO:     ('88.230.93.58', 0) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:app.websocket:WebSocket connected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Processing chat message for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created chat 71cfde24-bb4b-4279-9532-dd1025fbc36a for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created message 1b0b068d-dd49-4b80-b543-df4811d850a2 in chat 71cfde24-bb4b-4279-9532-dd1025fbc36a
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m07:40:47 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m07:40:47 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.websocket:Generating full LLM response for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.services.llm:Attempting to use model: claude-opus-4-20250514
+[92m07:40:48 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-opus-4-20250514; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m07:40:51 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m07:40:55 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+[92m07:40:55 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-opus-4-20250514
+INFO:db.chats.chat_db:Created message b20a2b16-6dbf-4748-9fbf-2ebff53e5c91 in chat 71cfde24-bb4b-4279-9532-dd1025fbc36a
+[92m07:40:55 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m07:40:55 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m07:40:55 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 71cfde24-bb4b-4279-9532-dd1025fbc36a name to: The Search for Life's Meaning
+INFO:app.websocket:Generated chat name for 71cfde24-bb4b-4279-9532-dd1025fbc36a: The Search for Life's Meaning
+INFO:app.websocket:Starting voice generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+INFO:app.websocket:Voice generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Starting image generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+[92m07:41:06 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m07:41:09 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:app.services.llm:Generated image prompt: A silhouette of a human figure sits cross-legged at the center, their chest glowing with soft, warm light that radiates outward. Surrounding them, swirling clouds of cosmic dust and stars form the outline of a vast universe, with galaxies spiraling and nebulae blossoming. From the human’s heart, subtle tendrils of light reach out and intertwine with the stars, suggesting a connection between the individual and the cosmos. In the background, faint outlines of other human figures are visible, connected by threads of light, symbolizing relationships and shared meaning.
+INFO:app.services.fal_service:Starting image generation with prompt: A silhouette of a human figure sits cross-legged at the center, their chest glowing with soft, warm ...
+[92m07:41:09 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:httpx:HTTP Request: POST https://queue.fal.run/fal-ai/flux-lora "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+data {"type":"chat","message":"hey russell, whats the meaning of life","enable_voice":true,"enable_image":true,"expertise":3}
+INFO:     88.230.93.58:0 - "OPTIONS /chats/71cfde24-bb4b-4279-9532-dd1025fbc36a HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:     88.230.93.58:0 - "GET /chats/71cfde24-bb4b-4279-9532-dd1025fbc36a HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=true "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0/status?logs=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/483ab491-ae9b-4b0c-876a-5876cdab8ce0 "HTTP/1.1 200 OK"
+INFO:app.services.fal_service:Image generation completed. Generated 1 image(s)
+INFO:db.chats.chat_db:Created image b2c4609b-1cd0-48d0-8cee-28aca3041385 for message b20a2b16-6dbf-4748-9fbf-2ebff53e5c91
+INFO:app.websocket:Saved image b2c4609b-1cd0-48d0-8cee-28aca3041385 for message b20a2b16-6dbf-4748-9fbf-2ebff53e5c91
+INFO:app.websocket:Image generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Completed chat message processing for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnect detected for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:     connection closed
+INFO:     47.251.92.52:28756 - "GET / HTTP/1.1" 200 OK
+INFO:     123.160.223.74:20755 - "GET / HTTP/1.1" 200 OK
+INFO:     123.160.223.73:21994 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     34.39.133.115:0 - "OPTIONS / HTTP/1.1" 405 Method Not Allowed
+INFO:     193.34.212.110:35656 - "GET / HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [397246]
+INFO:     Started server process [456576]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.services.fal_service:Fal service initialized with API key
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:app.main:Application shutting down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [456576]
+WARNING:  WatchFiles detected changes in 'app/config.py'. Reloading...
+INFO:     Started server process [456734]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.services.fal_service:Fal service initialized with API key
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     Started server process [456744]
+INFO:     Waiting for application startup.
+INFO:app.main:Database tables created
+INFO:app.services.vector:Initialized VectorService with index: loomlock-ai and model: text-embedding-3-large
+INFO:app.services.fal_service:Fal service initialized with API key
+INFO:app.main:Services initialized successfully
+INFO:     Application startup complete.
+INFO:     88.230.93.58:0 - "OPTIONS /chats/71cfde24-bb4b-4279-9532-dd1025fbc36a HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET https://api.clerk.com/v1/jwks "HTTP/1.1 200 OK"
+INFO:     88.230.93.58:0 - "GET /chats/71cfde24-bb4b-4279-9532-dd1025fbc36a HTTP/1.1" 200 OK
+INFO:     ('88.230.93.58', 0) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:app.websocket:WebSocket connected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Processing chat message for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created chat 91ac371a-624a-40e8-a5ab-67ce697a5572 for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created message cb46a226-3d43-4f41-b144-d046b8045abc in chat 91ac371a-624a-40e8-a5ab-67ce697a5572
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m08:51:30 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m08:51:30 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m08:51:30 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:app.websocket:Generating full LLM response for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.services.llm:Attempting to use model: claude-3-5-sonnet-latest
+[92m08:51:31 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m08:51:33 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+data {"type":"chat","message":"hey russell, whats the meaning of life","enable_voice":true,"enable_image":true,"expertise":3}
+INFO:     88.230.93.58:0 - "OPTIONS /chats/91ac371a-624a-40e8-a5ab-67ce697a5572 HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/91ac371a-624a-40e8-a5ab-67ce697a5572 HTTP/1.1" 200 OK
+[92m08:51:35 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+[92m08:51:35 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:db.chats.chat_db:Created message af750b8e-8ac3-41ff-9a50-2dd4d381a24c in chat 91ac371a-624a-40e8-a5ab-67ce697a5572
+[92m08:51:35 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m08:51:36 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+[92m08:51:36 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4o-mini-2024-07-18
+INFO:db.chats.chat_db:Updated chat 91ac371a-624a-40e8-a5ab-67ce697a5572 name to: Exploring the Meaning of Life
+INFO:app.websocket:Generated chat name for 91ac371a-624a-40e8-a5ab-67ce697a5572: Exploring the Meaning of Life
+INFO:app.websocket:Starting voice generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:httpx:HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/NFG5qt843uXKj4pFvR7C?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+INFO:app.websocket:Voice generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Starting image generation for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+[92m08:51:38 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:LiteLLM:
+LiteLLM completion() model= gpt-4.1; provider = openai
+INFO:     connection closed
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[92m08:51:40 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:app.services.llm:Generated image prompt: A vast, star-filled cosmic book lies open in the center of the image. Emerging from its pages are diverse human figures walking along winding, glowing paths. Each path is unique—some filled with curious discoveries (magnifying glass, books), others with hearts or hands reaching out (representing love and connection), and some with brushes painting vibrant colors (symbolizing art and creativity). The figures are illuminated, suggesting that their journeys and choices bring light and meaning to the universe around them.
+ERROR:app.websocket:Failed to send message to user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu: 
+INFO:app.websocket:WebSocket disconnected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.services.fal_service:Starting image generation with prompt: A vast, star-filled cosmic book lies open in the center of the image. Emerging from its pages are di...
+[92m08:51:41 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:LiteLLM:selected model name for cost calculation: openai/gpt-4.1-2025-04-14
+INFO:httpx:HTTP Request: POST https://queue.fal.run/fal-ai/flux-lora "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:     ('88.230.93.58', 0) - "WebSocket /ws/chat" [accepted]
+INFO:     connection open
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:app.websocket:WebSocket connected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:app.websocket:Processing chat message for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created chat ebb602df-8182-4c5f-9505-f8902e169b1e for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:db.chats.chat_db:Created message 81947139-d689-4585-9e18-33108c689362 in chat ebb602df-8182-4c5f-9505-f8902e169b1e
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[92m08:51:46 - LiteLLM:INFO[0m: utils.py:1213 - Wrapper: Completed Call, calling success_handler
+INFO:LiteLLM:Wrapper: Completed Call, calling success_handler
+[92m08:51:46 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+[92m08:51:46 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: openai/text-embedding-3-large
+INFO:LiteLLM:selected model name for cost calculation: openai/text-embedding-3-large
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 202 Accepted"
+INFO:app.websocket:Generating full LLM response for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.services.llm:Attempting to use model: claude-3-5-sonnet-latest
+[92m08:51:46 - LiteLLM:INFO[0m: utils.py:2958 - 
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:LiteLLM:
+LiteLLM completion() model= claude-3-5-sonnet-latest; provider = anthropic
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=true "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7/status?logs=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://queue.fal.run/fal-ai/flux-lora/requests/5aaead42-5dc5-4880-9def-fd2520f727a7 "HTTP/1.1 200 OK"
+INFO:app.services.fal_service:Image generation completed. Generated 1 image(s)
+INFO:db.chats.chat_db:Created image 0af0e393-8df2-4437-9797-349f386dfeec for message af750b8e-8ac3-41ff-9a50-2dd4d381a24c
+INFO:app.websocket:Saved image 0af0e393-8df2-4437-9797-349f386dfeec for message af750b8e-8ac3-41ff-9a50-2dd4d381a24c
+INFO:app.websocket:Image generation completed for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:Completed chat message processing for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+ERROR:app.websocket:Error handling WebSocket message for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu: WebSocket is not connected. Need to call "accept" first.
+WARNING:app.websocket:WebSocket for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu is not connected. Closing loop.
+INFO:app.websocket:WebSocket disconnected for user: user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:     connection closed
+INFO:httpx:HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[92m08:51:48 - LiteLLM:INFO[0m: cost_calculator.py:655 - selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+INFO:LiteLLM:selected model name for cost calculation: anthropic/claude-3-5-sonnet-latest
+WARNING:app.websocket:Connection lost for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu during LLM generation
+INFO:app.websocket:Completed chat message processing for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+INFO:app.websocket:WebSocket disconnect detected for user user_2zT4Av03hC7tZ8HVIlBx3NdOnzu
+data {"type":"chat","message":"hey russell, whats the meaning of life","enable_voice":true,"enable_image":true,"expertise":3}
+INFO:     88.230.93.58:0 - "OPTIONS /chats/ebb602df-8182-4c5f-9505-f8902e169b1e HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/ebb602df-8182-4c5f-9505-f8902e169b1e HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "OPTIONS /chats/ebb602df-8182-4c5f-9505-f8902e169b1e HTTP/1.1" 200 OK
+INFO:     88.230.93.58:0 - "GET /chats/ebb602df-8182-4c5f-9505-f8902e169b1e HTTP/1.1" 200 OK
