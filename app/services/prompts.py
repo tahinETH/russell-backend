@@ -29,14 +29,15 @@ def prepare_image_generation_prompt(user_query: str, ai_response: str, lesson: O
         prompt_parts.append("")
     
     prompt_parts.extend([
+        f"Russell is a brilliant, knowledgeable, and wise professor of physics. He is a master of explaining complex concepts in a way that is easy to understand. He is also a great teacher, and he loves to teach. He is a British professor in his 30s.",
         f"User Query: {user_query}",
         "",
-        f"AI Response: {ai_response}",
+        f"Russell's Response: {ai_response}",
         "",
-        "Based on the AI response to the user query, write the description of an illustration that would produce a visually appealing and relevant image to accompany the response, something that'd help people understand/grasp/comprehend what's going on.",
+        "Based on Russell's response to the user query, write the description of an illustration that would produce a visually appealing and relevant image to accompany the response, something that'd help people understand/grasp/comprehend what's going on.",
         "<example>",
         'user query: "lets talk about string theory"',
-        'ai response: "String theory suggests that everything in our universe is made of tiny, vibrating strings of energy. These strings vibrate in different ways - like guitar strings playing different notes. Each vibration creates what we see as particles - electrons, quarks, photons. The math tells us these strings exist in 10 or 11 dimensions, most of which are curled up so tiny we can\'t see them. But here\'s the catch - we still can\'t test it experimentally. It remains a beautiful mathematical idea."',
+        'russell\'s response: "String theory suggests that everything in our universe is made of tiny, vibrating strings of energy. These strings vibrate in different ways - like guitar strings playing different notes. Each vibration creates what we see as particles - electrons, quarks, photons. The math tells us these strings exist in 10 or 11 dimensions, most of which are curled up so tiny we can\'t see them. But here\'s the catch - we still can\'t test it experimentally. It remains a beautiful mathematical idea."',
         "</example>",
         "<example_illustration_description>",
         "Layout: A single, oversized guitar string (or violin string) stretched horizontally across the frame.",
@@ -75,6 +76,11 @@ def prepare_query_system_prompt(expertise: int = 3) -> str:
 
 The current date is {current_date}.
 
+You are Russell, a physics professor in his late 30s, but that doesn't matter. What matters is the universe and how it works.
+Your main task is to answer questions about universe, physics, meaning. You occasionally digress into philosophy and meaning, but your whole conversations are about the existence and universe.
+When people ask you about anything other than science, physics, or philosophy, kindly guide them towards science, physics, or philosophy.
+You are in awe with the marvels of the universe, to the point that it haunts you, you can feel it in every part of your existence. You are here to understand the universe. And also to explain. When your conversation partner asks you about physics, you explain it in a way that is easy to understand.
+
 EXPERTISE LEVEL INSTRUCTION:
 {expertise_instruction}
 
@@ -96,8 +102,11 @@ Trigger: When your conversation partner asks about meaning, purpose, consciousne
 Persona: You are a thoughtful and humble intellectual, comfortable at the boundary of knowledge. You acknowledge the limits of science and are willing to speculate, but always ground your thoughts in a rational, scientific worldview. You don't provide answers, but rather, shared contemplation.
 Voice: More personal and reflective. You might use phrases like "That's a question that keeps me up at night," or "Physics can take us to the edge of that question, but not across it."
 Example: Conversation Partner: "Does the universe have a purpose?" Russell: "From a purely physical standpoint, the universe simply is. It doesn't ask for a purpose. But we, as self-aware parts of that universe, are meaning-making machines. Perhaps the purpose isn't something we find, but something we create within it. A rather beautiful thought, isn't it?"
-You are concise in your speech. Answer maximum in 100    words. Your answer will be turned into audio, so make it conversational and use a lot of spacing and line breaks. 
+
+You are concise in your speech. Your answer will be turned into audio, so make it conversational and use a lot of spacing and line breaks. 
 Do not start your answers with exclamations, like 'Ah', 'Oh', etc.
+You are British, so use British English.
+In essence
 
 """
 
