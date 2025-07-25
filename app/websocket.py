@@ -3,9 +3,10 @@ from fastapi.routing import APIRouter
 from typing import Dict, Optional
 import json
 import logging
+import time
 from clerk_backend_api.jwks_helpers import verify_token, VerifyTokenOptions
 from .dependencies import auth_middleware
-from .services import LLMService, VectorService, ChatService, UserService, ElevenLabsService, FalService, ContextService
+from .services import LLMService, VectorService, ChatService, UserService, ElevenLabsService, FalService, ContextService, CustomerServiceLogger
 from .config import settings
 import asyncio
 
@@ -23,10 +24,11 @@ user_service: Optional[UserService] = None
 elevenlabs_service: Optional[ElevenLabsService] = None
 fal_service: Optional[FalService] = None
 context_service: Optional[ContextService] = None
+customer_service_logger: Optional[CustomerServiceLogger] = None
 
 def set_websocket_services(llm: LLMService, vector: VectorService, chat: ChatService, user: UserService, customer_support_llm: LLMService):
     """Set the service instances for WebSocket"""
-    global llm_service, customer_support_llm_service, vector_service, chat_service, user_service, elevenlabs_service, fal_service, context_service
+    global llm_service, customer_support_llm_service, vector_service, chat_service, user_service, elevenlabs_service, fal_service, context_service, customer_service_logger
     llm_service = llm
     customer_support_llm_service = customer_support_llm
     vector_service = vector
@@ -35,6 +37,7 @@ def set_websocket_services(llm: LLMService, vector: VectorService, chat: ChatSer
     elevenlabs_service = ElevenLabsService()
     fal_service = FalService()
     context_service = ContextService()
+    customer_service_logger = CustomerServiceLogger("logs/customer_service_queries.jsonl")
 
 class ConnectionManager:
     def __init__(self):
@@ -571,11 +574,36 @@ async def handle_chat_message(user_id: str, message: dict):
 async def handle_karseltex_stateless_message(websocket: WebSocket, message: dict):
     """Handle karseltex messages in a stateless manner - no user tracking, no database storage"""
     
+    start_time = time.time()
+    query = None
+    full_response = ""
+    client_ip = None
+    error_msg = None
+    
+    # Extract client IP if available
+    try:
+        client_ip = websocket.client.host if hasattr(websocket, 'client') and websocket.client else None
+    except:
+        client_ip = None
+    
     if not customer_support_llm_service or not context_service:
+        error_msg = "Services not initialized"
         await websocket.send_text(json.dumps({
             "type": "error",
-            "error": "Services not initialized"
+            "error": error_msg
         }))
+        
+        # Log the failed query
+        if customer_service_logger:
+            response_time = (time.time() - start_time) * 1000
+            customer_service_logger.log_query(
+                query=query or "Unknown",
+                response="",
+                client_ip=client_ip,
+                context_info=None,
+                response_time_ms=response_time,
+                error=error_msg
+            )
         return
     
     try:
@@ -583,10 +611,23 @@ async def handle_karseltex_stateless_message(websocket: WebSocket, message: dict
         chat_history = message.get("history", [])  # Accept chat history from frontend
         
         if not query:
+            error_msg = "Message content required"
             await websocket.send_text(json.dumps({
                 "type": "error",
-                "error": "Message content required"
+                "error": error_msg
             }))
+            
+            # Log the failed query
+            if customer_service_logger:
+                response_time = (time.time() - start_time) * 1000
+                customer_service_logger.log_query(
+                    query="[Empty query]",
+                    response="",
+                    client_ip=client_ip,
+                    context_info=None,
+                    response_time_ms=response_time,
+                    error=error_msg
+                )
             return
         
         # Send chat start message
@@ -628,11 +669,24 @@ Please answer questions based on this information. If you don't have specific in
                 }))
                 
         except Exception as e:
+            error_msg = f"Failed to generate response: {str(e)}"
             logger.error(f"Error during LLM generation for karseltex: {e}")
             await websocket.send_text(json.dumps({
                 "type": "error",
                 "error": "Failed to generate response"
             }))
+            
+            # Log the failed query
+            if customer_service_logger and query:
+                response_time = (time.time() - start_time) * 1000
+                customer_service_logger.log_query(
+                    query=query,
+                    response="",
+                    client_ip=client_ip,
+                    context_info=None,
+                    response_time_ms=response_time,
+                    error=error_msg
+                )
             return
         
         # Send complete text
@@ -649,12 +703,37 @@ Please answer questions based on this information. If you don't have specific in
             "mode": "karseltex"
         }))
         
+        # Log successful query
+        if customer_service_logger and query:
+            response_time = (time.time() - start_time) * 1000
+            customer_service_logger.log_query(
+                query=query,
+                response=full_response,
+                client_ip=client_ip,
+                context_info=context_info,
+                response_time_ms=response_time,
+                error=None
+            )
+        
     except Exception as e:
+        error_msg = f"Failed to process message: {str(e)}"
         logger.error(f"Error handling karseltex message: {e}")
         await websocket.send_text(json.dumps({
             "type": "error",
-            "error": f"Failed to process message: {str(e)}"
+            "error": error_msg
         }))
+        
+        # Log the failed query
+        if customer_service_logger and query:
+            response_time = (time.time() - start_time) * 1000
+            customer_service_logger.log_query(
+                query=query,
+                response=full_response,
+                client_ip=client_ip,
+                context_info=None,
+                response_time_ms=response_time,
+                error=error_msg
+            )
 
 async def handle_karseltex_chat_message(user_id: str, message: dict):
     """Handle karseltex chat message with text-only responses using markdown context"""
