@@ -8,3 +8,4 @@ __pycache__
 *.out
 __pycache__
 *.pyc
+*.jsonl
