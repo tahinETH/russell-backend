@@ -1,7 +1,7 @@
 ---
 title: "Automotive Upholstery Fabric MVS-DK-D 001"
 description: "Premium automotive upholstery fabric made from 100% polyester with multiple width options and lamination choices for professional vehicle interior applications"
-price: 32
+
 category: "Automotive Upholstery Fabric"
 image: "/images/products/automotive-upholstery-fabric-mvs-dk-d-001/featured.png"
 gallery:

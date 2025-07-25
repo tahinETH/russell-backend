@@ -1,7 +1,7 @@
 ---
 title: "Mikro Automotive Headliner Fabric MVS-TK-M 001"
 description: "Premium mikro automotive headliner fabric made from 100% polyester with raschel knitting and flame lamination processing for enhanced durability and fire safety"
-price: 30
+
 category: "Automotive Headliner Fabric"
 image: "/images/products/mikro-automotive-headliner-fabric-mvs-tk-m-001/featured.png"
 gallery:

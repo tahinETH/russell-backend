@@ -1,7 +1,7 @@
 ---
 title: "Automotive Seat Cover Fabric MVS-DK-KL 001"
 description: "Premium automotive seat cover fabric made from 100% polyester with jacquard weaving for custom vehicle upholstery and protection"
-price: 25
+
 category: "Automotive Upholstery Fabric"
 image: "/images/products/automotive-seat-cover-fabric-mvs-dk-kl-001/featured.png"
 gallery:

@@ -1,7 +1,7 @@
 ---
 title: "Automotive Design Fabric MVS-DZ-002"
 description: "Premium felt-backed automotive design fabric with lycra blend for enhanced durability and easy maintenance in vehicle interior applications"
-price: 52
+
 category: "Automotive Design Fabric"
 image: "/images/products/automotive-design-fabric-mvs-dz-002/featured.png"
 gallery:

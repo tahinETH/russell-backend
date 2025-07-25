@@ -1,7 +1,6 @@
 ---
 title: "Automotive Design Fabric MVS-DZ-001"
 description: "Premium automotive design fabric with lycra blend for flexible vehicle interior applications and custom design projects"
-price: 45
 category: "Automotive Design Fabric"
 image: "/images/products/automotive-design-fabric-mvs-dz-001/featured.png"
 gallery:

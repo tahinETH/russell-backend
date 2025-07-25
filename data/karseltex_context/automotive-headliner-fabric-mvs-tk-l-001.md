@@ -1,7 +1,7 @@
 ---
 title: "Lakost Automotive Headliner Fabric MVS-TK-L 001"
 description: "Premium automotive headliner fabric made from 100% polyester with flame lamination processing for enhanced durability and fire safety in automotive interior applications"
-price: 28
+
 category: "Automotive Headliner Fabric"
 image: "/images/products/automotive-headliner-fabric-mvs-tk-l-001/featured.png"
 gallery:

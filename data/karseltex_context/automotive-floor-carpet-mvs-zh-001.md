@@ -1,7 +1,6 @@
 ---
 title: "Automotive Floor Carpet MVS-ZH-001"
 description: "Heavy-duty automotive floor carpet made from 100% polyester for vehicle flooring and bus applications with superior durability"
-price: 22
 category: "Automotive Floor Carpet"
 image: "/images/products/automotive-floor-carpet-mvs-zh-001/featured.png"
 gallery:

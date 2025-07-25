@@ -1,7 +1,7 @@
 ---
 title: "Automotive Side Carpet MVS-ZH-002"
 description: "Premium automotive side carpet made from 100% polyester with plush texture for vehicle interior side panel applications"
-price: 18
+
 category: "Automotive Floor Carpet"
 image: "/images/products/automotive-side-carpet-mvs-zh-002/featured.png"
 gallery:

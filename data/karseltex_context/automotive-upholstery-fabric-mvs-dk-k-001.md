@@ -1,7 +1,7 @@
 ---
 title: "Automotive Upholstery Fabric AU-200"
 description: "Premium automotive upholstery fabric designed for seat covers and interior trim with exceptional durability and comfort"
-price: 38
+
 category: "Automotive Upholstery Fabric"
 image: "/images/products/automotive-upholstery-fabric-mvs-dk-k-001/featured.png"
 gallery:
