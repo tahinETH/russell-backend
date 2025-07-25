@@ -218,4 +218,54 @@ class LLMService:
                 
             except Exception as fallback_error:
                 logger.error(f"Fallback image prompt generation also failed: {str(fallback_error)}")
-                return None 
+                return None
+    
+    async def stream_with_custom_context(
+        self, 
+        query: str, 
+        system_context: str,
+        chat_history: List[Dict] = None
+    ) -> AsyncGenerator[str, None]:
+        """Stream LLM response with custom system context (for karseltex)"""
+        
+        # Build messages with custom system context
+        messages = [
+            {"role": "system", "content": system_context}
+        ]
+        
+        # Add chat history if provided
+        if chat_history:
+            messages.extend(chat_history)
+        
+        # Add current user query
+        messages.append({"role": "user", "content": query})
+        
+        # Try main model first, then fallback
+        models_to_try = [self.model, self.fallback_model]
+        
+        for model in models_to_try:
+            try:
+                logger.info(f"Attempting to use model for karseltex: {model}")
+                
+                # Stream response
+                response = await litellm.acompletion(
+                    model=model,
+                    messages=messages,
+                    stream=True,
+                    max_tokens=500,
+                )
+                
+                async for chunk in response:
+                    if chunk.choices[0].delta.content:
+                        yield chunk.choices[0].delta.content
+                return  # Success, exit the function
+                        
+            except Exception as e:
+                logger.warning(f"Karseltex model {model} failed: {str(e)}")
+                if model == self.fallback_model:
+                    # If even fallback fails, yield error message
+                    yield f"Error: Both main model ({self.model}) and fallback model ({self.fallback_model}) failed. Last error: {str(e)}"
+                else:
+                    # Continue to try fallback model
+                    logger.info(f"Karseltex falling back to {self.fallback_model}")
+                    continue 

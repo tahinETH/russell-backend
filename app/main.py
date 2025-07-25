@@ -29,7 +29,8 @@ async def lifespan(app: FastAPI):
         logger.info("Database tables created")
         
         # Initialize services
-        llm_service = LLMService(settings.llm_model)
+        llm_service = LLMService(settings.llm_model)  # Russell model
+        customer_support_llm_service = LLMService(settings.customer_support_model)  # Customer support model
         vector_service = VectorService(
             settings.pinecone_api_key,
             settings.pinecone_environment,
@@ -44,7 +45,7 @@ async def lifespan(app: FastAPI):
         
         
         # Set services in WebSocket module
-        set_websocket_services(llm_service, vector_service, chat_service, user_service)
+        set_websocket_services(llm_service, vector_service, chat_service, user_service, customer_support_llm_service)
         logger.info("Services initialized successfully")
         
     except Exception as e:
@@ -68,6 +69,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://russell.hfgok.com",
+        "https://karseltex-int.com",
         "http://localhost:3000",  # For local development
         "http://127.0.0.1:3000"   # Alternative local development
     ],

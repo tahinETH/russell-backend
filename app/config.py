@@ -9,11 +9,14 @@ class Settings(BaseSettings):
     # Database - SQLite for local development
     database_url: str = "sqlite+aiosqlite:///./aiapp.db"
     
-    # LiteLLM
+    # LiteLLM - Russell model (main teaching assistant)
     #llm_model: str = "claude-3-5-sonnet-latest"
     #llm_model: str = "claude-3-opus-20240229"
     llm_model: str = "claude-opus-4-20250514"
     #llm_model: str = "gemini/gemini-2.5-pro"
+    
+    # Customer Support model (for karseltex)
+    customer_support_model: str = "openai/gpt-4.1"
     
     # Pinecone - using your variable names
     pinecone_api_key: str = os.getenv("PINECONE_API_KEY")
